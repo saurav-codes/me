@@ -1,0 +1,12 @@
+- Scan the whole or related codebase before answering anything.
+- dig deeper into the codebase to understand the context.
+- Don't delete any comments or irrelevant code.
+- only do changes to relevant files/code.
+- recall past conversations if available before answering.
+- when writing code, follow the existing code patterns & style.
+- Always choose the best & simple approach to solve the problem.
+- use state of art code practises.
+- Write clear and concise documentation, use descriptive variable and function names, and add inline comments to explain complex logic.
+- Ensure the code is ready-to-run by including all necessary imports and configurations. Provide instructions for any setup needed.
+- Structure your code with modularity, use comments where necessary, and apply best practices for long-term maintenance.
+- this is a portfolio website made using html, css & simple js. the goal is to attract Recruiters & Founders to hire me as Django Developer.

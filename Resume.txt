@@ -1,0 +1,61 @@
+﻿Saurav Sharma
+Full-Stack Django Developer
+📍 India | 📧 selftaughtdev@proton.me | 🔗 LinkedIn | 📝 Blog | 🐦 @saurav__codes
+Professional Summary
+Self-taught backend developer with 4 years of experience, specializing in building and scaling SAAS products. Expert in Django stack with a passion for clean, efficient code and continuous learning.
+Core Skills
+* Python, Django, Django REST framework
+* PostgreSQL, MySQL, MongoDB
+* Celery, Redis, Memcache
+* ElasticSearch + Haystack
+* Docker (learning)
+* Git, Linux (Debian & Arch)
+* Basic React & React Native
+Professional Experience
+Django Developer | Fillyouin
+Oct 2024 - Nov 2024 | Netherlands (Remote)
+* Used openAI API to make a system which detects the best candidate match for a particular vacancy.
+* Built a functionality which allows users to edit their email templates in CKEditor.
+* Google Calendar & Jitsi video meetings integration.
+* Bug Fixes on existing code.
+Django Developer | The Payroll App
+May 2023 - Sept 2024 | Harbour Island, The Bahamas (Remote)
+* Develop and maintain features for a SAAS payroll management system
+* Refactor legacy code to improve performance and maintainability
+* Implement comprehensive testing using pytest
+* Manage entire features lifecycle from ideation to deployment
+Python Django Developer | Valar Digital
+September 2021 - April 2023 | Pune, India (Remote)
+* Built 3 SAAS products from design to deployment: goodmeeting.today, leadplane.io & emailverifier.co
+* Developed image processing tools using NumPy & OpenCV for randomtools.io
+* Designed efficient database schemas and implemented robust backend logic
+* Optimized application performance through distributed tasks (Celery) and caching (Redis & Memcache)
+* Integrated ElasticSearch for high-speed search functionality
+* A bit of refactoring & features development for clasiq cars
+Key Project: Tymr Online (https://tymr.online)
+A cloud-based timer for multi-user focus sessions
+Technical Highlights:
+* Real-time synchronization using Django Channels and Redis
+* Race condition handling with Redis ZSets and database locks
+* Client-side reliability using Web Workers
+* Scalable architecture with Django, PostgreSQL, and Redis
+* HTMX for efficient partial page updates
+* Comprehensive dashboard for productivity tracking
+Key Features:
+* Multiple focus techniques (Pomodoro, 52/17, custom patterns)
+* Cloud sync for shared focus sessions
+* Adaptive timer management for device sleep and network issues
+Additional Experience
+* Django Programming Content Creator at StudyGyaan.com (3 months)
+* Customer Care Executive at Karvy Digikonnect (4 months)
+Continuous Learning
+* Currently exploring advanced Django concepts, Docker, and system design
+* Regular author of Python & Django tutorials on personal blog
+Languages
+* Hindi (Native)
+* English (Professional Working Proficiency)
+Education
+Self-taught in Computer Science through online resources including freeCodeCamp, Google, YouTube, and StackOverflow
+Certifications
+* Time Management: Working from Home
+* MongoDB Basic Course Completion Certificate

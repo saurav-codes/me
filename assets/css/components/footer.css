@@ -1,0 +1,54 @@
+.footer {
+    position: fixed;
+    bottom: 0;
+    background: var(--nav-bg);
+    border-top: 1px solid var(--border-color);
+    padding: 1rem;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    max-width: 800px;
+    width: 100%;
+}
+
+.footer-content {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-links {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.footer-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: var(--link-hover);
+}
+
+/* Add padding to body to prevent content from being hidden behind fixed footer */
+body {
+    padding-bottom: 4rem;
+}
+
+@media (max-width: 640px) {
+    .footer {
+        padding: 0.75rem 1rem;
+    }
+    
+    .footer-links {
+        gap: 1rem;
+    }
+}

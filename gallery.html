@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery - Saurav Sharma</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/components/gallery.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body>
+    <!-- Progress Bar -->
+    <div class="progress-container">
+        <div class="progress-bar"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="nav-links">
+                <a href="/#projects" title="Some of my Projects">
+                    <i class="ph ph-compass-tool"></i>Projects</a>
+                <a href="/#blog" title="My Django Blog">
+                    <i class="ph ph-notebook"></i>Blog</a>
+                <a href="/#hire-me" title="Let's work together on a Django Project">
+                    <i class="ph ph-handshake"></i>Hire Me</a>
+            </div>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                <i id="theme-icon" class="ph ph-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section" id="gallery">
+        <h2 class="row">Photo Gallery <i class="ph ph-camera"></i></h2>
+        <p class="section-description">A glimpse into my life and personality through photographs</p>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="assets/images/gallery/himachal group.jpg" alt="Group photo in Himachal" loading="lazy">
+                <div class="gallery-caption">
+                    <span class="gallery-date">Himachal Pradesh</span>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="assets/images/gallery/himachal1.jpg" alt="Scenic view in Himachal" loading="lazy">
+                <div class="gallery-caption">
+                    <span class="gallery-date">Himachal Pradesh</span>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="assets/images/gallery/himachal3.jpg" alt="Another view in Himachal" loading="lazy">
+                <div class="gallery-caption">
+                    <span class="gallery-date">Himachal Pradesh</span>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="assets/images/gallery/himachal_group2.jpg" alt="Group photo in Himachal" loading="lazy">
+                <div class="gallery-caption">
+                    <span class="gallery-date">Himachal Pradesh</span>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="assets/images/gallery/me1.jpg" alt="Portrait of Saurav" loading="lazy">
+                <div class="gallery-caption">
+                    <span class="gallery-date">Personal Photo</span>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="assets/images/gallery/me_caffee.jpg" alt="Saurav at a cafe" loading="lazy">
+                <div class="gallery-caption">
+                    <span class="gallery-date">Coffee Time</span>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="assets/images/gallery/noida.jpg" alt="View from Noida" loading="lazy">
+                <div class="gallery-caption">
+                    <span class="gallery-date">Noida</span>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="assets/images/gallery/noida2.jpg" alt="Another view from Noida" loading="lazy">
+                <div class="gallery-caption">
+                    <span class="gallery-date">Noida</span>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="assets/images/gallery/noida3.jpg" alt="Noida cityscape" loading="lazy">
+                <div class="gallery-caption">
+                    <span class="gallery-date">Noida</span>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="assets/images/gallery/noida4.jpg" alt="Noida street view" loading="lazy">
+                <div class="gallery-caption">
+                    <span class="gallery-date">Noida</span>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="assets/images/gallery/noida5.jpg" alt="Noida evening view" loading="lazy">
+                <div class="gallery-caption">
+                    <span class="gallery-date">Noida</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="/">
+                    <i class="ph ph-house"></i>
+                    Home
+                </a>
+                <a href="./tweets.html">
+                    <i class="ph ph-twitter-logo"></i>
+                    Tweet Highlights ✨
+                </a>
+                <a href="./gallery.html">
+                    <i class="ph ph-camera"></i>
+                    Photo Gallery 📸
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./assets/js/components/theme.js"></script>
+    <script src="./assets/js/components/navigation.js"></script>
+    <script src="./assets/js/scroll.js"></script>
+    <script src="./assets/js/components/gallery.js"></script>
+</body>
+
+</html>
