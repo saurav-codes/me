@@ -34,6 +34,11 @@
     transition: color 0.2s;
 }
 
+.footer-links div {
+    display: flex;
+    align-items: center;
+}
+
 .footer-links a:hover {
     color: var(--link-hover);
 }
