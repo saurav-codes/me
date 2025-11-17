@@ -9,6 +9,7 @@
 @import 'components/projects.css';
 @import 'components/blog.css';
 @import 'components/footer.css';
+@import 'components/tweet-card.css';
 
 
 
@@ -481,22 +482,6 @@ p {
     color: var(--heading-color);
     font-size: 1.25rem;
 }
-
-.tweet-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust min size as needed */
-    gap: 20px; /* Space between items */
-    margin: 20px; /* Add some margin around the grid */
-    padding: 0;
-}
-
-blockquote.twitter-tweet {
-    width: 100% !important; /* Ensure blockquotes fill the grid cell */
-    min-width: auto !important;
-    border: none; /* Remove border, as Twitter sometimes adds it */
-}
-
-
 
 /* Responsive */
 @media (max-width: 768px) {

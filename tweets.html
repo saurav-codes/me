@@ -3,16 +3,21 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Photo Gallery - Saurav Sharma</title>
+        <title>Tweet Highlights - Saurav Sharma</title>
+        <meta name="description" content="Curated highlights of my important tweets about Django, Python, and web development.">
+        <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
+        <link rel="manifest" href="./site.webmanifest">
         <link rel="stylesheet" href="./assets/css/style.css">
         <script src="https://unpkg.com/@phosphor-icons/web"></script>
     </head>
     <body>
-        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         <!-- Progress Bar -->
         <div class="progress-container">
             <div class="progress-bar"></div>
         </div>
+        
         <!-- Navigation -->
         <nav class="navbar">
             <div class="nav-content">
@@ -29,149 +34,557 @@
                 </button>
             </div>
         </nav>
-        <!-- TWEETS -->
+
+        <!-- Header -->
+        <header class="tweets-header">
+            <h1>
+                <i class="ph ph-twitter-logo"></i>
+                Tweet Highlights
+            </h1>
+            <p>Curated collection of my important tweets about Django, Python, and building SaaS products</p>
+        </header>
+        
+        <!-- Tweet Cards Container -->
         <div class="tweet-container">
-            <blockquote class="twitter-tweet">
-                <p lang="en" dir="ltr">
-                    Building SaaS is about solving problems, not just writing code.
-                    <br>
-                    <br>
-                    Here are 3 simple steps to bring your idea to life.👇
-                </p>
-                &mdash; Saurav Sharma | Django Dev 🐍📦🚀 (@saurav__codes) <a href="https://twitter.com/saurav__codes/status/1864569911802253754?ref_src=twsrc%5Etfw">December 5, 2024</a>
-            </blockquote>
-            <blockquote class="twitter-tweet" data-media-max-width="560">
-                <p lang="en" dir="ltr">
-                    1/
-                    <br>
-                    <br>
-                    Starting a SaaS project can feel overwhelming, especially if you&#39;re not technical.
-                    <br>
-                    <br>
-                    Here are 3 quick tips to simplify the process 👇📷🧵
-                </p>
-                &mdash; Saurav Sharma | Django Dev 🐍📦🚀 (@saurav__codes) <a href="https://twitter.com/saurav__codes/status/1864360254403956780?ref_src=twsrc%5Etfw">December 4, 2024</a>
-            </blockquote>
-            <blockquote class="twitter-tweet">
-                <p lang="en" dir="ltr">
-                    Just published a case study about how i built a cloud-based focus timer with Django, Redis &amp; WebSockets.
-                    <br>
-                    <br>
-                    Learn how we:
-                    <br>
-                    <br>
-                    - Keep timers accurate
-                    <br>
-                    - Use Web Workers
-                    <br>
-                    - Manage time with Redis
-                    <br>
-                    - Handle concurrent updates<a href="https://t.co/j8IyUT02FE">https://t.co/j8IyUT02FE</a><a href="https://twitter.com/hashtag/Python?src=hash&amp;ref_src=twsrc%5Etfw">#Python</a> <a href="https://twitter.com/hashtag/Django?src=hash&amp;ref_src=twsrc%5Etfw">#Django</a> <a href="https://twitter.com/hashtag/WebDev?src=hash&amp;ref_src=twsrc%5Etfw">#WebDev</a> <a href="https://twitter.com/hashtag/redis?src=hash&amp;ref_src=twsrc%5Etfw">#redis</a>
-                </p>
-                &mdash; Saurav Sharma | Django Dev 🐍📦🚀 (@saurav__codes) <a href="https://twitter.com/saurav__codes/status/1845514706498588998?ref_src=twsrc%5Etfw">October 13, 2024</a>
-            </blockquote>
-            <blockquote class="twitter-tweet">
-                <p lang="en" dir="ltr">
-                    Building a Focus Timer with a twist: one host, many followers, all in sync! 🕰️👥
-                    <br>
-                    <br>
-                    Start timer, share the link
-                    <br>
-                    Others join &amp; follow ur pace
-                    <br>
-                    Real-time updates for all
-                    <br>
-                    <br>
-                    Using Django + WebSockets. Aiming to ship next week!
-                    <br>
-                    Ever used a shared timer for remote work/study? Thoughts? 🤔 <a href="https://t.co/Jp2yRU2pTW">pic.twitter.com/Jp2yRU2pTW</a>
-                </p>
-                &mdash; Saurav Sharma | Django Dev 🐍📦🚀 (@saurav__codes) <a href="https://twitter.com/saurav__codes/status/1826937051989827621?ref_src=twsrc%5Etfw">August 23, 2024</a>
-            </blockquote>
-            <blockquote class="twitter-tweet">
-                <p lang="en" dir="ltr">
-                    while deploying <a href="https://twitter.com/CloudTimer67264?ref_src=twsrc%5Etfw">@CloudTimer67264</a> i faced many challenges so i compile all of them in this blog.
-                    <br>
-                    <br>
-                    Comprehensive Django Deployment Guide for Beginners on VPS<a href="https://t.co/xM896NER72">https://t.co/xM896NER72</a>
-                </p>
-                &mdash; Saurav Sharma | Django Dev 🐍📦🚀 (@saurav__codes) <a href="https://twitter.com/saurav__codes/status/1845487582303715563?ref_src=twsrc%5Etfw">October 13, 2024</a>
-            </blockquote>
-            <blockquote class="twitter-tweet">
-                <p lang="en" dir="ltr">
-                    Just cracked a tough Django + DataTables puzzle! 🐍📊
-                    <br>
-                    <br>
-                    Handled 1000s of records with dynamic columns, sorting &amp; filtering - all server-side.
-                    <br>
-                    <br>
-                    Custom view, efficient queries = lightning-fast tables, even with massive data.
-                    <br>
-                    <br>
-                    Key: Plan well, query smart, process server-side. <a href="https://t.co/8IZ3RxhxE1">pic.twitter.com/8IZ3RxhxE1</a>
-                </p>
-                &mdash; Saurav Sharma | Django Dev 🐍📦🚀 (@saurav__codes) <a href="https://twitter.com/saurav__codes/status/1842547549498155508?ref_src=twsrc%5Etfw">October 5, 2024</a>
-            </blockquote>
-            <blockquote class="twitter-tweet">
-                <p lang="en" dir="ltr">
-                    Timelapse ⏳<a href="https://twitter.com/hashtag/CodingJourney?src=hash&amp;ref_src=twsrc%5Etfw">#CodingJourney</a> <a href="https://twitter.com/hashtag/developer?src=hash&amp;ref_src=twsrc%5Etfw">#developer</a> <a href="https://twitter.com/hashtag/django?src=hash&amp;ref_src=twsrc%5Etfw">#django</a> <a href="https://twitter.com/hashtag/Python?src=hash&amp;ref_src=twsrc%5Etfw">#Python</a> <a href="https://t.co/hO2qf3bsVF">pic.twitter.com/hO2qf3bsVF</a>
-                </p>
-                &mdash; Saurav Sharma | Django Dev 🐍📦🚀 (@saurav__codes) <a href="https://twitter.com/saurav__codes/status/1832000876262891900?ref_src=twsrc%5Etfw">September 6, 2024</a>
-            </blockquote>
-            <blockquote class="twitter-tweet">
-                <p lang="en" dir="ltr">
-                    The best way to release all the coding frustration 🚀 <a href="https://t.co/u43skNyzeO">pic.twitter.com/u43skNyzeO</a>
-                </p>
-                &mdash; Saurav Sharma | Django Dev 🐍📦🚀 (@saurav__codes) <a href="https://twitter.com/saurav__codes/status/1788582816852123738?ref_src=twsrc%5Etfw">May 9, 2024</a>
-            </blockquote>
-            <blockquote class="twitter-tweet">
-                <p lang="qme" dir="ltr">
-                    🏔️⛈️👨‍💻☕️ <a href="https://t.co/nNjKWdiMFe">pic.twitter.com/nNjKWdiMFe</a>
-                </p>
-                &mdash; Saurav Sharma | Django Dev 🐍📦🚀 (@saurav__codes) <a href="https://twitter.com/saurav__codes/status/1784983943151829222?ref_src=twsrc%5Etfw">April 29, 2024</a>
-            </blockquote>
-            <blockquote class="twitter-tweet">
-                <p lang="en" dir="ltr">
-                    🧵 When deploying a <a href="https://twitter.com/hashtag/Django?src=hash&amp;ref_src=twsrc%5Etfw">#Django</a> app with Gunicorn, managing worker processes is crucial for performance and reliability. Two configurations, `max-requests` and `max-requests-jitter`, play a key role. Let&#39;s dive into what these configurations do and why they are important: (1/6) <a href="https://t.co/NoSguCed5u">pic.twitter.com/NoSguCed5u</a>
-                </p>
-                &mdash; Saurav Sharma | Django Dev 🐍📦🚀 (@saurav__codes) <a href="https://twitter.com/saurav__codes/status/1714232231378722837?ref_src=twsrc%5Etfw">October 17, 2023</a>
-            </blockquote>
-            <blockquote class="twitter-tweet">
-                <p lang="en" dir="ltr">
-                    Inviting Beta testers for our new start-up <a href="https://twitter.com/eliteemailverif?ref_src=twsrc%5Etfw">@eliteemailverif</a> 😃<a href="https://twitter.com/hashtag/emailmarketing?src=hash&amp;ref_src=twsrc%5Etfw">#emailmarketing</a> <a href="https://t.co/HnXARABUnn">pic.twitter.com/HnXARABUnn</a>
-                </p>
-                &mdash; Saurav Sharma | Django Dev 🐍📦🚀 (@saurav__codes) <a href="https://twitter.com/saurav__codes/status/1541984338916438016?ref_src=twsrc%5Etfw">June 29, 2022</a>
-            </blockquote>
-            <blockquote class="twitter-tweet">
-                <p lang="en" dir="ltr">
-                    My blog is listed on <a href="https://twitter.com/dailydotdev?ref_src=twsrc%5Etfw">@dailydotdev</a> 😃
-                    <br>
-                    <br>
-                    if you haven&#39;t read.. checkout this link 🖇️<a href="https://t.co/5iO6odzFLC">https://t.co/5iO6odzFLC</a> <a href="https://t.co/c6oWQ6W2im">pic.twitter.com/c6oWQ6W2im</a>
-                </p>
-                &mdash; Saurav Sharma | Django Dev 🐍📦🚀 (@saurav__codes) <a href="https://twitter.com/saurav__codes/status/1639437145239871489?ref_src=twsrc%5Etfw">March 25, 2023</a>
-            </blockquote>
-            <blockquote class="twitter-tweet">
-                <p lang="en" dir="ltr">
-                    1/4: Hey, ever had a database operation fail in the middle and end up with a half-baked state? 🙄 Django&#39;s got you covered with atomic transactions! 💪
-                </p>
-                &mdash; Saurav Sharma | Django Dev 🐍📦🚀 (@saurav__codes) <a href="https://twitter.com/saurav__codes/status/1638908793592643585?ref_src=twsrc%5Etfw">March 23, 2023</a>
-            </blockquote>
-            <blockquote class="twitter-tweet">
-                <p lang="en" dir="ltr">
-                    Use contextlib.suppress() to keep the code neat when you don&#39;t want to do anything in the except block.
-                    <br>
-                    The optimal situations to utilise contextlib.suppress() are when you need to close a file, connection, or other resource.<a href="https://twitter.com/hashtag/python3?src=hash&amp;ref_src=twsrc%5Etfw">#python3</a> <a href="https://twitter.com/hashtag/django?src=hash&amp;ref_src=twsrc%5Etfw">#django</a> <a href="https://twitter.com/hashtag/djangodeveloper?src=hash&amp;ref_src=twsrc%5Etfw">#djangodeveloper</a> <a href="https://twitter.com/hashtag/pythondeveloper?src=hash&amp;ref_src=twsrc%5Etfw">#pythondeveloper</a> <a href="https://t.co/ViXxsbu7yJ">pic.twitter.com/ViXxsbu7yJ</a>
-                </p>
-                &mdash; Saurav Sharma | Django Dev 🐍📦🚀 (@saurav__codes) <a href="https://twitter.com/saurav__codes/status/1637827543008178189?ref_src=twsrc%5Etfw">March 20, 2023</a>
-            </blockquote>
-            <blockquote class="twitter-tweet">
-                <p lang="en" dir="ltr">
-                    My Django Blog started getting some attention. Thank you to everyone who has taken the time to read my content and engage with my ideas. I&#39;m looking forward to continuing to grow my blog and sharing even more in the future.<a href="https://t.co/iC1QogKBz3">https://t.co/iC1QogKBz3</a><a href="https://twitter.com/hashtag/django?src=hash&amp;ref_src=twsrc%5Etfw">#django</a> <a href="https://twitter.com/hashtag/Python?src=hash&amp;ref_src=twsrc%5Etfw">#Python</a> <a href="https://twitter.com/hashtag/python3?src=hash&amp;ref_src=twsrc%5Etfw">#python3</a> <a href="https://t.co/n8HrwwNCqV">pic.twitter.com/n8HrwwNCqV</a>
-                </p>
-                &mdash; Saurav Sharma | Django Dev 🐍📦🚀 (@saurav__codes) <a href="https://twitter.com/saurav__codes/status/1626499051415015425?ref_src=twsrc%5Etfw">February 17, 2023</a>
-            </blockquote>
+            
+            <!-- Tweet 1 -->
+            <article class="tweet-card">
+                <div class="tweet-header">
+                    <img src="./assets/images/me.jpg" 
+                         alt="Saurav Sharma" 
+                         class="tweet-avatar"
+                         loading="lazy">
+                    <div class="tweet-author">
+                        <span class="tweet-name">Saurav Sharma | Django Dev 🐍📦🚀</span>
+                        <span class="tweet-handle">@saurav__codes</span>
+                    </div>
+                    <a href="https://twitter.com/saurav__codes" 
+                       class="tweet-logo"
+                       aria-label="View on Twitter"
+                       target="_blank"
+                       rel="noopener">
+                        <i class="ph ph-twitter-logo"></i>
+                    </a>
+                </div>
+                <div class="tweet-content">
+                    <p>Building SaaS is about solving problems, not just writing code.</p>
+                    <p>Here are 3 simple steps to bring your idea to life.👇</p>
+                </div>
+                <div class="tweet-footer">
+                    <time datetime="2024-12-05">Dec 5, 2024</time>
+                    <a href="https://twitter.com/saurav__codes/status/1864569911802253754" 
+                       class="tweet-link"
+                       target="_blank"
+                       rel="noopener">
+                        View on Twitter
+                        <i class="ph ph-arrow-up-right"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Tweet 2 -->
+            <article class="tweet-card">
+                <div class="tweet-header">
+                    <img src="./assets/images/me.jpg" 
+                         alt="Saurav Sharma" 
+                         class="tweet-avatar"
+                         loading="lazy">
+                    <div class="tweet-author">
+                        <span class="tweet-name">Saurav Sharma | Django Dev 🐍📦🚀</span>
+                        <span class="tweet-handle">@saurav__codes</span>
+                    </div>
+                    <a href="https://twitter.com/saurav__codes" 
+                       class="tweet-logo"
+                       aria-label="View on Twitter"
+                       target="_blank"
+                       rel="noopener">
+                        <i class="ph ph-twitter-logo"></i>
+                    </a>
+                </div>
+                <div class="tweet-content">
+                    <p>Starting a SaaS project can feel overwhelming, especially if you're not technical.</p>
+                    <p>Here are 3 quick tips to simplify the process 👇📷🧵</p>
+                </div>
+                <div class="tweet-footer">
+                    <time datetime="2024-12-04">Dec 4, 2024</time>
+                    <a href="https://twitter.com/saurav__codes/status/1864360254403956780" 
+                       class="tweet-link"
+                       target="_blank"
+                       rel="noopener">
+                        View on Twitter
+                        <i class="ph ph-arrow-up-right"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Tweet 3 -->
+            <article class="tweet-card">
+                <div class="tweet-header">
+                    <img src="./assets/images/me.jpg" 
+                         alt="Saurav Sharma" 
+                         class="tweet-avatar"
+                         loading="lazy">
+                    <div class="tweet-author">
+                        <span class="tweet-name">Saurav Sharma | Django Dev 🐍📦🚀</span>
+                        <span class="tweet-handle">@saurav__codes</span>
+                    </div>
+                    <a href="https://twitter.com/saurav__codes" 
+                       class="tweet-logo"
+                       aria-label="View on Twitter"
+                       target="_blank"
+                       rel="noopener">
+                        <i class="ph ph-twitter-logo"></i>
+                    </a>
+                </div>
+                <div class="tweet-content">
+                    <p>Just published a case study about how i built a cloud-based focus timer with Django, Redis &amp; WebSockets.</p>
+                    <p>Learn how we:</p>
+                    <p>- Keep timers accurate<br>
+                    - Use Web Workers<br>
+                    - Manage time with Redis<br>
+                    - Handle concurrent updates</p>
+                    <p><a href="https://selftaughtdev.hashnode.dev/building-a-cloud-based-focus-timer-with-django-redis-websockets" target="_blank" rel="noopener">Read the case study →</a></p>
+                    <p>#Python #Django #WebDev #redis</p>
+                </div>
+                <div class="tweet-footer">
+                    <time datetime="2024-10-13">Oct 13, 2024</time>
+                    <a href="https://twitter.com/saurav__codes/status/1845514706498588998" 
+                       class="tweet-link"
+                       target="_blank"
+                       rel="noopener">
+                        View on Twitter
+                        <i class="ph ph-arrow-up-right"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Tweet 4 -->
+            <article class="tweet-card">
+                <div class="tweet-header">
+                    <img src="./assets/images/me.jpg" 
+                         alt="Saurav Sharma" 
+                         class="tweet-avatar"
+                         loading="lazy">
+                    <div class="tweet-author">
+                        <span class="tweet-name">Saurav Sharma | Django Dev 🐍📦🚀</span>
+                        <span class="tweet-handle">@saurav__codes</span>
+                    </div>
+                    <a href="https://twitter.com/saurav__codes" 
+                       class="tweet-logo"
+                       aria-label="View on Twitter"
+                       target="_blank"
+                       rel="noopener">
+                        <i class="ph ph-twitter-logo"></i>
+                    </a>
+                </div>
+                <div class="tweet-content">
+                    <p>Building a Focus Timer with a twist: one host, many followers, all in sync! 🕰️👥</p>
+                    <p>Start timer, share the link<br>
+                    Others join &amp; follow ur pace<br>
+                    Real-time updates for all</p>
+                    <p>Using Django + WebSockets. Aiming to ship next week!</p>
+                    <p>Ever used a shared timer for remote work/study? Thoughts? 🤔</p>
+                </div>
+                <div class="tweet-footer">
+                    <time datetime="2024-08-23">Aug 23, 2024</time>
+                    <a href="https://twitter.com/saurav__codes/status/1826937051989827621" 
+                       class="tweet-link"
+                       target="_blank"
+                       rel="noopener">
+                        View on Twitter
+                        <i class="ph ph-arrow-up-right"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Tweet 5 -->
+            <article class="tweet-card">
+                <div class="tweet-header">
+                    <img src="./assets/images/me.jpg" 
+                         alt="Saurav Sharma" 
+                         class="tweet-avatar"
+                         loading="lazy">
+                    <div class="tweet-author">
+                        <span class="tweet-name">Saurav Sharma | Django Dev 🐍📦🚀</span>
+                        <span class="tweet-handle">@saurav__codes</span>
+                    </div>
+                    <a href="https://twitter.com/saurav__codes" 
+                       class="tweet-logo"
+                       aria-label="View on Twitter"
+                       target="_blank"
+                       rel="noopener">
+                        <i class="ph ph-twitter-logo"></i>
+                    </a>
+                </div>
+                <div class="tweet-content">
+                    <p>while deploying @CloudTimer67264 i faced many challenges so i compile all of them in this blog.</p>
+                    <p>Comprehensive Django Deployment Guide for Beginners on VPS</p>
+                </div>
+                <div class="tweet-footer">
+                    <time datetime="2024-10-13">Oct 13, 2024</time>
+                    <a href="https://twitter.com/saurav__codes/status/1845487582303715563" 
+                       class="tweet-link"
+                       target="_blank"
+                       rel="noopener">
+                        View on Twitter
+                        <i class="ph ph-arrow-up-right"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Tweet 6 -->
+            <article class="tweet-card">
+                <div class="tweet-header">
+                    <img src="./assets/images/me.jpg" 
+                         alt="Saurav Sharma" 
+                         class="tweet-avatar"
+                         loading="lazy">
+                    <div class="tweet-author">
+                        <span class="tweet-name">Saurav Sharma | Django Dev 🐍📦🚀</span>
+                        <span class="tweet-handle">@saurav__codes</span>
+                    </div>
+                    <a href="https://twitter.com/saurav__codes" 
+                       class="tweet-logo"
+                       aria-label="View on Twitter"
+                       target="_blank"
+                       rel="noopener">
+                        <i class="ph ph-twitter-logo"></i>
+                    </a>
+                </div>
+                <div class="tweet-content">
+                    <p>Just cracked a tough Django + DataTables puzzle! 🐍📊</p>
+                    <p>Handled 1000s of records with dynamic columns, sorting &amp; filtering - all server-side.</p>
+                    <p>Custom view, efficient queries = lightning-fast tables, even with massive data.</p>
+                    <p>Key: Plan well, query smart, process server-side.</p>
+                </div>
+                <div class="tweet-footer">
+                    <time datetime="2024-10-05">Oct 5, 2024</time>
+                    <a href="https://twitter.com/saurav__codes/status/1842547549498155508" 
+                       class="tweet-link"
+                       target="_blank"
+                       rel="noopener">
+                        View on Twitter
+                        <i class="ph ph-arrow-up-right"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Tweet 7 -->
+            <article class="tweet-card">
+                <div class="tweet-header">
+                    <img src="./assets/images/me.jpg" 
+                         alt="Saurav Sharma" 
+                         class="tweet-avatar"
+                         loading="lazy">
+                    <div class="tweet-author">
+                        <span class="tweet-name">Saurav Sharma | Django Dev 🐍📦🚀</span>
+                        <span class="tweet-handle">@saurav__codes</span>
+                    </div>
+                    <a href="https://twitter.com/saurav__codes" 
+                       class="tweet-logo"
+                       aria-label="View on Twitter"
+                       target="_blank"
+                       rel="noopener">
+                        <i class="ph ph-twitter-logo"></i>
+                    </a>
+                </div>
+                <div class="tweet-content">
+                    <p>Timelapse ⏳</p>
+                    <p>#CodingJourney #developer #django #Python</p>
+                </div>
+                <div class="tweet-footer">
+                    <time datetime="2024-09-06">Sep 6, 2024</time>
+                    <a href="https://twitter.com/saurav__codes/status/1832000876262891900" 
+                       class="tweet-link"
+                       target="_blank"
+                       rel="noopener">
+                        View on Twitter
+                        <i class="ph ph-arrow-up-right"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Tweet 8 -->
+            <article class="tweet-card">
+                <div class="tweet-header">
+                    <img src="./assets/images/me.jpg" 
+                         alt="Saurav Sharma" 
+                         class="tweet-avatar"
+                         loading="lazy">
+                    <div class="tweet-author">
+                        <span class="tweet-name">Saurav Sharma | Django Dev 🐍📦🚀</span>
+                        <span class="tweet-handle">@saurav__codes</span>
+                    </div>
+                    <a href="https://twitter.com/saurav__codes" 
+                       class="tweet-logo"
+                       aria-label="View on Twitter"
+                       target="_blank"
+                       rel="noopener">
+                        <i class="ph ph-twitter-logo"></i>
+                    </a>
+                </div>
+                <div class="tweet-content">
+                    <p>The best way to release all the coding frustration 🚀</p>
+                </div>
+                <div class="tweet-footer">
+                    <time datetime="2024-05-09">May 9, 2024</time>
+                    <a href="https://twitter.com/saurav__codes/status/1788582816852123738" 
+                       class="tweet-link"
+                       target="_blank"
+                       rel="noopener">
+                        View on Twitter
+                        <i class="ph ph-arrow-up-right"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Tweet 9 -->
+            <article class="tweet-card">
+                <div class="tweet-header">
+                    <img src="./assets/images/me.jpg" 
+                         alt="Saurav Sharma" 
+                         class="tweet-avatar"
+                         loading="lazy">
+                    <div class="tweet-author">
+                        <span class="tweet-name">Saurav Sharma | Django Dev 🐍📦🚀</span>
+                        <span class="tweet-handle">@saurav__codes</span>
+                    </div>
+                    <a href="https://twitter.com/saurav__codes" 
+                       class="tweet-logo"
+                       aria-label="View on Twitter"
+                       target="_blank"
+                       rel="noopener">
+                        <i class="ph ph-twitter-logo"></i>
+                    </a>
+                </div>
+                <div class="tweet-content">
+                    <p>🏔️⛈️👨‍💻☕️</p>
+                </div>
+                <div class="tweet-footer">
+                    <time datetime="2024-04-29">Apr 29, 2024</time>
+                    <a href="https://twitter.com/saurav__codes/status/1784983943151829222" 
+                       class="tweet-link"
+                       target="_blank"
+                       rel="noopener">
+                        View on Twitter
+                        <i class="ph ph-arrow-up-right"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Tweet 10 -->
+            <article class="tweet-card">
+                <div class="tweet-header">
+                    <img src="./assets/images/me.jpg" 
+                         alt="Saurav Sharma" 
+                         class="tweet-avatar"
+                         loading="lazy">
+                    <div class="tweet-author">
+                        <span class="tweet-name">Saurav Sharma | Django Dev 🐍📦🚀</span>
+                        <span class="tweet-handle">@saurav__codes</span>
+                    </div>
+                    <a href="https://twitter.com/saurav__codes" 
+                       class="tweet-logo"
+                       aria-label="View on Twitter"
+                       target="_blank"
+                       rel="noopener">
+                        <i class="ph ph-twitter-logo"></i>
+                    </a>
+                </div>
+                <div class="tweet-content">
+                    <p>🧵 When deploying a #Django app with Gunicorn, managing worker processes is crucial for performance and reliability. Two configurations, `max-requests` and `max-requests-jitter`, play a key role. Let's dive into what these configurations do and why they are important: (1/6)</p>
+                </div>
+                <div class="tweet-footer">
+                    <time datetime="2023-10-17">Oct 17, 2023</time>
+                    <a href="https://twitter.com/saurav__codes/status/1714232231378722837" 
+                       class="tweet-link"
+                       target="_blank"
+                       rel="noopener">
+                        View on Twitter
+                        <i class="ph ph-arrow-up-right"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Tweet 11 -->
+            <article class="tweet-card">
+                <div class="tweet-header">
+                    <img src="./assets/images/me.jpg" 
+                         alt="Saurav Sharma" 
+                         class="tweet-avatar"
+                         loading="lazy">
+                    <div class="tweet-author">
+                        <span class="tweet-name">Saurav Sharma | Django Dev 🐍📦🚀</span>
+                        <span class="tweet-handle">@saurav__codes</span>
+                    </div>
+                    <a href="https://twitter.com/saurav__codes" 
+                       class="tweet-logo"
+                       aria-label="View on Twitter"
+                       target="_blank"
+                       rel="noopener">
+                        <i class="ph ph-twitter-logo"></i>
+                    </a>
+                </div>
+                <div class="tweet-content">
+                    <p>Inviting Beta testers for our new start-up @eliteemailverif 😃</p>
+                    <p>#emailmarketing</p>
+                </div>
+                <div class="tweet-footer">
+                    <time datetime="2022-06-29">Jun 29, 2022</time>
+                    <a href="https://twitter.com/saurav__codes/status/1541984338916438016" 
+                       class="tweet-link"
+                       target="_blank"
+                       rel="noopener">
+                        View on Twitter
+                        <i class="ph ph-arrow-up-right"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Tweet 12 -->
+            <article class="tweet-card">
+                <div class="tweet-header">
+                    <img src="./assets/images/me.jpg" 
+                         alt="Saurav Sharma" 
+                         class="tweet-avatar"
+                         loading="lazy">
+                    <div class="tweet-author">
+                        <span class="tweet-name">Saurav Sharma | Django Dev 🐍📦🚀</span>
+                        <span class="tweet-handle">@saurav__codes</span>
+                    </div>
+                    <a href="https://twitter.com/saurav__codes" 
+                       class="tweet-logo"
+                       aria-label="View on Twitter"
+                       target="_blank"
+                       rel="noopener">
+                        <i class="ph ph-twitter-logo"></i>
+                    </a>
+                </div>
+                <div class="tweet-content">
+                    <p>My blog is listed on @dailydotdev 😃</p>
+                    <p>if you haven't read.. checkout this link 🖇️</p>
+                    <p><a href="https://selftaughtdev.hashnode.dev/" target="_blank" rel="noopener">selftaughtdev.hashnode.dev</a></p>
+                </div>
+                <div class="tweet-footer">
+                    <time datetime="2023-03-25">Mar 25, 2023</time>
+                    <a href="https://twitter.com/saurav__codes/status/1639437145239871489" 
+                       class="tweet-link"
+                       target="_blank"
+                       rel="noopener">
+                        View on Twitter
+                        <i class="ph ph-arrow-up-right"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Tweet 13 -->
+            <article class="tweet-card">
+                <div class="tweet-header">
+                    <img src="./assets/images/me.jpg" 
+                         alt="Saurav Sharma" 
+                         class="tweet-avatar"
+                         loading="lazy">
+                    <div class="tweet-author">
+                        <span class="tweet-name">Saurav Sharma | Django Dev 🐍📦🚀</span>
+                        <span class="tweet-handle">@saurav__codes</span>
+                    </div>
+                    <a href="https://twitter.com/saurav__codes" 
+                       class="tweet-logo"
+                       aria-label="View on Twitter"
+                       target="_blank"
+                       rel="noopener">
+                        <i class="ph ph-twitter-logo"></i>
+                    </a>
+                </div>
+                <div class="tweet-content">
+                    <p>Hey, ever had a database operation fail in the middle and end up with a half-baked state? 🙄 Django's got you covered with atomic transactions! 💪</p>
+                </div>
+                <div class="tweet-footer">
+                    <time datetime="2023-03-23">Mar 23, 2023</time>
+                    <a href="https://twitter.com/saurav__codes/status/1638908793592643585" 
+                       class="tweet-link"
+                       target="_blank"
+                       rel="noopener">
+                        View on Twitter
+                        <i class="ph ph-arrow-up-right"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Tweet 14 -->
+            <article class="tweet-card">
+                <div class="tweet-header">
+                    <img src="./assets/images/me.jpg" 
+                         alt="Saurav Sharma" 
+                         class="tweet-avatar"
+                         loading="lazy">
+                    <div class="tweet-author">
+                        <span class="tweet-name">Saurav Sharma | Django Dev 🐍📦🚀</span>
+                        <span class="tweet-handle">@saurav__codes</span>
+                    </div>
+                    <a href="https://twitter.com/saurav__codes" 
+                       class="tweet-logo"
+                       aria-label="View on Twitter"
+                       target="_blank"
+                       rel="noopener">
+                        <i class="ph ph-twitter-logo"></i>
+                    </a>
+                </div>
+                <div class="tweet-content">
+                    <p>Use contextlib.suppress() to keep the code neat when you don't want to do anything in the except block.</p>
+                    <p>The optimal situations to utilise contextlib.suppress() are when you need to close a file, connection, or other resource.</p>
+                    <p>#python3 #django #djangodeveloper #pythondeveloper</p>
+                </div>
+                <div class="tweet-footer">
+                    <time datetime="2023-03-20">Mar 20, 2023</time>
+                    <a href="https://twitter.com/saurav__codes/status/1637827543008178189" 
+                       class="tweet-link"
+                       target="_blank"
+                       rel="noopener">
+                        View on Twitter
+                        <i class="ph ph-arrow-up-right"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Tweet 15 -->
+            <article class="tweet-card">
+                <div class="tweet-header">
+                    <img src="./assets/images/me.jpg" 
+                         alt="Saurav Sharma" 
+                         class="tweet-avatar"
+                         loading="lazy">
+                    <div class="tweet-author">
+                        <span class="tweet-name">Saurav Sharma | Django Dev 🐍📦🚀</span>
+                        <span class="tweet-handle">@saurav__codes</span>
+                    </div>
+                    <a href="https://twitter.com/saurav__codes" 
+                       class="tweet-logo"
+                       aria-label="View on Twitter"
+                       target="_blank"
+                       rel="noopener">
+                        <i class="ph ph-twitter-logo"></i>
+                    </a>
+                </div>
+                <div class="tweet-content">
+                    <p>My Django Blog started getting some attention. Thank you to everyone who has taken the time to read my content and engage with my ideas. I'm looking forward to continuing to grow my blog and sharing even more in the future.</p>
+                    <p><a href="https://selftaughtdev.hashnode.dev/" target="_blank" rel="noopener">selftaughtdev.hashnode.dev</a></p>
+                    <p>#django #Python #python3</p>
+                </div>
+                <div class="tweet-footer">
+                    <time datetime="2023-02-17">Feb 17, 2023</time>
+                    <a href="https://twitter.com/saurav__codes/status/1626499051415015425" 
+                       class="tweet-link"
+                       target="_blank"
+                       rel="noopener">
+                        View on Twitter
+                        <i class="ph ph-arrow-up-right"></i>
+                    </a>
+                </div>
+            </article>
+
         </div>
+        
         <!-- Footer -->
         <footer class="footer">
             <div class="footer-content">
@@ -182,32 +595,29 @@
                     </a>
                     <a href="./tweets.html">
                         <i class="ph ph-twitter-logo"></i>
-                        Tweets
+                        Tweet Highlights ✨
                     </a>
                     <a href="./gallery.html">
                         <i class="ph ph-camera"></i>
-                        Photo Gallery
+                        Photo Gallery 📸
                     </a>
+                    <div id="wcb" class="carbonbadge"></div>
                 </div>
             </div>
         </footer>
+        
         <!-- Scripts -->
         <script src="./assets/js/components/theme.js"></script>
         <script src="./assets/js/components/navigation.js"></script>
         <script src="./assets/js/scroll.js"></script>
-	<script
-  src="https://beamanalytics.b-cdn.net/beam.min.js"
-  data-token="4d8d10b5-436d-4483-b61d-392ee0f77a3d"
-  async
->
-</script>
-
-<script>
-    !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey getNextSurveyStep identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug getPageViewId".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
-    posthog.init('phc_iN0P8bb09CFVA5iPmwX4Kh0z8ikwX1TKDx1xRMAx5BG', {
-        api_host: 'https://us.i.posthog.com',
-        person_profiles: 'always', // or 'always' to create profiles for anonymous users as well
-    })
-</script>
+        <script src="https://beamanalytics.b-cdn.net/beam.min.js" data-token="4d8d10b5-436d-4483-b61d-392ee0f77a3d" async></script>
+        <script>
+            !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey getNextSurveyStep identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug getPageViewId".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+            posthog.init('phc_iN0P8bb09CFVA5iPmwX4Kh0z8ikwX1TKDx1xRMAx5BG', {
+                api_host: 'https://us.i.posthog.com',
+                person_profiles: 'always',
+            })
+        </script>
+        <script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
     </body>
 </html>
