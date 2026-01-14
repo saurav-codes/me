@@ -728,3 +728,9 @@ p {
     justify-content: flex-start;
     align-items: center;
 }
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -23,6 +23,10 @@
     gap: 2rem;
 }
 
+.nav-links i {
+    padding: 2px;
+}
+
 .nav-links a {
     color: var(--text-muted);
     text-decoration: none;
