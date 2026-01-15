@@ -483,6 +483,11 @@ p {
     font-size: 1.25rem;
 }
 
+.section-description {
+    text-align: left;
+    color: #304266;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     body {
