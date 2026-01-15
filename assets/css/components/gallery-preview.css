@@ -31,6 +31,7 @@
     display: flex; /* Use flex to center actual photo tiles */
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .photo-tile {
