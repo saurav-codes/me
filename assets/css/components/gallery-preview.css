@@ -1,143 +1,50 @@
-/* Gallery Preview Section */
-#gallery-preview {
-    text-align: center;
-    padding: 60px 20px;
+.gallery-preview-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
 }
 
-#gallery-preview .section-description {
-    margin-bottom: 40px;
-    font-size: 1rem;
-    color: var(--text-secondary);
+.gallery-preview-card {
+    display: grid;
+    gap: 12px;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    background: var(--card-bg);
+    transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
 }
 
-.gallery-preview-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 30px; /* Space between photo stacks */
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto 40px auto; /* Center the container */
-    min-height: 380px; /* Ensure a minimum height to avoid collapsing */
+.gallery-preview-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--border-strong);
+    box-shadow: var(--card-shadow);
 }
 
-/* Photo Stacks */
-.photo-stack {
-    position: relative; /* Allow children to be absolutely positioned relative to this */
-    width: 160px; /* Base width for the stack area */
-    height: 160px; /* Base height for the stack area */
-    flex-shrink: 0;
-    display: flex; /* Use flex to center actual photo tiles */
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}
-
-.photo-tile {
-    position: absolute;
-    width: 120px;
-    height: 120px;
+.gallery-preview-card img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
     object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 12px;
 }
 
-.photo-tile:hover {
-    transform: translateY(-6px) scale(1.08);
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+.gallery-preview-card span {
+    color: var(--text-muted);
+    font-size: 0.82rem;
 }
 
-/* Adjust individual photo tile positions within their stack */
-.photo-stack .photo-tile:nth-child(1) {
-    transform: translateY(0) rotate(-8deg);
-    z-index: 2;
-}
-
-.photo-stack .photo-tile:nth-child(2) {
-    transform: translateY(15px) translateX(10px) rotate(4deg);
-    z-index: 1;
-}
-
-/* Gallery CTA Button */
 .gallery-cta {
-    margin-bottom: 3rem;
+    display: flex;
+    justify-content: flex-start;
 }
 
-.gallery-cta .cta-button {
-    display: inline-block;
-    padding: 10px 24px;
-    border: 1.5px solid var(--text-primary);
-    background: transparent;
-    color: var(--text-primary);
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: 500;
-    font-size: 0.95rem;
-    transition: all 0.2s ease;
-    cursor: pointer;
-}
-
-.gallery-cta .cta-button:hover {
-    background: var(--text-primary);
-    color: var(--bg-primary);
-}
-
-.gallery-cta .cta-button.minimal {
-    border-color: var(--text-primary);
-    color: var(--text-primary);
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .gallery-preview-container {
-        gap: 20px;
-        padding: 15px;
-        min-height: 340px;
-    }
-
-    .photo-stack {
-        width: 140px;
-        height: 140px;
-    }
-
-    .photo-tile {
-        width: 100px;
-        height: 100px;
-    }
-
-    .photo-stack .photo-tile:nth-child(2) {
-        transform: translateY(12px) translateX(8px) rotate(4deg);
-    }
-
-    .gallery-cta .cta-button {
-        padding: 9px 20px;
-        font-size: 0.9rem;
+@media (max-width: 960px) {
+    .gallery-preview-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
-@media (max-width: 480px) {
-    #gallery-preview {
-        padding: 40px 15px;
-    }
-
-    .gallery-preview-container {
-        min-height: 300px; /* Allow height to adjust */
-        border-radius: 8px;
-    }
-
-    .photo-stack .photo-tile:nth-child(2) {
-        transform: translateY(10px) translateX(6px) rotate(4deg);
-    }
-
-    .gallery-cta {
-        margin-top: 20px;
-    }
-
-    .gallery-cta .cta-button {
-        padding: 8px 18px;
-        font-size: 0.85rem;
-        border-width: 1px;
+@media (max-width: 720px) {
+    .gallery-preview-grid {
+        grid-template-columns: 1fr;
     }
 }

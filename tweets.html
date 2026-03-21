@@ -5,47 +5,61 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Tweet Highlights - Saurav Sharma</title>
         <meta name="description" content="Curated highlights of my important tweets about Django, Python, and web development.">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet"
+              href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap">
         <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
         <link rel="manifest" href="./site.webmanifest">
         <link rel="stylesheet" href="./assets/css/style.css">
-        <script src="https://unpkg.com/@phosphor-icons/web"></script>
+        <script defer src="https://unpkg.com/@phosphor-icons/web"></script>
     </head>
     <body>
-        <!-- Progress Bar -->
         <div class="progress-container">
             <div class="progress-bar"></div>
         </div>
-        
-        <!-- Navigation -->
+
         <nav class="navbar">
             <div class="nav-content">
+                <a href="/" class="site-brand" aria-label="sorv.dev home">
+                    <span class="brand-mark">sorv.dev</span>
+                    <span class="brand-separator">/</span>
+                    <span class="brand-name">Saurav Sharma</span>
+                </a>
                 <div class="nav-links">
-                    <a href="/#projects" title="Some of my Projects">
-                        <i class="ph ph-compass-tool"></i>Projects</a>
-                    <a href="/#blog" title="My Django Blog">
-                        <i class="ph ph-notebook"></i>Blog</a>
-                    <a href="/#hire-me" title="Let's work together on a Django Project">
-                        <i class="ph ph-handshake"></i>Hire Me</a>
+                    <a href="/#projects" title="Selected projects">Work</a>
+                    <a href="/#blog" title="Writing and case studies">Writing</a>
+                    <a href="./gallery.html" title="Photo gallery">Gallery</a>
+                    <a href="./tweets.html" title="Tweet highlights">Tweets</a>
+                    <a href="/#hire-me" title="Work with me">Hire</a>
                 </div>
-                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
-                    <i id="theme-icon" class="ph ph-moon"></i>
-                </button>
+                <a class="nav-cta" href="mailto:selftaughtdev@proton.me">Email</a>
             </div>
         </nav>
 
-        <!-- Header -->
-        <header class="tweets-header">
-            <h1>
-                <i class="ph ph-twitter-logo"></i>
-                Tweet Highlights
-            </h1>
-            <p>Curated collection of my important tweets about Django, Python, and building SaaS products</p>
-        </header>
-        
-        <!-- Tweet Cards Container -->
-        <div class="tweet-container">
+        <main class="page-shell">
+            <section class="page-header">
+                <div class="section-layout">
+                    <div class="section-label">[tweet highlights]</div>
+                    <div class="page-intro">
+                        <div class="page-title">
+                            <h1>Tweet Highlights</h1>
+                            <p>Curated notes, threads, and snapshots from my work around Django, Python, and SaaS.</p>
+                        </div>
+                        <a href="https://twitter.com/saurav__codes"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="button">
+                            Follow on X
+                            <i class="ph ph-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <div class="tweet-container">
             
             <!-- Tweet 1 -->
             <article class="tweet-card">
@@ -582,32 +596,21 @@
                     </a>
                 </div>
             </article>
+            </div>
+        </main>
 
-        </div>
-        
-        <!-- Footer -->
         <footer class="footer">
             <div class="footer-content">
+                <p class="footer-note">sorv.dev / tweet archive</p>
                 <div class="footer-links">
-                    <a href="./index.html">
-                        <i class="ph ph-house"></i>
-                        Home
-                    </a>
-                    <a href="./tweets.html">
-                        <i class="ph ph-twitter-logo"></i>
-                        Tweet Highlights ✨
-                    </a>
-                    <a href="./gallery.html">
-                        <i class="ph ph-camera"></i>
-                        Photo Gallery 📸
-                    </a>
-                    <div id="wcb" class="carbonbadge"></div>
+                    <a href="/">Home</a>
+                    <a href="./tweets.html">Tweet Highlights</a>
+                    <a href="./gallery.html">Photo Gallery</a>
+                    <a href="mailto:selftaughtdev@proton.me">Email</a>
                 </div>
             </div>
         </footer>
-        
-        <!-- Scripts -->
-        <script src="./assets/js/components/theme.js"></script>
+
         <script src="./assets/js/components/navigation.js"></script>
         <script src="./assets/js/scroll.js"></script>
         <script src="https://beamanalytics.b-cdn.net/beam.min.js" data-token="4d8d10b5-436d-4483-b61d-392ee0f77a3d" async></script>
@@ -618,6 +621,5 @@
                 person_profiles: 'always',
             })
         </script>
-        <script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
     </body>
 </html>

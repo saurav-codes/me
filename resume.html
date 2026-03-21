@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Saurav Sharma Resume</title>
+        <style>
+            @page {
+                size: A4;
+                margin: 0.5in;
+            }
+
+            :root {
+                color-scheme: light;
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                max-width: 8.27in;
+                margin: 0 auto;
+                padding: 0.5in;
+                color: #111111;
+                background: #ffffff;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 11px;
+                line-height: 1.35;
+            }
+
+            h1,
+            h2,
+            h3,
+            p,
+            ul {
+                margin: 0;
+            }
+
+            .resume {
+                display: block;
+            }
+
+            .name {
+                font-size: 24px;
+                font-weight: 700;
+                letter-spacing: 0.01em;
+            }
+
+            .role {
+                margin-top: 4px;
+                font-size: 13px;
+                font-weight: 700;
+            }
+
+            .contact,
+            .summary,
+            .skills,
+            .entry-meta,
+            .education,
+            .languages {
+                margin-top: 8px;
+            }
+
+            .contact p,
+            .summary p,
+            .skills p,
+            .education p,
+            .languages p {
+                margin-top: 2px;
+            }
+
+            .section {
+                margin-top: 16px;
+            }
+
+            .section-title {
+                margin-bottom: 6px;
+                padding-bottom: 3px;
+                border-bottom: 1px solid #111111;
+                font-size: 11px;
+                font-weight: 700;
+                letter-spacing: 0.08em;
+            }
+
+            .entry {
+                margin-top: 10px;
+                break-inside: avoid;
+            }
+
+            .entry:first-of-type {
+                margin-top: 0;
+            }
+
+            .entry-title {
+                font-size: 11px;
+                font-weight: 700;
+            }
+
+            .entry-meta {
+                font-size: 11px;
+            }
+
+            ul {
+                margin-top: 6px;
+                padding-left: 18px;
+            }
+
+            li {
+                margin-top: 3px;
+            }
+
+            a {
+                color: inherit;
+                text-decoration: none;
+            }
+
+            @media screen {
+                body {
+                    padding: 32px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main class="resume">
+            <header>
+                <h1 class="name">Saurav Sharma</h1>
+                <p class="role">Django Developer</p>
+
+                <div class="contact">
+                    <p>India</p>
+                    <p>Email: <a href="mailto:selftaughtdev@proton.me">selftaughtdev@proton.me</a></p>
+                    <p>Portfolio: <a href="https://sorv.dev">https://sorv.dev</a></p>
+                    <p>GitHub: <a href="https://github.com/saurav-codes">https://github.com/saurav-codes</a></p>
+                    <p>Blog: <a href="https://blog.sorv.dev">https://blog.sorv.dev</a></p>
+                </div>
+
+                <div class="summary">
+                    <p>Django developer with 4+ years of experience building SaaS products, APIs, internal tools, and real-time features.</p>
+                    <p>Main stack: Python, Django, PostgreSQL, Redis, HTMX, and Vue.js.</p>
+                </div>
+            </header>
+
+            <section class="section">
+                <h2 class="section-title">SKILLS</h2>
+                <div class="skills">
+                    <p>Python, Django, Django REST Framework, Django Channels, FastAPI, Vue.js, HTMX, JavaScript</p>
+                    <p>PostgreSQL, MySQL, SQLite, Redis</p>
+                    <p>Celery, Docker, Git, Linux, pytest, REST APIs, WebSockets, OpenAI API</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">EXPERIENCE</h2>
+
+                <article class="entry">
+                    <h3 class="entry-title">Generative Studio, Software Developer</h3>
+                    <p class="entry-meta">Jul 2025 - Present | Remote</p>
+                    <ul>
+                        <li>Build Python backend services for real-time voice workflows</li>
+                        <li>Work on low-latency processing, orchestration, and third-party integrations</li>
+                        <li>Ship backend features with a small remote product team</li>
+                    </ul>
+                </article>
+
+                <article class="entry">
+                    <h3 class="entry-title">Fillyouin, Django Developer</h3>
+                    <p class="entry-meta">Oct 2024 - Nov 2024 | Remote</p>
+                    <ul>
+                        <li>Built candidate-matching features with Django and the OpenAI API</li>
+                        <li>Added CKEditor-based email template editing for internal users</li>
+                        <li>Integrated Google Calendar and Jitsi meetings into the product</li>
+                    </ul>
+                </article>
+
+                <article class="entry">
+                    <h3 class="entry-title">The Payroll App, Django Developer</h3>
+                    <p class="entry-meta">May 2023 - Sep 2024 | Remote</p>
+                    <ul>
+                        <li>Built and maintained features for a payroll SaaS covering payroll, tax reporting, and employee benefits</li>
+                        <li>Refactored backend code to improve maintainability and test coverage with pytest</li>
+                        <li>Owned backend work for new features from implementation through deployment</li>
+                    </ul>
+                </article>
+
+                <article class="entry">
+                    <h3 class="entry-title">Valar Digital, Python Django Developer</h3>
+                    <p class="entry-meta">Sep 2021 - Apr 2023 | Remote</p>
+                    <ul>
+                        <li>Built SaaS products including LeadPlane, GoodMeeting, and EmailVerifier using Django and PostgreSQL</li>
+                        <li>Developed image-processing tools for Random Tools with NumPy and OpenCV</li>
+                        <li>Added background jobs with Celery and Redis and search features with Elasticsearch and Haystack</li>
+                        <li>Worked on backend refactors and product features for Clasiq Cars</li>
+                    </ul>
+                </article>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">PROJECT</h2>
+
+                <article class="entry">
+                    <h3 class="entry-title">Tymr Online</h3>
+                    <p class="entry-meta"><a href="https://github.com/saurav-codes/focus-timer-v">https://github.com/saurav-codes/focus-timer-v</a></p>
+                    <ul>
+                        <li>Built a real-time focus timer with synchronized sessions and live updates</li>
+                        <li>Handled concurrent updates with Redis-backed coordination and server-side state management</li>
+                        <li>Stack: Django, HTMX, Redis, Django Channels, SQLite</li>
+                    </ul>
+                </article>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">EARLY EXPERIENCE</h2>
+                <ul>
+                    <li>Django programming content creator at StudyGyaan</li>
+                    <li>Customer care executive at Karvy Digikonnect</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">EDUCATION</h2>
+                <div class="education">
+                    <p>Self-directed study in computer science and web development through project work, documentation, and online courses</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">LANGUAGES</h2>
+                <div class="languages">
+                    <p>Hindi, English</p>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>

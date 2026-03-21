@@ -1,12 +1,16 @@
 // Handle navigation scroll effect
 const nav = document.querySelector('nav');
 window.addEventListener('scroll', () => {
+    if (!nav) {
+        return;
+    }
+
     if (window.scrollY > 50) {
         nav.classList.add('scrolled');
     } else {
         nav.classList.remove('scrolled');
     }
-});
+}, { passive: true });
 
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -28,5 +32,5 @@ if (progressBar) {
         const windowHeight = document.documentElement.scrollHeight - window.innerHeight;
         const scrolled = (window.scrollY / windowHeight) * 100;
         progressBar.style.width = `${scrolled}%`;
-    });
+    }, { passive: true });
 }

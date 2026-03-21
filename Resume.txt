@@ -1,61 +1,67 @@
-﻿Saurav Sharma
-Full-Stack Django Developer
-📍 India | 📧 selftaughtdev@proton.me | 🔗 LinkedIn | 📝 Blog | 🐦 @saurav__codes
-Professional Summary
-Self-taught backend developer with 4 years of experience, specializing in building and scaling SAAS products. Expert in Django stack with a passion for clean, efficient code and continuous learning.
-Core Skills
-* Python, Django, Django REST framework
-* PostgreSQL, MySQL, MongoDB
-* Celery, Redis, Memcache
-* ElasticSearch + Haystack
-* Docker (learning)
-* Git, Linux (Debian & Arch)
-* Basic React & React Native
-Professional Experience
-Django Developer | Fillyouin
-Oct 2024 - Nov 2024 | Netherlands (Remote)
-* Used openAI API to make a system which detects the best candidate match for a particular vacancy.
-* Built a functionality which allows users to edit their email templates in CKEditor.
-* Google Calendar & Jitsi video meetings integration.
-* Bug Fixes on existing code.
-Django Developer | The Payroll App
-May 2023 - Sept 2024 | Harbour Island, The Bahamas (Remote)
-* Develop and maintain features for a SAAS payroll management system
-* Refactor legacy code to improve performance and maintainability
-* Implement comprehensive testing using pytest
-* Manage entire features lifecycle from ideation to deployment
-Python Django Developer | Valar Digital
-September 2021 - April 2023 | Pune, India (Remote)
-* Built 3 SAAS products from design to deployment: goodmeeting.today, leadplane.io & emailverifier.co
-* Developed image processing tools using NumPy & OpenCV for randomtools.io
-* Designed efficient database schemas and implemented robust backend logic
-* Optimized application performance through distributed tasks (Celery) and caching (Redis & Memcache)
-* Integrated ElasticSearch for high-speed search functionality
-* A bit of refactoring & features development for clasiq cars
-Key Project: Tymr Online (https://tymr.online)
-A cloud-based timer for multi-user focus sessions
-Technical Highlights:
-* Real-time synchronization using Django Channels and Redis
-* Race condition handling with Redis ZSets and database locks
-* Client-side reliability using Web Workers
-* Scalable architecture with Django, PostgreSQL, and Redis
-* HTMX for efficient partial page updates
-* Comprehensive dashboard for productivity tracking
-Key Features:
-* Multiple focus techniques (Pomodoro, 52/17, custom patterns)
-* Cloud sync for shared focus sessions
-* Adaptive timer management for device sleep and network issues
-Additional Experience
-* Django Programming Content Creator at StudyGyaan.com (3 months)
-* Customer Care Executive at Karvy Digikonnect (4 months)
-Continuous Learning
-* Currently exploring advanced Django concepts, Docker, and system design
-* Regular author of Python & Django tutorials on personal blog
-Languages
-* Hindi (Native)
-* English (Professional Working Proficiency)
-Education
-Self-taught in Computer Science through online resources including freeCodeCamp, Google, YouTube, and StackOverflow
-Certifications
-* Time Management: Working from Home
-* MongoDB Basic Course Completion Certificate
+Saurav Sharma
+Django Developer
+India
+Email: selftaughtdev@proton.me
+Portfolio: https://sorv.dev
+GitHub: https://github.com/saurav-codes
+Blog: https://blog.sorv.dev
+
+SUMMARY
+Django developer with 4+ years of experience building SaaS products, APIs, internal tools, and real-time features.
+Main stack: Python, Django, PostgreSQL, Redis, HTMX, and Vue.js.
+
+SKILLS
+Python, Django, Django REST Framework, Django Channels, FastAPI, Vue.js, HTMX, JavaScript
+PostgreSQL, MySQL, SQLite, Redis
+Celery, Docker, Git, Linux, pytest, REST APIs, WebSockets, OpenAI API
+
+EXPERIENCE
+Generative Studio
+Software Developer
+Jul 2025 - Present
+Remote
+- Build Python backend services for real-time voice workflows
+- Work on low-latency processing, orchestration, and third-party integrations
+- Ship backend features with a small remote product team
+
+Fillyouin
+Django Developer
+Oct 2024 - Nov 2024
+Remote
+- Built candidate-matching features with Django and the OpenAI API
+- Added CKEditor-based email template editing for internal users
+- Integrated Google Calendar and Jitsi meetings into the product
+
+The Payroll App
+Django Developer
+May 2023 - Sep 2024
+Remote
+- Built and maintained features for a payroll SaaS covering payroll, tax reporting, and employee benefits
+- Refactored backend code to improve maintainability and test coverage with pytest
+- Owned backend work for new features from implementation through deployment
+
+Valar Digital
+Python Django Developer
+Sep 2021 - Apr 2023
+Remote
+- Built SaaS products including LeadPlane, GoodMeeting, and EmailVerifier using Django and PostgreSQL
+- Developed image-processing tools for Random Tools with NumPy and OpenCV
+- Added background jobs with Celery and Redis and search features with Elasticsearch and Haystack
+- Worked on backend refactors and product features for Clasiq Cars
+
+PROJECT
+Tymr Online
+https://github.com/saurav-codes/focus-timer-v
+- Built a real-time focus timer with synchronized sessions and live updates
+- Handled concurrent updates with Redis-backed coordination and server-side state management
+- Stack: Django, HTMX, Redis, Django Channels, SQLite
+
+EARLY EXPERIENCE
+- Django programming content creator at StudyGyaan
+- Customer care executive at Karvy Digikonnect
+
+EDUCATION
+Self-directed study in computer science and web development through project work, documentation, and online courses
+
+LANGUAGES
+Hindi, English

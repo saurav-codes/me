@@ -1,27 +1,37 @@
 :root {
-    --bg-color: #ffffff;
-    --text-color: #2d3748;
-    --text-muted: #4a5568;
-    --border-color: #e2e8f0;
-    --hover-bg: #f7fafc;
-    --card-bg: #ffffff;
-    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    --nav-bg: #ffffff;
-    --heading-color: #1a202c;
-    --link-hover: #2d3748;
-    --card-hover-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    --font-mono: "IBM Plex Mono", "SFMono-Regular", ui-monospace, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --bg-color: #f7f5ee;
+    --surface-color: #fffdf7;
+    --surface-alt: #f0ece1;
+    --card-bg: rgba(255, 253, 247, 0.92);
+    --nav-bg: rgba(247, 245, 238, 0.92);
+    --text-color: #171613;
+    --heading-color: #11100d;
+    --text-muted: #6f6a5f;
+    --border-color: #ddd7ca;
+    --border-strong: #b9b09d;
+    --link-hover: #11100d;
+    --card-shadow: 0 20px 40px rgba(17, 16, 13, 0.06);
+    --card-hover-shadow: 0 26px 48px rgba(17, 16, 13, 0.08);
+    --page-width: 1160px;
+    --radius-lg: 24px;
+    --radius-md: 18px;
+    --radius-sm: 999px;
+    --transition-fast: 160ms ease;
 }
 
 [data-theme="dark"] {
-    --bg-color: #0f172a;
-    --text-color: #f8fafc;
-    --text-muted: #cbd5e1;
-    --border-color: #334155;
-    --hover-bg: #1e293b;
-    --card-bg: #1e293b;
-    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    --nav-bg: #0f172a;
-    --heading-color: #f1f5f9;
-    --link-hover: #f8fafc;
-    --card-hover-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    --bg-color: #f7f5ee;
+    --surface-color: #fffdf7;
+    --surface-alt: #f0ece1;
+    --card-bg: rgba(255, 253, 247, 0.92);
+    --nav-bg: rgba(247, 245, 238, 0.92);
+    --text-color: #171613;
+    --heading-color: #11100d;
+    --text-muted: #6f6a5f;
+    --border-color: #ddd7ca;
+    --border-strong: #b9b09d;
+    --link-hover: #11100d;
+    --card-shadow: 0 20px 40px rgba(17, 16, 13, 0.06);
+    --card-hover-shadow: 0 26px 48px rgba(17, 16, 13, 0.08);
 }

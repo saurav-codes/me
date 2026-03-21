@@ -1,128 +1,148 @@
-.profile {
+.hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.85fr);
+    gap: 24px;
+}
+
+.hero-copy {
+    display: grid;
+    gap: 24px;
+}
+
+.hero-copy h1 {
+    font-size: clamp(2.9rem, 7vw, 5.3rem);
+    line-height: 1.02;
+    max-width: 12ch;
+}
+
+.hero-lead {
+    font-size: 1rem;
+}
+
+.hero-actions {
     display: flex;
-    align-items: center;
-    gap: 2rem;
-    margin: 2rem 0 4rem 0;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.hero-highlights {
+    list-style: none;
+    padding-left: 0;
+    display: grid;
+    gap: 10px;
+}
+
+.hero-highlights li {
+    position: relative;
+    padding-left: 44px;
+    color: var(--text-muted);
+}
+
+.hero-highlights li::before {
+    content: "[*]";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--text-color);
+}
+
+.hero-aside {
+    align-content: start;
 }
 
 .profile-image {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
+    width: 100%;
+    max-width: 280px;
+    aspect-ratio: 1 / 1;
     object-fit: cover;
-    border: 3px solid #fff;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-color);
+    background: var(--surface-alt);
 }
 
-.profile-content {
-    flex: 1;
+.profile-copy {
+    display: grid;
+    gap: 4px;
 }
 
-.profile-content h1 {
+.profile-name {
     color: var(--heading-color);
-    margin-bottom: 0.5rem;
+    font-weight: 600;
 }
 
-.profile-content p {
+.profile-role {
+    font-size: 0.92rem;
     color: var(--text-muted);
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
+}
+
+.meta-list {
+    display: grid;
+    gap: 12px;
+}
+
+.meta-list div {
+    display: grid;
+    gap: 6px;
+    padding-top: 12px;
+    border-top: 1px dashed var(--border-color);
+}
+
+.meta-list dt {
+    color: var(--text-muted);
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.meta-list dd {
+    margin: 0;
+    color: var(--text-color);
 }
 
 .social-links {
     display: flex;
-    gap: 1rem;
-    margin-top: 1rem;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .social-links a {
-    color: var(--text-muted);
-    font-size: 1.25rem;
-    border: none;
-    transition: color 0.2s ease;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: var(--hover-bg);
+    padding: 0.6rem 0.85rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    color: var(--text-muted);
+    transition: border-color var(--transition-fast), background-color var(--transition-fast), color var(--transition-fast), transform var(--transition-fast);
 }
 
 .social-links a:hover {
     color: var(--text-color);
-    background-color: var(--border-color);
+    border-color: var(--border-strong);
+    background: rgba(255, 255, 255, 0.68);
+    transform: translateY(-1px);
 }
 
-@media (max-width: 768px) {
-    .profile {
-        gap: 1.5rem;
-        margin: 1.5rem 0 3rem 0;
+@media (max-width: 960px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
     }
 
-    .profile-content p {
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 600px) {
-    .profile {
-        flex-direction: column;
-        text-align: center;
-        gap: 1rem;
-        margin: 1.5rem 0 2rem 0;
+    .hero-copy h1 {
+        max-width: none;
     }
 
     .profile-image {
-        width: 110px;
-        height: 110px;
-    }
-
-    .profile-content h1 {
-        font-size: 1.5rem;
-        line-height: 1.3;
-    }
-
-    .profile-content p {
-        font-size: 0.9rem;
-        line-height: 1.5;
-    }
-
-    .social-links {
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 0.75rem;
-    }
-
-    .social-links a {
-        width: 38px;
-        height: 38px;
-        font-size: 1.1rem;
+        max-width: 220px;
     }
 }
 
-@media (max-width: 480px) {
-    .profile {
-        margin: 1rem 0 1.5rem 0;
+@media (max-width: 720px) {
+    .hero-copy h1 {
+        font-size: clamp(2.35rem, 13vw, 3.6rem);
     }
 
-    .profile-image {
-        width: 100px;
-        height: 100px;
-    }
-
-    .profile-content h1 {
-        font-size: 1.35rem;
-    }
-
-    .profile-content p {
-        font-size: 0.85rem;
-        line-height: 1.5;
-    }
-
-    .social-links a {
-        width: 36px;
-        height: 36px;
-        font-size: 1rem;
+    .hero-highlights li {
+        padding-left: 36px;
     }
 }
