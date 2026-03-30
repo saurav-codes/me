@@ -319,23 +319,8 @@ html[data-theme="light"] .home-page .button-secondary:visited {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 72px 56px;
+    /* padding: 72px 56px; */
     border-left: 1px solid var(--border);
-}
-
-.portrait-frame {
-    position: relative;
-    width: min(100%, 270px);
-    aspect-ratio: 1;
-    padding: 12px;
-    border: 1px solid var(--border);
-}
-
-.portrait-frame::after {
-    content: "";
-    position: absolute;
-    inset: 12px;
-    border: 1px solid var(--border);
 }
 
 .portrait-placeholder {
