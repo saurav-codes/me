@@ -1141,6 +1141,7 @@ html[data-theme="light"] .home-page .button-secondary:visited {
 
 .contact-submit {
     justify-self: flex-end;
+    cursor: pointer;
 }
 
 .site-footer {
