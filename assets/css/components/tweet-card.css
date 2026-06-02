@@ -102,7 +102,20 @@
 }
 
 .tweet-footer time {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
     color: var(--text-muted);
+}
+
+.tweet-footer time::before {
+    content: "";
+    width: 13px;
+    height: 13px;
+    flex: 0 0 auto;
+    background: currentColor;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Cpath d='M208 32h-24V24a8 8 0 0 0-16 0v8H88V24a8 8 0 0 0-16 0v8H48a16 16 0 0 0-16 16v160a16 16 0 0 0 16 16h160a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16ZM48 80h160v128H48Z'/%3E%3C/svg%3E") center / contain no-repeat;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Cpath d='M208 32h-24V24a8 8 0 0 0-16 0v8H88V24a8 8 0 0 0-16 0v8H48a16 16 0 0 0-16 16v160a16 16 0 0 0 16 16h160a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16ZM48 80h160v128H48Z'/%3E%3C/svg%3E") center / contain no-repeat;
 }
 
 .tweet-link {

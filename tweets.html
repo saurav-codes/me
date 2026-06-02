@@ -9,12 +9,12 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet"
               href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap">
+        <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
         <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
         <link rel="manifest" href="./site.webmanifest">
         <link rel="stylesheet" href="./assets/css/style.css">
-        <script defer src="https://unpkg.com/@phosphor-icons/web"></script>
     </head>
     <body>
         <div class="progress-container">
@@ -24,34 +24,36 @@
         <nav class="navbar">
             <div class="nav-content">
                 <a href="/" class="site-brand" aria-label="sorv.dev home">
+                    <i class="ph ph-terminal-window" aria-hidden="true"></i>
                     <span class="brand-mark">sorv.dev</span>
                     <span class="brand-separator">/</span>
                     <span class="brand-name">Saurav Sharma</span>
                 </a>
                 <div class="nav-links">
-                    <a href="/#projects" title="Selected projects">Work</a>
-                    <a href="/#blog" title="Writing and case studies">Writing</a>
-                    <a href="./gallery.html" title="Photo gallery">Gallery</a>
-                    <a href="./tweets.html" title="Tweet highlights">Tweets</a>
-                    <a href="/#hire-me" title="Work with me">Hire</a>
+                    <a href="/#projects" title="Selected projects"><i class="ph ph-briefcase" aria-hidden="true"></i>Work</a>
+                    <a href="/#blog" title="Writing and case studies"><i class="ph ph-notebook" aria-hidden="true"></i>Writing</a>
+                    <a href="./gallery.html" title="Photo gallery"><i class="ph ph-images" aria-hidden="true"></i>Gallery</a>
+                    <a href="./tweets.html" title="Tweet highlights"><i class="ph ph-chat-circle-text" aria-hidden="true"></i>Tweets</a>
+                    <a href="/#hire-me" title="Work with me"><i class="ph ph-paper-plane-tilt" aria-hidden="true"></i>Hire</a>
                 </div>
-                <a class="nav-cta" href="mailto:selftaughtdev@proton.me">Email</a>
+                <a class="nav-cta" href="mailto:selftaughtdev@proton.me"><i class="ph ph-envelope-simple" aria-hidden="true"></i>Email</a>
             </div>
         </nav>
 
         <main class="page-shell">
             <section class="page-header">
                 <div class="section-layout">
-                    <div class="section-label">[tweet highlights]</div>
+                    <div class="section-label"><i class="ph ph-chat-circle-text" aria-hidden="true"></i>[tweet highlights]</div>
                     <div class="page-intro">
                         <div class="page-title">
-                            <h1>Tweet Highlights</h1>
+                            <h1><i class="ph ph-chat-circle-text" aria-hidden="true"></i>Tweet Highlights</h1>
                             <p>Curated notes, threads, and snapshots from my work around Django, Python, and SaaS.</p>
                         </div>
                         <a href="https://twitter.com/saurav__codes"
                            target="_blank"
-                           rel="noopener noreferrer"
+                            rel="noopener noreferrer"
                            class="button">
+                            <i class="ph ph-twitter-logo" aria-hidden="true"></i>
                             Follow on X
                             <i class="ph ph-arrow-up-right"></i>
                         </a>
@@ -601,12 +603,16 @@
 
         <footer class="footer">
             <div class="footer-content">
-                <p class="footer-note">sorv.dev / tweet archive</p>
+                <p class="footer-note"><i class="ph ph-chat-circle-text" aria-hidden="true"></i>sorv.dev / tweet archive</p>
                 <div class="footer-links">
-                    <a href="/">Home</a>
-                    <a href="./tweets.html">Tweet Highlights</a>
-                    <a href="./gallery.html">Photo Gallery</a>
-                    <a href="mailto:selftaughtdev@proton.me">Email</a>
+                    <a href="/"><i class="ph ph-house" aria-hidden="true"></i>Home</a>
+                    <a href="./tweets.html"><i class="ph ph-chat-circle-text" aria-hidden="true"></i>Tweet Highlights</a>
+                    <a href="./gallery.html"><i class="ph ph-images" aria-hidden="true"></i>Photo Gallery</a>
+                    <a href="mailto:selftaughtdev@proton.me"><i class="ph ph-envelope-simple" aria-hidden="true"></i>Email</a>
+                    <a href="https://x.com/saurav__codes" target="_blank" rel="noopener noreferrer"><i class="ph ph-twitter-logo" aria-hidden="true"></i>Twitter</a>
+                    <a href="https://www.linkedin.com/in/saurav-sharma-23b162315" target="_blank" rel="noopener noreferrer"><i class="ph ph-linkedin-logo" aria-hidden="true"></i>LinkedIn</a>
+                    <a href="https://github.com/saurav-codes/" target="_blank" rel="noopener noreferrer"><i class="ph ph-github-logo" aria-hidden="true"></i>GitHub</a>
+                    <a href="https://blog.sorv.dev/" target="_blank" rel="noopener noreferrer"><i class="ph ph-notebook" aria-hidden="true"></i>Blog</a>
                 </div>
             </div>
         </footer>

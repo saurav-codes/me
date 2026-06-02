@@ -2,7 +2,7 @@
     --bg: #1f1e1e;
     --surface: #1f1e1e;
     --surface-soft: rgba(255, 255, 255, 0.02);
-    --text: #9f9d9d;
+    --text: #bbb6b6;
     --strong: #f5f2f2;
     --border: #3a3838;
     --border-strong: #4a4747;
@@ -28,7 +28,7 @@ html[data-theme="light"] .home-page {
     --bg: #fefefe;
     --surface: #fefefe;
     --surface-soft: rgba(31, 30, 30, 0.02);
-    --text: #646262;
+    --text: #4f4d4d;
     --strong: #1f1e1e;
     --border: #cfcdcb;
     --border-strong: #9f9a98;
@@ -124,6 +124,7 @@ html[data-theme="light"] .home-page {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    gap: 10px;
     min-height: 76px;
     padding: 0 32px;
     font-size: 1rem;
@@ -136,6 +137,12 @@ html[data-theme="light"] .home-page {
     color: var(--strong);
     font-size: 1rem;
     letter-spacing: 0.01em;
+    gap: 10px;
+}
+
+.brand-link i {
+    color: var(--accent);
+    font-size: 1.2rem;
 }
 
 .site-nav {
@@ -171,9 +178,9 @@ html[data-theme="light"] .home-page {
 
 .hero-section {
     display: grid;
-    grid-template-columns: minmax(0, 1.55fr) minmax(320px, 0.8fr);
+    grid-template-columns: minmax(0, 1.6fr) minmax(300px, 0.64fr);
     min-width: 0;
-    min-height: 780px;
+    min-height: 640px;
     border-bottom: 1px solid var(--border);
 }
 
@@ -182,10 +189,13 @@ html[data-theme="light"] .home-page {
     min-width: 0;
     flex-direction: column;
     justify-content: center;
-    padding: 88px 72px 96px;
+    padding: 72px 72px 80px;
 }
 
 .hero-greeting {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
     margin: 0 0 18px;
     color: var(--strong);
     font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
@@ -193,6 +203,11 @@ html[data-theme="light"] .home-page {
     font-weight: 500;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+}
+
+.hero-greeting i {
+    color: var(--accent);
+    font-size: 1.1rem;
 }
 
 .hero-title {
@@ -213,17 +228,26 @@ html[data-theme="light"] .home-page {
 }
 
 .hero-description {
-    max-width: 70ch;
-    margin: 34px 0 0;
+    max-width: 58ch;
+    margin: 22px 0 0;
     font-size: 1.08rem;
     color: var(--strong);
     line-height: 1.65;
     overflow-wrap: break-word;
 }
 
+.hero-qualifier {
+    max-width: 58ch;
+    margin: 24px 0 0;
+    color: var(--strong);
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.55;
+}
+
 .hero-note {
     max-width: 56ch;
-    margin: 18px 0 0;
+    margin: 14px 0 0;
     color: var(--strong);
     font-size: 1rem;
     font-weight: 600;
@@ -231,16 +255,18 @@ html[data-theme="light"] .home-page {
 
 .hero-reassurance {
     max-width: 62ch;
-    margin: 18px 0 0;
+    margin: 16px 0 0;
     color: var(--text);
-    font-size: 0.96rem;
+    font-size: 1rem;
+    font-weight: 600;
 }
 
 .hero-actions {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     gap: 16px;
-    margin-top: 46px;
+    margin-top: 42px;
 }
 
 .button-primary,
@@ -299,6 +325,27 @@ html[data-theme="light"] .home-page .button-primary:visited {
     border-color: var(--border-strong);
 }
 
+.hero-work-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 44px;
+    color: var(--strong);
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: gap 160ms ease, color 160ms ease;
+}
+
+.hero-work-link:hover {
+    gap: 14px;
+    color: var(--link-hover);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.24em;
+}
+
 html[data-theme="dark"] .home-page .button-secondary,
 html[data-theme="dark"] .home-page .button-secondary:visited {
     color: #f5f2f2;
@@ -346,7 +393,7 @@ html[data-theme="light"] .home-page .button-secondary:visited {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* padding: 72px 56px; */
+    padding: 56px 48px;
     border-left: 1px solid var(--border);
 }
 
@@ -355,8 +402,9 @@ html[data-theme="light"] .home-page .button-secondary:visited {
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 100%;
+    height: min(100%, 540px);
     overflow: hidden;
+    border: 1px solid var(--border);
     background: rgba(255, 255, 255, 0.02);
     color: var(--text);
 }
@@ -370,29 +418,34 @@ html[data-theme="light"] .home-page .button-secondary:visited {
 }
 
 .tech-marquee {
-    overflow: hidden;
+    overflow: visible;
     display: flex;
     align-items: center;
     border-bottom: 1px solid var(--border);
-    white-space: nowrap;
 }
 
 .tech-marquee-track {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    gap: 26px;
-    min-width: max-content;
-    padding: 18px 0;
-    animation: home-scroll 30s linear infinite;
+    gap: 12px;
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+    padding: 18px 72px;
+    list-style: none;
 }
 
 .tech-item {
     display: inline-flex;
     align-items: center;
     gap: 12px;
+    min-height: 42px;
+    padding: 0 14px;
+    border: 1px solid var(--border);
     color: var(--strong);
     font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-    font-size: 1rem;
+    font-size: 0.875rem;
     font-weight: 600;
     letter-spacing: 0.06em;
     text-transform: uppercase;
@@ -411,6 +464,40 @@ html[data-theme="light"] .home-page .button-secondary:visited {
     object-fit: contain;
 }
 
+.tech-brand-pair {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.tech-brand-icon {
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    padding: 3px;
+    border-radius: 4px;
+    background: #f5f2f2;
+}
+
+.tech-brand-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: none;
+}
+
+.tech-brand-livekit {
+    background: #101010;
+}
+
+.tech-brand-telnyx {
+    width: 38px;
+    background: #00e3aa;
+}
+
 .tech-glyph,
 .skill-glyph {
     display: inline-flex;
@@ -425,8 +512,6 @@ html[data-theme="light"] .home-page .button-secondary:visited {
 .content-section {
     padding: 88px 72px;
     border-bottom: 1px solid var(--border);
-    content-visibility: auto;
-    contain-intrinsic-size: 1px 960px;
 }
 
 .content-section.soft {
@@ -443,6 +528,9 @@ html[data-theme="light"] .home-page .button-secondary:visited {
 }
 
 .proof-strip p {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
     margin: 0;
     color: var(--strong);
     font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
@@ -450,6 +538,13 @@ html[data-theme="light"] .home-page .button-secondary:visited {
     font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
+}
+
+.proof-strip p i,
+.logo-strip p i,
+.nav-link i {
+    color: var(--accent);
+    font-size: 1rem;
 }
 
 .proof-strip ul {
@@ -463,7 +558,7 @@ html[data-theme="light"] .home-page .button-secondary:visited {
 
 .proof-strip li {
     position: relative;
-    padding-left: 18px;
+    padding-left: 26px;
     color: var(--strong);
     font-size: 1rem;
     line-height: 1.65;
@@ -479,6 +574,9 @@ html[data-theme="light"] .home-page .button-secondary:visited {
 }
 
 .logo-strip p {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
     margin: 0;
     color: var(--strong);
     font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
@@ -521,6 +619,28 @@ html[data-theme="light"] .home-page .button-secondary:visited {
     border-color: #3f3d3d;
 }
 
+.logo-mark-brand {
+    min-width: 58px;
+}
+
+.logo-mark-telnyx {
+    min-width: 136px;
+    background: #00e3aa;
+}
+
+.logo-mark-livekit {
+    background: #101010;
+}
+
+.logo-mark-livekit,
+.logo-mark-celery,
+.logo-mark-openai {
+    width: 58px;
+    min-width: 58px;
+    padding: 11px;
+    border-radius: 50%;
+}
+
 .logo-strip-list img {
     width: auto;
     max-width: 150px;
@@ -530,17 +650,32 @@ html[data-theme="light"] .home-page .button-secondary:visited {
     opacity: 1;
 }
 
+.logo-mark-brand img {
+    max-width: 108px;
+    max-height: 28px;
+}
+
+.logo-mark-livekit img,
+.logo-mark-celery img,
+.logo-mark-openai img {
+    max-width: 24px;
+    max-height: 24px;
+}
+
 .proof-strip li::before,
 .check-list li::before,
 .audience-card li::before,
-.offer-card li::before {
+.offer-card li::before,
+.contact-proof-list li::before {
     content: "";
     position: absolute;
     left: 0;
-    top: 0.82em;
-    width: 6px;
-    height: 6px;
+    top: 0.58em;
+    width: 14px;
+    height: 14px;
     background: var(--accent);
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Cpath d='M229.66 77.66l-128 128a8 8 0 0 1-11.32 0l-56-56a8 8 0 0 1 11.32-11.32L96 188.69 218.34 66.34a8 8 0 0 1 11.32 11.32Z'/%3E%3C/svg%3E") center / contain no-repeat;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Cpath d='M229.66 77.66l-128 128a8 8 0 0 1-11.32 0l-56-56a8 8 0 0 1 11.32-11.32L96 188.69 218.34 66.34a8 8 0 0 1 11.32 11.32Z'/%3E%3C/svg%3E") center / contain no-repeat;
 }
 
 .section-intro {
@@ -554,7 +689,8 @@ html[data-theme="light"] .home-page .button-secondary:visited {
 .offer-grid,
 .faq-grid,
 .process-grid,
-.risk-grid {
+.risk-grid,
+.comparison-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 28px;
@@ -564,7 +700,8 @@ html[data-theme="light"] .home-page .button-secondary:visited {
 .offer-card,
 .faq-grid article,
 .process-grid article,
-.risk-grid article {
+.risk-grid article,
+.comparison-card {
     position: relative;
     padding: 28px;
     border: 1px solid var(--border);
@@ -575,7 +712,8 @@ html[data-theme="light"] .home-page .button-secondary:visited {
 .offer-card::after,
 .faq-grid article::after,
 .process-grid article::after,
-.risk-grid article::after {
+.risk-grid article::after,
+.comparison-card::after {
     content: "";
     position: absolute;
     top: -1px;
@@ -590,6 +728,8 @@ html[data-theme="light"] .home-page .button-secondary:visited {
 .offer-price,
 .process-grid span {
     display: inline-flex;
+    align-items: center;
+    gap: 8px;
     margin: 0 0 16px;
     color: var(--strong);
     font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
@@ -599,15 +739,38 @@ html[data-theme="light"] .home-page .button-secondary:visited {
     text-transform: uppercase;
 }
 
+.eyebrow i,
+.offer-price i,
+.process-grid span i {
+    color: var(--accent);
+    font-size: 1rem;
+}
+
 .audience-card h3,
 .offer-card h3,
 .faq-grid h3,
 .process-grid h3,
 .risk-grid h3,
+.comparison-card h3,
 .split-section h2 {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
     margin: 0 0 16px;
     color: var(--strong);
     line-height: 1.35;
+}
+
+.title-icon,
+.section-heading-icon {
+    flex: 0 0 auto;
+    color: var(--accent);
+    line-height: 1;
+}
+
+.title-icon {
+    margin-top: 0.18em;
+    font-size: 1.05em;
 }
 
 .audience-card p,
@@ -615,6 +778,7 @@ html[data-theme="light"] .home-page .button-secondary:visited {
 .faq-grid p,
 .process-grid p,
 .risk-grid p,
+.comparison-card p,
 .split-section p {
     margin: 0 0 18px;
     font-size: 1rem;
@@ -622,7 +786,8 @@ html[data-theme="light"] .home-page .button-secondary:visited {
 
 .audience-card ul,
 .offer-card ul,
-.check-list ul {
+.check-list ul,
+.contact-proof-list {
     display: grid;
     gap: 10px;
     margin: 22px 0 0;
@@ -632,9 +797,10 @@ html[data-theme="light"] .home-page .button-secondary:visited {
 
 .audience-card li,
 .offer-card li,
-.check-list li {
+.check-list li,
+.contact-proof-list li {
     position: relative;
-    padding-left: 18px;
+    padding-left: 26px;
     color: var(--text);
     font-size: 1rem;
     line-height: 1.65;
@@ -656,8 +822,26 @@ html[data-theme="light"] .home-page .button-secondary:visited {
 .offer-cta {
     align-self: flex-start;
     min-height: 52px;
-    margin-top: 28px;
+    margin-top: 36px;
     padding: 0 20px;
+}
+
+.audience-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.audience-card .card-cta {
+    margin-top: 36px;
+}
+
+.comparison-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.comparison-card-featured {
+    border-color: var(--strong);
+    background: rgba(255, 255, 255, 0.045);
 }
 
 .inline-cta:hover {
@@ -758,10 +942,17 @@ html[data-theme="light"] .home-page .button-secondary:visited {
 }
 
 .section-heading h2 {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
     margin: 0;
     color: var(--strong);
     font-size: 1.5rem;
     font-weight: 600;
+}
+
+.section-heading-icon {
+    font-size: 1.25rem;
 }
 
 .projects-grid {
@@ -812,6 +1003,9 @@ html[data-theme="light"] .home-page .button-secondary:visited {
 }
 
 .project-title {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
     margin: 0;
     color: var(--strong);
     font-size: 1.2rem;
@@ -834,6 +1028,9 @@ html[data-theme="light"] .home-page .button-secondary:visited {
 }
 
 .project-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
     padding: 5px 10px;
     border: 1px solid var(--border);
     border-radius: 4px;
@@ -844,6 +1041,34 @@ html[data-theme="light"] .home-page .button-secondary:visited {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.06em;
+}
+
+.chip-logo {
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    padding: 2px;
+    border-radius: 3px;
+    background: #f5f2f2;
+}
+
+.chip-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: none;
+}
+
+.chip-logo-livekit {
+    background: #101010;
+}
+
+.chip-logo-telnyx {
+    width: 36px;
+    background: #00e3aa;
 }
 
 .project-link {
@@ -887,6 +1112,9 @@ html[data-theme="light"] .home-page .button-secondary:visited {
 }
 
 .project-placeholder span {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
     padding: 8px 12px;
     border: 1px solid var(--border);
     font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
@@ -894,6 +1122,11 @@ html[data-theme="light"] .home-page .button-secondary:visited {
     font-weight: 600;
     letter-spacing: 0.08em;
     text-transform: uppercase;
+}
+
+.project-placeholder i {
+    color: var(--accent);
+    font-size: 1rem;
 }
 
 .project-card-wide {
@@ -1180,11 +1413,19 @@ html[data-theme="light"] .home-page .button-secondary:visited {
 }
 
 .contact-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
     margin: 0 0 16px;
     color: var(--strong);
     font-size: 2.2rem;
     line-height: 1.2;
     text-align: center;
+}
+
+.contact-title i {
+    color: var(--accent);
 }
 
 .contact-copy {
@@ -1194,11 +1435,39 @@ html[data-theme="light"] .home-page .button-secondary:visited {
     font-size: 1rem;
 }
 
+.contact-proof-list {
+    max-width: 640px;
+    margin: 0 auto 18px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.contact-proof-list li {
+    padding: 12px 12px 12px 34px;
+    border: 1px solid var(--border);
+    color: var(--strong);
+    font-size: 0.9rem;
+    line-height: 1.45;
+}
+
+.contact-proof-list li::before {
+    left: 12px;
+    top: 1.18em;
+}
+
 .contact-microcopy {
     max-width: 62ch;
-    margin: 0 auto 40px;
+    margin: 0 auto 12px;
     color: var(--strong);
     font-size: 0.95rem;
+    text-align: center;
+}
+
+.legal-links {
+    max-width: 62ch;
+    margin: 0 auto 40px;
+    color: var(--text);
+    font-size: 0.9rem;
     text-align: center;
 }
 
@@ -1219,12 +1488,20 @@ html[data-theme="light"] .home-page .button-secondary:visited {
 }
 
 .field label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
     color: var(--strong);
     font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
     font-size: 0.875rem;
     font-weight: 600;
     letter-spacing: 0.08em;
     text-transform: uppercase;
+}
+
+.field label i {
+    color: var(--accent);
+    font-size: 1rem;
 }
 
 .field input,
@@ -1258,6 +1535,7 @@ html[data-theme="light"] .home-page .button-secondary:visited {
 
 .contact-submit {
     justify-self: flex-end;
+    margin-top: 8px;
     cursor: pointer;
 }
 
@@ -1270,10 +1548,17 @@ html[data-theme="light"] .home-page .button-secondary:visited {
 }
 
 .footer-copy {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
     margin: 0;
     color: var(--strong);
     font-size: 1rem;
     font-weight: 500;
+}
+
+.footer-copy i {
+    color: var(--accent);
 }
 
 .footer-links {
@@ -1321,7 +1606,8 @@ html[data-theme="light"] .home-page .button-secondary:visited {
     }
 
     .proof-strip,
-    .logo-strip {
+    .logo-strip,
+    .tech-marquee-track {
         padding-left: 40px;
         padding-right: 40px;
     }
@@ -1359,7 +1645,13 @@ html[data-theme="light"] .home-page .button-secondary:visited {
     .hero-visual {
         border-left: 0;
         border-top: 1px solid var(--border);
-        min-height: 280px;
+        min-height: 240px;
+        padding: 0;
+    }
+
+    .portrait-placeholder {
+        height: min(60vh, 420px);
+        border: 0;
     }
 
     .projects-grid,
@@ -1375,6 +1667,10 @@ html[data-theme="light"] .home-page .button-secondary:visited {
     }
 
     .proof-strip ul {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-proof-list {
         grid-template-columns: 1fr;
     }
 
@@ -1418,7 +1714,8 @@ html[data-theme="light"] .home-page .button-secondary:visited {
     }
 
     .proof-strip,
-    .logo-strip {
+    .logo-strip,
+    .tech-marquee-track {
         padding: 28px 18px;
     }
 
@@ -1427,14 +1724,15 @@ html[data-theme="light"] .home-page .button-secondary:visited {
     }
 
     .hero-title {
-        font-size: 2.35rem;
+        font-size: 2.2rem;
     }
 
     .hero-title-line {
         display: block;
     }
 
-    .hero-description {
+    .hero-description,
+    .hero-qualifier {
         max-width: none;
         overflow-wrap: anywhere;
     }
@@ -1467,7 +1765,8 @@ html[data-theme="light"] .home-page .button-secondary:visited {
     .offer-grid,
     .faq-grid,
     .process-grid,
-    .risk-grid {
+    .risk-grid,
+    .comparison-grid {
         grid-template-columns: 1fr;
     }
 

@@ -20,13 +20,13 @@
           href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap">
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;700&family=Newsreader:opsz,wght@6..72,300;400;500&display=swap">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
     <link rel="manifest" href="./site.webmanifest">
     <link rel="stylesheet" href="./assets/css/home.css">
     <link rel="stylesheet" href="./assets/css/gallery-page.css">
-    <script defer src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
 
 <body class="home-page gallery-page">
@@ -36,12 +36,15 @@
 
     <div class="site-shell gallery-shell">
         <header class="site-header">
-            <a href="/" class="brand-link" aria-label="sorv.dev home">sorv.dev</a>
+            <a href="/" class="brand-link" aria-label="sorv.dev home">
+                <i class="ph ph-terminal-window" aria-hidden="true"></i>
+                sorv.dev
+            </a>
             <nav class="site-nav nav-links">
-                <a href="/#projects" class="nav-link">Projects</a>
-                <a href="/#blog" class="nav-link">Blog</a>
-                <a href="./gallery.html" class="nav-link active">Gallery</a>
-                <a href="/#hire" class="nav-link">Hire Me</a>
+                <a href="/#projects" class="nav-link"><i class="ph ph-briefcase" aria-hidden="true"></i>Projects</a>
+                <a href="/#blog" class="nav-link"><i class="ph ph-notebook" aria-hidden="true"></i>Blog</a>
+                <a href="./gallery.html" class="nav-link active"><i class="ph ph-images" aria-hidden="true"></i>Gallery</a>
+                <a href="/#hire" class="nav-link"><i class="ph ph-paper-plane-tilt" aria-hidden="true"></i>Hire Me</a>
             </nav>
             <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme">
                 <i id="theme-icon" class="ph ph-sun" aria-hidden="true"></i>
@@ -51,7 +54,7 @@
         <main class="gallery-page-main">
             <section class="gallery-hero">
                 <div class="gallery-copy">
-                    <p class="gallery-eyebrow">[gallery]</p>
+                    <p class="gallery-eyebrow"><i class="ph ph-images" aria-hidden="true"></i>[gallery]</p>
                     <h1 class="gallery-title">Photo Gallery.</h1>
                     <p class="gallery-summary">A few photos from travel, work, and everyday life outside the editor.</p>
                 </div>
@@ -344,6 +347,7 @@
 
                 <div class="gallery-load-more-row">
                     <button id="gallery-load-more" class="button-secondary gallery-load-more" type="button">
+                        <i class="ph ph-plus" aria-hidden="true"></i>
                         Load More
                     </button>
                 </div>
@@ -351,7 +355,7 @@
         </main>
 
         <footer class="site-footer gallery-footer">
-            <p class="footer-copy">photo archive / saurav sharma</p>
+            <p class="footer-copy"><i class="ph ph-camera" aria-hidden="true"></i>photo archive / saurav sharma</p>
             <div class="footer-links">
                 <a href="mailto:selftaughtdev@proton.me">
                     <i class="ph ph-envelope-simple" aria-hidden="true"></i>
@@ -361,9 +365,21 @@
                     <i class="ph ph-twitter-logo" aria-hidden="true"></i>
                     Twitter
                 </a>
+                <a href="https://www.linkedin.com/in/saurav-sharma-23b162315" target="_blank" rel="noopener noreferrer">
+                    <i class="ph ph-linkedin-logo" aria-hidden="true"></i>
+                    LinkedIn
+                </a>
+                <a href="https://github.com/saurav-codes/" target="_blank" rel="noopener noreferrer">
+                    <i class="ph ph-github-logo" aria-hidden="true"></i>
+                    GitHub
+                </a>
                 <a href="https://blog.sorv.dev/" target="_blank" rel="noopener noreferrer">
                     <i class="ph ph-notebook" aria-hidden="true"></i>
                     Blog
+                </a>
+                <a href="./gallery.html">
+                    <i class="ph ph-images" aria-hidden="true"></i>
+                    Photo Gallery
                 </a>
                 <a href="./tweets.html">
                     <i class="ph ph-chat-circle-text" aria-hidden="true"></i>

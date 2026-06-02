@@ -94,11 +94,19 @@ section:first-of-type {
 .section-label {
     position: sticky;
     top: 88px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
     padding-top: 6px;
     color: var(--text-muted);
     font-size: 0.72rem;
     letter-spacing: 0.14em;
     text-transform: uppercase;
+}
+
+.section-label i {
+    color: var(--heading-color);
+    font-size: 0.95rem;
 }
 
 .section-stack {
@@ -120,8 +128,16 @@ section:first-of-type {
 }
 
 .page-title h1 {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
     font-size: clamp(2.5rem, 6vw, 4.2rem);
-    max-width: 14ch;
+    max-width: 16ch;
+}
+
+.page-title h1 i {
+    color: var(--text-muted);
+    font-size: 0.78em;
 }
 
 .panel {
