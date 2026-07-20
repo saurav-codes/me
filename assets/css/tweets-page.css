@@ -1,0 +1,240 @@
+.tweets-page .site-shell {
+    width: min(100%, 1440px);
+}
+
+.tweets-page-main {
+    background: var(--bg);
+}
+
+.tweets-hero {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 48px;
+    padding: clamp(64px, 8vw, 112px) var(--page-gutter) clamp(56px, 7vw, 88px);
+    border-bottom: 1px solid var(--border);
+}
+
+.tweets-copy {
+    display: grid;
+    gap: 20px;
+    max-width: 880px;
+}
+
+.tweets-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    color: var(--strong);
+    font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.tweets-eyebrow i {
+    color: var(--accent);
+}
+
+.tweets-title {
+    margin: 0;
+    color: var(--strong);
+    font-size: clamp(3.6rem, 8vw, 7rem);
+    font-weight: 700;
+    line-height: 0.94;
+    letter-spacing: -0.045em;
+    text-wrap: balance;
+}
+
+.tweets-summary {
+    max-width: 54ch;
+    margin: 0;
+    color: var(--text);
+    font-size: 1.08rem;
+    line-height: 1.65;
+}
+
+.tweets-page .tweets-follow {
+    flex: 0 0 auto;
+}
+
+.tweet-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    padding: var(--section-space) var(--page-gutter);
+    border-bottom: 1px solid var(--border);
+}
+
+.tweet-card {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    gap: 20px;
+    padding: 24px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+    transition: transform 160ms ease, border-color 160ms ease, background-color 160ms ease;
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 340px;
+}
+
+.tweet-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--strong);
+    background: var(--surface-soft);
+}
+
+.tweet-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.tweet-avatar {
+    width: 48px;
+    height: 48px;
+    flex: 0 0 auto;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    object-fit: cover;
+    filter: grayscale(1);
+}
+
+.tweet-author {
+    display: grid;
+    min-width: 0;
+    flex: 1;
+    gap: 2px;
+}
+
+.tweet-name {
+    overflow: hidden;
+    color: var(--strong);
+    font-size: 0.94rem;
+    font-weight: 600;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.tweet-handle {
+    color: var(--text);
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 0.78rem;
+}
+
+.tweet-logo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    flex: 0 0 auto;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    color: var(--strong);
+    transition: background-color 160ms ease, color 160ms ease, border-color 160ms ease;
+}
+
+.tweet-logo:hover {
+    border-color: var(--accent);
+    background: var(--accent);
+    color: var(--accent-ink);
+}
+
+.tweet-content {
+    flex: 1;
+    color: var(--text);
+    font-size: 1rem;
+    line-height: 1.65;
+    overflow-wrap: anywhere;
+}
+
+.tweet-content p {
+    max-width: 62ch;
+    margin: 0 0 0.85rem;
+    color: inherit;
+}
+
+.tweet-content p:last-child {
+    margin-bottom: 0;
+}
+
+.tweet-content a {
+    color: var(--strong);
+    text-decoration: underline;
+    text-decoration-color: var(--border-strong);
+    text-underline-offset: 0.2em;
+}
+
+.tweet-content a:hover {
+    color: var(--link-hover);
+}
+
+.tweet-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 0.78rem;
+}
+
+.tweet-footer time {
+    color: var(--text);
+    font-variant-numeric: tabular-nums;
+}
+
+.tweet-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--strong);
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.tweet-link:hover {
+    color: var(--link-hover);
+}
+
+.tweets-footer {
+    border-top: 0;
+}
+
+@media (max-width: 900px) {
+    .tweet-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 720px) {
+    .tweets-hero {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 32px;
+    }
+
+    .tweets-title {
+        font-size: clamp(3rem, 17vw, 5rem);
+    }
+
+    .tweets-page .tweets-follow {
+        width: 100%;
+    }
+
+    .tweet-card {
+        padding: 18px;
+    }
+
+    .tweet-footer {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
