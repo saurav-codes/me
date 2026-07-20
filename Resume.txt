@@ -7,7 +7,7 @@ GitHub: https://github.com/saurav-codes
 Blog: https://blog.sorv.dev
 
 SUMMARY
-Django developer with 4+ years of experience building SaaS products, APIs, internal tools, and real-time features.
+Django developer with 5+ years of experience building SaaS products, APIs, internal tools, and real-time features.
 Main stack: Python, Django, PostgreSQL, Redis, HTMX, and Vue.js.
 
 SKILLS
