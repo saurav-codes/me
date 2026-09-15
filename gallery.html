@@ -9,175 +9,30 @@
     />
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; base-uri 'self'; img-src 'self'; media-src 'self'; connect-src https://us.i.posthog.com https://beamanalytics.b-cdn.net; script-src 'self' 'unsafe-inline' https://unpkg.com https://us-assets.i.posthog.com https://beamanalytics.b-cdn.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com https://api.fontshare.com; font-src 'self' https://fonts.gstatic.com https://unpkg.com https://api.fontshare.com;"
+      content="default-src 'self'; base-uri 'self'; img-src 'self'; media-src 'self'; connect-src 'self' https://beamanalytics.b-cdn.net; script-src 'self' 'unsafe-inline' https://unpkg.com https://beamanalytics.b-cdn.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com; font-src 'self' https://fonts.gstatic.com https://unpkg.com;"
     />
-    <meta property="og:title" content="Photo Gallery | Saurav Sharma" />
+    <meta property="og:title" content="Photos | Saurav Sharma" />
     <meta property="og:description" content="Travel and personal moments from Saurav Sharma." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://sorv.dev/gallery.html" />
     <meta property="og:image" content="https://sorv.dev/assets/images/gallery/me_caffee_compressed.jpg" />
-    <title>Photo Gallery | Saurav Sharma</title>
+    <title>Photos | Saurav Sharma</title>
     <link rel="canonical" href="https://sorv.dev/gallery.html" />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap"
     />
     <link
       rel="stylesheet"
       href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css"
     />
+    <link rel="stylesheet" href="./assets/css/site.css" />
     <style>
-      
-      
-      
-      :root {
-        --ink: #111;
-        --ink-soft: #555;
-        --ink-faint: #999;
-        --ink-shade: #444;
-        --paper: #fff;
-        --paper-ink: #000;
-        --sans: "Atkinson Hyperlegible", -apple-system, system-ui, sans-serif;
-        --serif: "Atkinson Hyperlegible", -apple-system, system-ui, sans-serif;
-      }
-      :root[data-theme="dark"] {
-        --ink: #ededed;
-        --ink-soft: #aaa;
-        --ink-faint: #777;
-        --ink-shade: #ccc;
-        --paper: #101010;
-        --paper-ink: #fff;
-      }
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      body {
-        font-family: var(--sans);
-        color: var(--ink);
-        background: var(--paper);
-        line-height: 1.6;
-        -webkit-font-smoothing: antialiased;
-      }
-      a {
-        color: inherit;
-        text-decoration: underline;
-        text-underline-offset: 3px;
-      }
-      header nav a .ph {
-        font-size: 13px;
-        margin-right: 5px;
-        vertical-align: -1px;
-      }
-      a[target="_blank"]::after {
-        content: "\2197";
-        font-size: 0.72em;
-        margin-left: 3px;
-        display: inline-block;
-        transition: transform 150ms ease-out;
-      }
-      a[target="_blank"]:hover::after {
-        transform: translate(2px, -2px);
-      }
-      h1 .ph {
-        font-size: 26px;
-        vertical-align: -2px;
-      }
-      :focus-visible {
-        outline: 2px solid var(--ink);
-        outline-offset: 2px;
-        border-radius: 2px;
-      }
-      .container {
-        max-width: 900px;
-        margin: 0 auto;
-        padding: 28px 32px 80px;
-      }
-      header {
-        display: flex;
-        align-items: center;
-        margin-bottom: 64px;
-      }
-      header nav {
-        margin-left: auto;
-        flex-wrap: wrap;
-        text-align: right;
-      }
-      header nav a {
-        font-size: 15px;
-        color: var(--ink-soft);
-        text-decoration: none;
-        margin-left: 36px;
-      }
-      header nav a:hover {
-        color: var(--ink);
-        text-decoration: underline;
-        text-underline-offset: 20px;
-      }
-      #theme-toggle {
-        margin-left: 36px;
-        background: none;
-        border: none;
-        cursor: pointer;
-        color: var(--ink-soft);
-        font-size: 17px;
-        display: inline-flex;
-        padding: 0;
-      }
-      #theme-toggle:hover {
-        color: var(--ink);
-      }
-      #theme-toggle .ph {
-        display: block;
-      }
-
-      h1 {
-        font-family: var(--serif);
-        font-size: 30px;
-        font-weight: 400;
-        letter-spacing: -0.01em;
-        margin-bottom: 8px;
-      }
-      .lead {
-        font-size: 15px;
-        color: var(--ink-soft);
-        margin-bottom: 56px;
-      }
-
       .photo-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 10px;
         margin-bottom: 20px;
       }
-      .gallery-item {
-        display: block;
-        text-decoration: none;
-        color: inherit;
-      }
       .gallery-item img {
-        transition: transform 250ms ease-out;
-        width: 100%;
-        aspect-ratio: 1 / 1;
-        object-fit: cover;
-        border-radius: 2px;
-        display: block;
         cursor: zoom-in;
-        outline: 1px solid oklch(0 0 0 / 0.1);
-      }
-      :root[data-theme="dark"] .gallery-item img {
-        transition: transform 250ms ease-out;
-        outline: 1px solid oklch(1 0 0 / 0.1);
-      }
-      .gallery-item .caption {
-        font-size: 12px;
-        color: var(--ink-faint);
-        padding: 6px 0 0;
-        display: block;
-      }
-      .gallery-item img:hover {
-        transform: scale(1.03);
       }
       .is-hidden {
         display: none;
@@ -185,13 +40,12 @@
 
       .load-more {
         margin-top: 24px;
-        font-size: 14px;
-        font-family: var(--sans);
+        padding: 8px 16px;
+        font-size: 15px;
         color: var(--ink-soft);
         background: none;
-        border: 1px solid var(--ink-faint);
-        border-radius: 2px;
-        padding: 8px 16px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
         cursor: pointer;
       }
       .load-more:hover {
@@ -206,7 +60,7 @@
         align-items: center;
         justify-content: center;
         background: color-mix(in srgb, var(--paper) 92%, transparent);
-        z-index: 30;
+        z-index: 50;
       }
       .lightbox-content {
         max-width: 80vw;
@@ -216,7 +70,7 @@
         max-width: 80vw;
         max-height: 80vh;
         object-fit: contain;
-        border-radius: 2px;
+        border-radius: var(--radius);
       }
       .lightbox-caption {
         text-align: center;
@@ -248,40 +102,15 @@
         top: 50%;
         transform: translateY(-50%);
       }
-
-      footer {
-        margin-top: 80px;
-        font-size: 14px;
-        color: var(--ink-soft);
-      }
-
-      @media (max-width: 720px) {
-        .photo-grid {
-          grid-template-columns: repeat(2, 1fr);
-        }
-        header nav a {
-          margin-left: 20px;
-        }
-        #theme-toggle {
-          margin-left: 20px;
-        }
-      }
-    .scroll-progress{position:fixed;top:0;left:0;height:2px;width:0;background:var(--ink);z-index:40;opacity:0.6}
-
-      html {
-        scroll-behavior: smooth;
-      }
-      @media (prefers-reduced-motion: reduce) {
-        html {
-          scroll-behavior: auto;
-        }
-      }
-      a {
-        transition: color 150ms ease-out;
-      }
-</style>
+    </style>
+    <script>
+      (function () {
+        var stored = localStorage.getItem("theme");
+        var dark = window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.dataset.theme = stored || (dark ? "dark" : "light");
+      })();
+    </script>
   </head>
-<script>(function(){var t=localStorage.getItem("theme")||(window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");document.documentElement.dataset.theme=t;})();</script>
   <body>
     <div class="scroll-progress"></div>
     <div class="container">
@@ -291,6 +120,9 @@
           <a href="/#story"><i class="ph ph-book-open" aria-hidden="true"></i>Story</a>
           <a href="/#projects"><i class="ph ph-briefcase" aria-hidden="true"></i>Projects</a>
           <a href="/#blog"><i class="ph ph-pencil-line" aria-hidden="true"></i>Blog</a>
+          <a href="./gallery.html" aria-current="page"><i class="ph ph-images" aria-hidden="true"></i>Photos</a>
+          <a href="./tweets.html"><i class="ph ph-chats-circle" aria-hidden="true"></i>Tweet Wall</a>
+          <a href="./resume.html"><i class="ph ph-file-text" aria-hidden="true"></i>Resume</a>
         </nav>
         <button id="theme-toggle" type="button" aria-label="Toggle theme">
           <i id="theme-icon" class="ph ph-sun" aria-hidden="true"></i>
@@ -492,14 +324,18 @@
       </main>
 
       <footer>
-        <a href="mailto:selftaughtdev@proton.me">Email</a> ·
-        <a href="/">Home</a> ·
-        <a href="./tweets.html">Tweets Wall</a>
+        <a href="mailto:selftaughtdev@proton.me">Email</a>
+        <a href="./resume.html">Resume</a>
+        <a href="https://blog.sorv.dev/" target="_blank" rel="noopener noreferrer">Writing</a>
+        <a href="https://twitter.com/saurav__codes" target="_blank" rel="noopener noreferrer">Twitter</a>
+        <a href="https://github.com/saurav-codes/" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/saurav-sharma-23b162315" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       </footer>
     </div>
 
     <script defer src="./assets/js/theme-toggle.js"></script>
     <script defer src="./assets/js/proximity.js"></script>
+    <script defer src="./assets/js/scroll-progress.js"></script>
     <script>
       (function () {
         const items = Array.from(document.querySelectorAll(".gallery-item"));
@@ -591,6 +427,5 @@
       data-token="4d8d10b5-436d-4483-b61d-392ee0f77a3d"
       async
     ></script>
-  <script>(function(){var bar=document.querySelector(".scroll-progress");document.addEventListener("scroll",function(){var d=document.documentElement;var p=d.scrollTop/(d.scrollHeight-d.clientHeight);bar.style.width=(p*100).toFixed(2)+"%";},{passive:true})})();</script>
   </body>
 </html>
