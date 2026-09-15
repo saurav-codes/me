@@ -9,7 +9,7 @@
     />
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; base-uri 'self'; img-src 'self' https://cdn.jsdelivr.net; media-src 'self'; connect-src https://us.i.posthog.com https://beamanalytics.b-cdn.net; script-src 'self' 'unsafe-inline' https://unpkg.com https://us-assets.i.posthog.com https://beamanalytics.b-cdn.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com https://api.fontshare.com; font-src 'self' https://fonts.gstatic.com https://unpkg.com https://api.fontshare.com;"
+      content="default-src 'self'; base-uri 'self'; img-src 'self'; media-src 'self'; connect-src 'self' https://beamanalytics.b-cdn.net; script-src 'self' 'unsafe-inline' https://unpkg.com https://beamanalytics.b-cdn.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com; font-src 'self' https://fonts.gstatic.com https://unpkg.com;"
     />
     <meta property="og:title" content="Saurav Sharma | Indie Hacker & Software Engineer" />
     <meta property="og:description" content="Indie hacker and software engineer building SaaS products end to end." />
@@ -19,291 +19,107 @@
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="canonical" href="https://sorv.dev/" />
     <title>Saurav Sharma | Indie Hacker &amp; Software Engineer</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap"
+    />
     <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+    <link rel="stylesheet" href="./assets/css/site.css" />
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png" />
     <link rel="manifest" href="./site.webmanifest" />
+    <script>
+      (function () {
+        var stored = localStorage.getItem("theme");
+        var dark = window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.dataset.theme = stored || (dark ? "dark" : "light");
+      })();
+    </script>
     <style>
-      
-      
-      
-      :root {
-        --ink: #111;
-        --ink-soft: #555;
-        --ink-faint: #999;
-        --paper: #fff;
-        --serif: "Atkinson Hyperlegible", -apple-system, system-ui, sans-serif;
-        --sans: "Atkinson Hyperlegible", -apple-system, system-ui, sans-serif;
-      }
-      :root[data-theme="dark"] {
-        --ink: #ededed;
-        --ink-soft: #aaa;
-        --ink-faint: #777;
-        --paper: #101010;
-      }
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      body {
-        font-family: var(--sans);
-        color: var(--ink);
-        background: var(--paper);
-        line-height: 1.6;
-        -webkit-font-smoothing: antialiased;
-      }
-      a {
-        color: inherit;
-        text-decoration: underline;
-        text-underline-offset: 3px;
-      }
-      :focus-visible {
-        outline: 2px solid var(--ink);
-        outline-offset: 2px;
-        border-radius: 2px;
-      }
       section {
         scroll-margin-top: 24px;
       }
-      .container {
-        max-width: 900px;
-        margin: 0 auto;
-        padding: 28px 32px 80px;
-      }
 
-      header {
-        display: flex;
-        align-items: center;
-      }
-      header nav {
-        margin-left: auto;
-      }
-      header nav a {
-        font-size: 15px;
-        color: var(--ink-soft);
-        text-decoration: none;
-        margin-left: 36px;
-      }
-      header nav a:hover {
-        color: var(--ink);
-        text-decoration: underline;
-        text-underline-offset: 20px;
-      }
-      #theme-toggle {
-        margin-left: 36px;
-        background: none;
-        border: none;
-        cursor: pointer;
-        color: var(--ink-soft);
-        font-size: 17px;
-        display: inline-flex;
-        padding: 0;
-      }
-      #theme-toggle:hover {
-        color: var(--ink);
-      }
-      #theme-toggle .ph {
-        display: block;
-      }
-
-      main {
-        min-height: calc(100svh - 76px - 12svh + 60px);
-        display: block;
-      }
       .hero {
         display: grid;
         grid-template-columns: 280px 1fr;
         gap: 56px;
         align-items: center;
-        min-height: calc(100svh - 96px);
+        min-height: calc(100svh - 164px);
         padding-bottom: 24px;
       }
       .hero-photo {
-        width: 320px;
-        height: 420px;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 280 / 360;
         object-fit: cover;
-        border-radius: 3px;
+        border-radius: var(--radius);
+        outline: 1px solid var(--line);
       }
-      .intro {
-        font-family: var(--serif);
+      .hero-title {
         font-size: clamp(30px, 4.5vw, 40px);
-        font-weight: 700;
         line-height: 1.2;
-        letter-spacing: -0.02em;
-        text-wrap: balance;
       }
-      header nav a .ph {
-        font-size: 13px;
-        margin-right: 5px;
-        vertical-align: -1px;
-      }
-      a[target="_blank"]::after {
-        content: "\2197";
-        font-size: 0.72em;
-        margin-left: 3px;
-        display: inline-block;
-        transition: transform 150ms ease-out;
-      }
-      a[target="_blank"]:hover::after {
-        transform: translate(2px, -2px);
-      }
-      .intro a {
-        text-decoration: underline;
+      .hero-title a {
         text-underline-offset: 4px;
       }
       .intro-sub {
+        max-width: var(--measure);
+        margin-top: 20px;
         font-size: 16px;
         color: var(--ink-soft);
-        margin-top: 20px;
-        font-family: var(--sans);
       }
       .say-hello {
+        margin-top: 12px;
         font-size: 16px;
         font-weight: 700;
-        margin-top: 12px;
-        font-family: var(--sans);
-      }
-
-      .section {
-        margin-bottom: 84px;
-      }
-      h2 {
-        font-family: var(--serif);
-        font-size: 24px;
-        font-weight: 700;
-        margin-bottom: 18px;
-      }
-      .section p {
-        font-family: var(--serif);
-        font-size: 17px;
-        color: var(--ink-soft);
-        line-height: 1.75;
-        text-wrap: pretty;
-      }
-      .section p + p {
-        margin-top: 14px;
       }
 
       .project-list {
         list-style: none;
       }
       .project-list li {
+        max-width: var(--measure);
         margin-bottom: 22px;
-        font-size: 16px;
-        font-family: var(--sans);
       }
       .project-list .project-name {
-        font-weight: 600;
+        font-weight: 700;
       }
       .project-list .project-desc {
         color: var(--ink-soft);
       }
       .project-list .project-tag {
-        color: var(--ink-faint);
         font-size: 14px;
-      }
-
-      .photo-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 10px;
-        margin-bottom: 12px;
-      }
-      .photo-grid a {
-        display: block;
-        text-decoration: none;
-      }
-      .photo-grid img {
-        width: 100%;
-        aspect-ratio: 4 / 5;
-        object-fit: cover;
-        border-radius: 2px;
-        display: block;
-        outline: 1px solid oklch(0 0 0 / 0.1);
-        transition: transform 250ms ease-out;
-      }
-      .photo-grid img:hover {
-        transform: scale(1.03);
-      }
-      :root[data-theme="dark"] .photo-grid img {
-        outline: 1px solid oklch(1 0 0 / 0.1);
-      }
-      .photos-all {
-        font-size: 15px;
-        color: var(--ink-soft);
-        font-family: var(--sans);
-      }
-
-      footer {
-        margin-top: 80px;
-        font-size: 15px;
-        color: var(--ink-soft);
-        font-family: var(--sans);
+        color: var(--ink-faint);
       }
 
       @media (max-width: 720px) {
-        header nav {
-          display: flex;
-        }
-        header nav a {
-          margin-left: 0;
-          margin-right: 12px;
-          font-size: 14px;
-        }
-        #theme-toggle {
-          margin-left: auto;
-        }
         .hero {
           grid-template-columns: 1fr;
-          gap: 44px;
-          min-height: auto;
+          gap: 32px;
           align-items: start;
+          min-height: auto;
           padding-bottom: 40px;
-          justify-items: center;
         }
-        .hero-photo {
-          width: 100%;
-          height: auto;
-          aspect-ratio: 3 / 4;
-          object-fit: cover;
-        }
-        .hero > div {
-          width: 100%;
-          max-width: 520px;
-        }
-        .intro {
+        .hero-title {
           font-size: 26px;
         }
-        main {
-          min-height: 0;
-        }
       }
-    .scroll-progress{position:fixed;top:0;left:0;height:2px;width:0;background:var(--ink);z-index:40;opacity:0.6}
-
-      html {
-        scroll-behavior: smooth;
-      }
-      @media (prefers-reduced-motion: reduce) {
-        html {
-          scroll-behavior: auto;
-        }
-      }
-      a {
-        transition: color 150ms ease-out;
-      }
-</style>
+    </style>
   </head>
-<script>(function(){var t=localStorage.getItem("theme")||(window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");document.documentElement.dataset.theme=t;})();</script>
   <body>
     <div class="scroll-progress"></div>
     <div class="container">
       <header>
         <nav aria-label="Primary navigation">
-          <a href="#projects"><i class="ph ph-briefcase" aria-hidden="true"></i>Projects</a>
-          <a href="#story"><i class="ph ph-book-open" aria-hidden="true"></i>Story</a>
-          <a href="#blog"><i class="ph ph-pencil-line" aria-hidden="true"></i>Blog</a>
+          <a href="/" aria-current="page"><i class="ph ph-house" aria-hidden="true"></i>Home</a>
+          <a href="/#story"><i class="ph ph-book-open" aria-hidden="true"></i>Story</a>
+          <a href="/#projects"><i class="ph ph-briefcase" aria-hidden="true"></i>Projects</a>
+          <a href="/#blog"><i class="ph ph-pencil-line" aria-hidden="true"></i>Blog</a>
+          <a href="./gallery.html"><i class="ph ph-images" aria-hidden="true"></i>Photos</a>
+          <a href="./tweets.html"><i class="ph ph-chats-circle" aria-hidden="true"></i>Tweet Wall</a>
+          <a href="./resume.html"><i class="ph ph-file-text" aria-hidden="true"></i>Resume</a>
         </nav>
         <button id="theme-toggle" type="button" aria-label="Toggle theme">
           <i id="theme-icon" class="ph ph-sun" aria-hidden="true"></i>
@@ -316,7 +132,7 @@
             class="hero-photo"
             src="./assets/images/hero-saurav-backend.jpg"
             srcset="./assets/images/hero-saurav-backend-390.jpg 390w, ./assets/images/hero-saurav-backend-780.jpg 780w, ./assets/images/hero-saurav-backend.jpg 800w"
-            sizes="280px"
+            sizes="(max-width: 720px) 100vw, 280px"
             alt="Saurav Sharma"
             width="280"
             height="360"
@@ -324,16 +140,16 @@
             decoding="async"
           />
           <div>
-            <p class="intro">
+            <h1 class="hero-title">
               Saurav Sharma is an indie hacker &amp; software engineer who builds
               SaaS products end to end, currently working on
               <a href="https://lazyplanner.app" target="_blank" rel="noopener noreferrer">LazyPlanner</a>.
-            </p>
+            </h1>
             <p class="intro-sub">
               Build logs on <a href="https://x.com/saurav__codes" target="_blank" rel="noopener noreferrer">Twitter</a>,
               code on <a href="https://github.com/saurav-codes/" target="_blank" rel="noopener noreferrer">GitHub</a>,
               writing on <a href="https://blog.sorv.dev/" target="_blank" rel="noopener noreferrer">Blog</a>,
-              full resume <a href="./assets/saurav_sharma_django_dev_resume.pdf">here</a>.
+              full resume <a href="./resume.html">here</a>.
             </p>
             <p class="say-hello">
               <a href="mailto:selftaughtdev@proton.me">Say Hello</a>
@@ -415,58 +231,58 @@
               <span class="project-desc">Full walkthrough from bare server to production.</span>
             </li>
           </ul>
-          <a class="photos-all" href="https://blog.sorv.dev/" target="_blank" rel="noopener noreferrer">All writing, 23 posts →</a>
+          <a class="more-link" href="https://blog.sorv.dev/" target="_blank" rel="noopener noreferrer">All writing, 23 posts →</a>
         </section>
 
         <section id="photos" class="section">
           <h2><i class="ph ph-images" aria-hidden="true"></i> Photos corner</h2>
           <div class="photo-grid">
-            <a href="./gallery.html">
+            <a class="gallery-item" href="./gallery.html">
               <img
                 src="./assets/images/gallery/man-overlooking-palace-jaipur_compressed.JPG"
-                alt="Jaipur"
+                alt="Overlooking a palace in Jaipur"
                 loading="lazy"
                 decoding="async"
               />
             </a>
-            <a href="./gallery.html">
+            <a class="gallery-item" href="./gallery.html">
               <img
                 src="./assets/images/gallery/IMG_0938_compressed.jpg"
-                alt="Coding"
+                alt="Coding setup"
                 loading="lazy"
                 decoding="async"
               />
             </a>
-            <a href="./gallery.html">
+            <a class="gallery-item" href="./gallery.html">
               <img
                 src="./assets/images/gallery/man-in-black-outfit_compressed.JPG"
-                alt="Mussoorie"
+                alt="Black outfit in Mussoorie"
                 loading="lazy"
                 decoding="async"
               />
             </a>
           </div>
-          <a class="photos-all" href="./gallery.html">All photos →</a>
+          <a class="more-link" href="./gallery.html">All photos →</a>
         </section>
       </main>
 
       <footer>
-        <a href="mailto:selftaughtdev@proton.me">Email</a> ·
-        <a href="./gallery.html">Photos</a> ·
-        <a href="./tweets.html">Tweets Wall</a> ·
-        <a href="https://twitter.com/saurav__codes" target="_blank" rel="noopener noreferrer">Twitter</a> ·
-        <a href="https://github.com/saurav-codes/" target="_blank" rel="noopener noreferrer">GitHub</a> ·
+        <a href="mailto:selftaughtdev@proton.me">Email</a>
+        <a href="./resume.html">Resume</a>
+        <a href="https://blog.sorv.dev/" target="_blank" rel="noopener noreferrer">Writing</a>
+        <a href="https://twitter.com/saurav__codes" target="_blank" rel="noopener noreferrer">Twitter</a>
+        <a href="https://github.com/saurav-codes/" target="_blank" rel="noopener noreferrer">GitHub</a>
         <a href="https://www.linkedin.com/in/saurav-sharma-23b162315" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       </footer>
     </div>
 
     <script defer src="./assets/js/theme-toggle.js"></script>
     <script defer src="./assets/js/proximity.js"></script>
+    <script defer src="./assets/js/scroll-progress.js"></script>
     <script
       src="https://beamanalytics.b-cdn.net/beam.min.js"
       data-token="4d8d10b5-436d-4483-b61d-392ee0f77a3d"
       async
     ></script>
-  <script>(function(){var bar=document.querySelector(".scroll-progress");document.addEventListener("scroll",function(){var d=document.documentElement;var p=d.scrollTop/(d.scrollHeight-d.clientHeight);bar.style.width=(p*100).toFixed(2)+"%";},{passive:true})})();</script>
   </body>
 </html>
