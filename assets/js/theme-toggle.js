@@ -3,6 +3,7 @@
   const button = document.getElementById("theme-toggle");
   const icon = document.getElementById("theme-icon");
 
+  // The head script already resolved and applied the stored or system theme.
   function apply(theme) {
     root.dataset.theme = theme;
     if (icon) {
@@ -10,12 +11,7 @@
     }
   }
 
-  const stored = localStorage.getItem("theme");
-  const initial =
-    stored || (window.matchMedia("(prefers-color-scheme: dark)").matches
-      ? "dark"
-      : "light");
-  apply(initial);
+  apply(root.dataset.theme === "dark" ? "dark" : "light");
 
   if (button) {
     button.addEventListener("click", () => {
