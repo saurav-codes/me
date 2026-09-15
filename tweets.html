@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,32 +9,50 @@
     />
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; base-uri 'self'; img-src 'self'; media-src 'self'; connect-src https://us.i.posthog.com https://beamanalytics.b-cdn.net; script-src 'self' 'unsafe-inline' https://unpkg.com https://beamanalytics.b-cdn.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com; font-src https://fonts.gstatic.com https://unpkg.com;"
+      content="default-src 'self'; base-uri 'self'; img-src 'self'; media-src 'self'; connect-src https://us.i.posthog.com https://beamanalytics.b-cdn.net; script-src 'self' 'unsafe-inline' https://unpkg.com https://beamanalytics.b-cdn.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com; font-src 'self' https://fonts.gstatic.com https://unpkg.com;"
     />
-    <meta property="og:title" content="Tweets | Saurav Sharma" />
+    <meta property="og:title" content="Tweet Wall | Saurav Sharma" />
     <meta property="og:description" content="Notes around Django, Python, and SaaS." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://sorv.dev/tweets.html" />
-    <title>Tweets | Saurav Sharma</title>
+    <title>Tweet Wall | Saurav Sharma</title>
     <link rel="canonical" href="https://sorv.dev/tweets.html" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,700&display=swap"
     />
     <link
       rel="stylesheet"
       href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css"
     />
     <style>
+      @font-face {
+        font-family: "Geist";
+        src: url("./assets/fonts/geist-400.woff2") format("woff2");
+        font-weight: 400;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Geist";
+        src: url("./assets/fonts/geist-500.woff2") format("woff2");
+        font-weight: 500;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Geist";
+        src: url("./assets/fonts/geist-600.woff2") format("woff2");
+        font-weight: 600;
+        font-display: swap;
+      }
       :root {
         --ink: #111;
         --ink-soft: #555;
         --ink-faint: #999;
         --paper: #fff;
         --serif: "Newsreader", Georgia, serif;
-        --sans: "Inter", -apple-system, sans-serif;
+        --sans: "Geist", -apple-system, system-ui, sans-serif;
       }
       :root[data-theme="dark"] {
         --ink: #ededed;
@@ -164,6 +182,7 @@
       }
     </style>
   </head>
+<script>(function(){var t=localStorage.getItem("theme")||(window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");document.documentElement.dataset.theme=t;})();</script>
   <body>
     <div class="container">
       <header>
@@ -171,6 +190,7 @@
           <a href="/">Home</a>
           <a href="/#story">Story</a>
           <a href="/#projects">Projects</a>
+          <a href="/#blog">Blog</a>
         </nav>
         <button id="theme-toggle" type="button" aria-label="Toggle theme">
           <i id="theme-icon" class="ph ph-sun" aria-hidden="true"></i>
@@ -178,7 +198,7 @@
       </header>
 
       <main>
-        <h1>Tweets</h1>
+        <h1>Tweet Wall</h1>
         <p class="lead">
           Notes on Django, Python, and things I build.
           Follow <a href="https://twitter.com/saurav__codes" target="_blank" rel="noopener noreferrer">@saurav__codes</a>.
@@ -186,52 +206,44 @@
 
         <ul class="tweets">
           <li class="tweet">
-            <p class="tweet-meta">Dec 5, 2024 · <a href="https://twitter.com/saurav__codes/status/1864569911802253754" target="_blank" rel="noopener">view on X</a></p>
-            <p>Building SaaS is about solving problems, not just writing code. Here are 3 simple steps to bring your idea to life.</p>
+            <p class="tweet-meta">ML classifier on Hugging Face · <a href="https://x.com/saurav__codes/status/2098964800772755626" target="_blank" rel="noopener">view on X</a></p>
+            <p>My extension paid per-tweet LLM calls to filter engagement farming. Too expensive. So I trained my own: 12,506 posts labeled by an LLM, distilled into a 42MB model, 2ms per post on CPU. Free forever now.</p>
           </li>
           <li class="tweet">
-            <p class="tweet-meta">Dec 4, 2024 · <a href="https://twitter.com/saurav__codes/status/1864360254403956780" target="_blank" rel="noopener">view on X</a></p>
-            <p>Starting a SaaS project can feel overwhelming, especially if you're not technical. 3 quick tips to simplify the process.</p>
+            <p class="tweet-meta">Perf numbers on a real workload · <a href="https://x.com/saurav__codes/status/2099029344333316558" target="_blank" rel="noopener">view on X</a></p>
+            <p>Ran my bait filter on my real timeline for 8 min: 3,198 tweets checked at 17ms each, about 200MB of memory, zero internet calls. It hid 144 tweets. 1 in 22 tweets on my feed was bait.</p>
           </li>
           <li class="tweet">
-            <p class="tweet-meta">Oct 13, 2024 · <a href="https://twitter.com/saurav__codes/status/1845514706498588998" target="_blank" rel="noopener">view on X</a></p>
-            <p>Just published a case study about how I built a cloud-based focus timer with Django, Redis &amp; WebSockets: keep timers accurate, use Web Workers, manage time with Redis, handle concurrent updates. <a href="https://blog.sorv.dev/building-a-cloud-based-focus-timer-with-django-redis-websockets" target="_blank" rel="noopener">Read the case study →</a></p>
+            <p class="tweet-meta">Architecture of a shipped SaaS feature · <a href="https://x.com/saurav__codes/status/1914304106237227244" target="_blank" rel="noopener">view on X</a></p>
+            <p>Building the recurring-task feature for LazyPlanner: store recurrence as an RFC-5545 RRULE string, rrule.js in Vue for UI, python-dateutil on Django to validate and generate, a daily Celery job to seed the instances.</p>
           </li>
           <li class="tweet">
-            <p class="tweet-meta">Aug 23, 2024 · <a href="https://twitter.com/saurav__codes/status/1826937051989827621" target="_blank" rel="noopener">view on X</a></p>
-            <p>Building a Focus Timer with a twist: one host, many followers, all in sync. Start a timer, share the link, others join and follow your pace. Django + WebSockets.</p>
+            <p class="tweet-meta">Engineering judgment · <a href="https://x.com/saurav__codes/status/2090865891990978983" target="_blank" rel="noopener">view on X</a></p>
+            <p>The best code is no code. Deleted 10,700 lines of Python CLI machinery and replaced it with a small skill spec. Now any agent creates clean, topological atomic commits in seconds with zero token overhead.</p>
           </li>
           <li class="tweet">
-            <p class="tweet-meta">Oct 13, 2024 · <a href="https://twitter.com/saurav__codes/status/1845487582303715563" target="_blank" rel="noopener">view on X</a></p>
-            <p>Deploying @CloudTimer67264 faced many challenges so I compiled them into a blog: Comprehensive Django Deployment Guide for Beginners on VPS.</p>
+            <p class="tweet-meta">Open-source dev tool · <a href="https://x.com/saurav__codes/status/2066232945749393679" target="_blank" rel="noopener">view on X</a></p>
+            <p>I made a CLI for those who think more commits mean a better engineer. It takes a dirty worktree and commits it hunk by hunk: 5 messy feature commits become 30 tiny reviewable ones. Open source.</p>
           </li>
           <li class="tweet">
-            <p class="tweet-meta">Oct 5, 2024 · <a href="https://twitter.com/saurav__codes/status/1842547549498155508" target="_blank" rel="noopener">view on X</a></p>
-            <p>Cracked a Django + DataTables puzzle: thousands of records, dynamic columns, sorting &amp; filtering, all server-side. Plan well, query smart, process server-side.</p>
+            <p class="tweet-meta">Career story in one tweet · <a href="https://x.com/saurav__codes/status/2031358247643578788" target="_blank" rel="noopener">view on X</a></p>
+            <p>Dropped out of college. Learned coding for a year. Internship as backend developer that turned into a job. Spent about five years in tech. Now building SaaS products with Django/Vue.js and sharing everything in public.</p>
           </li>
           <li class="tweet">
-            <p class="tweet-meta">May 9, 2024 · <a href="https://twitter.com/saurav__codes/status/1788582816852123738" target="_blank" rel="noopener">view on X</a></p>
-            <p>The best way to release all the coding frustration.</p>
+            <p class="tweet-meta">Hired by an Estonian startup · <a href="https://x.com/saurav__codes/status/1952695730813976982" target="_blank" rel="noopener">view on X</a></p>
+            <p>Landed a dev role at an Estonian startup: building AI voice agents and their SaaS products, plus a few brand new ones from scratch.</p>
           </li>
           <li class="tweet">
-            <p class="tweet-meta">Oct 17, 2023 · <a href="https://twitter.com/saurav__codes/status/1714232231378722837" target="_blank" rel="noopener">view on X</a></p>
-            <p>When deploying a Django app with Gunicorn, max-requests and max-requests-jitter play a key role in worker processes. A short thread on why they matter. (1/6)</p>
+            <p class="tweet-meta">Production timezone lessons · <a href="https://x.com/saurav__codes/status/1943922555049717774" target="_blank" rel="noopener">view on X</a></p>
+            <p>Staying sane with multiple timezones: always store time in UTC and convert for the user, and store timezone names instead of offsets to dodge DST issues.</p>
           </li>
           <li class="tweet">
-            <p class="tweet-meta">Jun 29, 2022 · <a href="https://twitter.com/saurav__codes/status/1541984338916438016" target="_blank" rel="noopener">view on X</a></p>
-            <p>Inviting beta testers for our new startup @eliteemailverif #emailmarketing</p>
+            <p class="tweet-meta">Security from threat reports · <a href="https://x.com/saurav__codes/status/2098318058007965851" target="_blank" rel="noopener">view on X</a></p>
+            <p>Lessons from a recent AI threat report: AI keys are prod credentials, scope OAuth hard, scan repos and images for keys with TruffleHog, and buy direct instead of cheap AI resellers.</p>
           </li>
           <li class="tweet">
-            <p class="tweet-meta">Mar 25, 2023 · <a href="https://twitter.com/saurav__codes/status/1639437145239871489" target="_blank" rel="noopener">view on X</a></p>
-            <p>My blog is listed on daily.dev. If you haven't read: <a href="https://blog.sorv.dev/" target="_blank" rel="noopener">blog.sorv.dev</a></p>
-          </li>
-          <li class="tweet">
-            <p class="tweet-meta">Mar 23, 2023 · <a href="https://twitter.com/saurav__codes/status/1638908793592643585" target="_blank" rel="noopener">view on X</a></p>
-            <p>Ever had a database operation fail in the middle and end up with a half-baked state? Django's got you covered with atomic transactions.</p>
-          </li>
-          <li class="tweet">
-            <p class="tweet-meta">Mar 20, 2023 · <a href="https://twitter.com/saurav__codes/status/1637827543008178189" target="_blank" rel="noopener">view on X</a></p>
-            <p>Use contextlib.suppress() to keep the code neat when you don't want to do anything in the except block. Great for closing files, connections, and other resources. #python3 #django</p>
+            <p class="tweet-meta">Ops hardening + writeup · <a href="https://x.com/saurav__codes/status/1930181037520240650" target="_blank" rel="noopener">view on X</a></p>
+            <p>Set up fail2ban to automatically ban actors crawling or brute forcing my app, and wrote a full article about it.</p>
           </li>
         </ul>
       </main>

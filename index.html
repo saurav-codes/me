@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,7 +9,7 @@
     />
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; base-uri 'self'; img-src 'self' https://cdn.jsdelivr.net; media-src 'self'; connect-src https://us.i.posthog.com https://beamanalytics.b-cdn.net; script-src 'self' 'unsafe-inline' https://unpkg.com https://us-assets.i.posthog.com https://beamanalytics.b-cdn.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com; font-src https://fonts.gstatic.com https://unpkg.com;"
+      content="default-src 'self'; base-uri 'self'; img-src 'self' https://cdn.jsdelivr.net; media-src 'self'; connect-src https://us.i.posthog.com https://beamanalytics.b-cdn.net; script-src 'self' 'unsafe-inline' https://unpkg.com https://us-assets.i.posthog.com https://beamanalytics.b-cdn.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com; font-src 'self' https://fonts.gstatic.com https://unpkg.com;"
     />
     <meta property="og:title" content="Saurav Sharma | Indie Hacker & Software Engineer" />
     <meta property="og:description" content="Indie hacker and software engineer building SaaS products end to end." />
@@ -23,7 +23,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,700&display=swap"
     />
     <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css" />
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
@@ -31,13 +31,31 @@
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png" />
     <link rel="manifest" href="./site.webmanifest" />
     <style>
+      @font-face {
+        font-family: "Geist";
+        src: url("./assets/fonts/geist-400.woff2") format("woff2");
+        font-weight: 400;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Geist";
+        src: url("./assets/fonts/geist-500.woff2") format("woff2");
+        font-weight: 500;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Geist";
+        src: url("./assets/fonts/geist-600.woff2") format("woff2");
+        font-weight: 600;
+        font-display: swap;
+      }
       :root {
         --ink: #111;
         --ink-soft: #555;
         --ink-faint: #999;
         --paper: #fff;
         --serif: "Newsreader", Georgia, serif;
-        --sans: "Inter", -apple-system, sans-serif;
+        --sans: "Geist", -apple-system, system-ui, sans-serif;
       }
       :root[data-theme="dark"] {
         --ink: #ededed;
@@ -128,11 +146,6 @@
         height: 360px;
         object-fit: cover;
         border-radius: 3px;
-        outline: 1px solid oklch(0 0 0 / 0.1);
-      }
-      :root[data-theme="dark"] .hero-photo,
-      :root[data-theme="dark"] .photo-grid img {
-        outline: 1px solid oklch(1 0 0 / 0.1);
       }
       .intro {
         font-family: var(--serif);
@@ -147,13 +160,13 @@
         text-underline-offset: 4px;
       }
       .intro-sub {
-        font-size: 15px;
+        font-size: 16px;
         color: var(--ink-soft);
         margin-top: 20px;
         font-family: var(--sans);
       }
       .say-hello {
-        font-size: 15px;
+        font-size: 16px;
         font-weight: 700;
         margin-top: 12px;
         font-family: var(--sans);
@@ -170,9 +183,9 @@
       }
       .section p {
         font-family: var(--serif);
-        font-size: 17px;
+        font-size: 21px;
         color: var(--ink-soft);
-        line-height: 1.7;
+        line-height: 1.75;
         text-wrap: pretty;
       }
       .section p + p {
@@ -184,7 +197,7 @@
       }
       .project-list li {
         margin-bottom: 22px;
-        font-size: 15px;
+        font-size: 16px;
         font-family: var(--sans);
       }
       .project-list .project-name {
@@ -195,7 +208,7 @@
       }
       .project-list .project-tag {
         color: var(--ink-faint);
-        font-size: 13px;
+        font-size: 14px;
       }
 
       .photo-grid {
@@ -216,14 +229,18 @@
         display: block;
         outline: 1px solid oklch(0 0 0 / 0.1);
       }
-        font-size: 14px;
+      :root[data-theme="dark"] .photo-grid img {
+        outline: 1px solid oklch(1 0 0 / 0.1);
+      }
+      .photos-all {
+        font-size: 15px;
         color: var(--ink-soft);
         font-family: var(--sans);
       }
 
       footer {
         margin-top: 80px;
-        font-size: 14px;
+        font-size: 15px;
         color: var(--ink-soft);
         font-family: var(--sans);
       }
@@ -260,14 +277,14 @@
       }
     </style>
   </head>
+<script>(function(){var t=localStorage.getItem("theme")||(window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");document.documentElement.dataset.theme=t;})();</script>
   <body>
     <div class="container">
       <header>
         <nav aria-label="Primary navigation">
           <a href="#projects">Projects</a>
-          <a href="#writing">Writing</a>
           <a href="#story">Story</a>
-          <a href="./gallery.html">Photos</a>
+          <a href="#blog">Blog</a>
         </nav>
         <button id="theme-toggle" type="button" aria-label="Toggle theme">
           <i id="theme-icon" class="ph ph-sun" aria-hidden="true"></i>
@@ -363,20 +380,20 @@
           </ul>
         </section>
 
-        <section id="writing" class="section">
-          <h2>Writing</h2>
+        <section id="blog" class="section">
+          <h2>Blog</h2>
           <ul class="project-list">
             <li>
-              <a class="project-name" href="https://blog.sorv.dev/comprehensive-django-deployment-guide-for-beginners" target="_blank" rel="noopener noreferrer">Comprehensive Django Deployment Guide for Beginners</a>
-              <span class="project-desc">A full VPS deployment walkthrough, my most-read post.</span>
+              <a class="project-name" href="https://blog.sorv.dev/agentic-loops-swarm-is-the-new-moat" target="_blank" rel="noopener noreferrer">Agentic Loops &amp; Swarm is the New Moat</a>
+              <span class="project-desc">Why agent loops beat one-shot prompts.</span>
             </li>
             <li>
-              <a class="project-name" href="https://blog.sorv.dev/case-study-building-a-real-time-focus-timer-with-django-redis-and-websockets" target="_blank" rel="noopener noreferrer">Case Study: Real-Time Focus Timer</a>
-              <span class="project-desc">How Django, Redis, and WebSockets keep shared timers accurate.</span>
+              <a class="project-name" href="https://blog.sorv.dev/anti-engagement-farm-from-gpt-4o-prototype-to-a-42mb-local-classifier" target="_blank" rel="noopener noreferrer">Anti-Engagement-Farm: GPT-4o prototype to local classifier</a>
+              <span class="project-desc">From GPT-4o to a 42MB model running on device.</span>
             </li>
             <li>
-              <a class="project-name" href="https://blog.sorv.dev/implementing-a-robust-sqlite-backup-system-in-django" target="_blank" rel="noopener noreferrer">Implementing a Robust SQLite Backup System in Django</a>
-              <span class="project-desc">Backups that survive the application itself.</span>
+              <a class="project-name" href="https://blog.sorv.dev/deployment-guide-for-django-vuejs-project-on-vps" target="_blank" rel="noopener noreferrer">Deployment Guide for Django + Vue.js on VPS</a>
+              <span class="project-desc">Full walkthrough from bare server to production.</span>
             </li>
           </ul>
           <a class="photos-all" href="https://blog.sorv.dev/" target="_blank" rel="noopener noreferrer">All writing, 23 posts →</a>
@@ -403,8 +420,8 @@
             </a>
             <a href="./gallery.html">
               <img
-                src="./assets/images/gallery/himalaya-night-moonlight_compressed.jpg"
-                alt="Himalaya"
+                src="./assets/images/gallery/man-in-black-outfit_compressed.JPG"
+                alt="Mussoorie"
                 loading="lazy"
                 decoding="async"
               />
@@ -416,6 +433,8 @@
 
       <footer>
         <a href="mailto:selftaughtdev@proton.me">Email</a> ·
+        <a href="./gallery.html">Photos</a> ·
+        <a href="./tweets.html">Tweets Wall</a> ·
         <a href="https://twitter.com/saurav__codes" target="_blank" rel="noopener noreferrer">Twitter</a> ·
         <a href="https://github.com/saurav-codes/" target="_blank" rel="noopener noreferrer">GitHub</a> ·
         <a href="https://www.linkedin.com/in/saurav-sharma-23b162315" target="_blank" rel="noopener noreferrer">LinkedIn</a>

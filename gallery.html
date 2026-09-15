@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,7 +9,7 @@
     />
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; base-uri 'self'; img-src 'self'; media-src 'self'; connect-src https://us.i.posthog.com https://beamanalytics.b-cdn.net; script-src 'self' 'unsafe-inline' https://unpkg.com https://us-assets.i.posthog.com https://beamanalytics.b-cdn.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com; font-src https://fonts.gstatic.com https://unpkg.com;"
+      content="default-src 'self'; base-uri 'self'; img-src 'self'; media-src 'self'; connect-src https://us.i.posthog.com https://beamanalytics.b-cdn.net; script-src 'self' 'unsafe-inline' https://unpkg.com https://us-assets.i.posthog.com https://beamanalytics.b-cdn.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com; font-src 'self' https://fonts.gstatic.com https://unpkg.com;"
     />
     <meta property="og:title" content="Photo Gallery | Saurav Sharma" />
     <meta property="og:description" content="Travel and personal moments from Saurav Sharma." />
@@ -22,13 +22,31 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,700&display=swap"
     />
     <link
       rel="stylesheet"
       href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css"
     />
     <style>
+      @font-face {
+        font-family: "Geist";
+        src: url("./assets/fonts/geist-400.woff2") format("woff2");
+        font-weight: 400;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Geist";
+        src: url("./assets/fonts/geist-500.woff2") format("woff2");
+        font-weight: 500;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Geist";
+        src: url("./assets/fonts/geist-600.woff2") format("woff2");
+        font-weight: 600;
+        font-display: swap;
+      }
       :root {
         --ink: #111;
         --ink-soft: #555;
@@ -36,7 +54,7 @@
         --ink-shade: #444;
         --paper: #fff;
         --paper-ink: #000;
-        --sans: "Inter", -apple-system, sans-serif;
+        --sans: "Geist", -apple-system, system-ui, sans-serif;
         --serif: "Newsreader", Georgia, serif;
       }
       :root[data-theme="dark"] {
@@ -241,6 +259,7 @@
       }
     </style>
   </head>
+<script>(function(){var t=localStorage.getItem("theme")||(window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");document.documentElement.dataset.theme=t;})();</script>
   <body>
     <div class="container">
       <header>
@@ -248,6 +267,7 @@
           <a href="/">Home</a>
           <a href="/#story">Story</a>
           <a href="/#projects">Projects</a>
+          <a href="/#blog">Blog</a>
         </nav>
         <button id="theme-toggle" type="button" aria-label="Toggle theme">
           <i id="theme-icon" class="ph ph-sun" aria-hidden="true"></i>
@@ -450,10 +470,8 @@
 
       <footer>
         <a href="mailto:selftaughtdev@proton.me">Email</a> ·
-        <a href="https://twitter.com/saurav__codes" target="_blank" rel="noopener noreferrer">Twitter</a> ·
-        <a href="https://github.com/saurav-codes/" target="_blank" rel="noopener noreferrer">GitHub</a> ·
-        <a href="https://www.linkedin.com/in/saurav-sharma-23b162315" target="_blank" rel="noopener noreferrer">LinkedIn</a> ·
-        <a href="/">Home</a>
+        <a href="/">Home</a> ·
+        <a href="./tweets.html">Tweets Wall</a>
       </footer>
     </div>
 
