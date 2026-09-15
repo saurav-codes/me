@@ -33,8 +33,8 @@
         --ink-soft: #555;
         --ink-faint: #999;
         --paper: #fff;
-        --serif: "Satoshi", -apple-system, system-ui, sans-serif;
-        --sans: "Satoshi", -apple-system, system-ui, sans-serif;
+        --serif: "Atkinson Hyperlegible", -apple-system, system-ui, sans-serif;
+        --sans: "Atkinson Hyperlegible", -apple-system, system-ui, sans-serif;
       }
       :root[data-theme="dark"] {
         --ink: #ededed;
@@ -261,10 +261,15 @@
           min-height: auto;
           align-items: start;
           padding-bottom: 40px;
+          justify-items: center;
         }
         .hero-photo {
-          width: 200px;
-          height: 250px;
+          width: 240px;
+          height: 300px;
+        }
+        .hero > div {
+          width: 100%;
+          max-width: 520px;
         }
         .intro {
           font-size: 26px;
