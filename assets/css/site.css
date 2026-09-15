@@ -1,0 +1,298 @@
+/* Shared shell for every page: tokens, base type, chrome, tiles.
+   Page-specific rules stay inline in each page's <head>. */
+
+:root {
+  --ink: #111;
+  --ink-soft: #555;
+  --ink-faint: #767676;
+  --paper: #fff;
+  --line: oklch(0 0 0 / 0.1);
+  --font: "Atkinson Hyperlegible", -apple-system, system-ui, sans-serif;
+  --radius: 3px;
+  --container: 900px;
+  --measure: 62ch;
+}
+:root[data-theme="dark"] {
+  --ink: #ededed;
+  --ink-soft: #aaa;
+  --ink-faint: #8a8a8a;
+  --paper: #101010;
+  --line: oklch(1 0 0 / 0.1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--paper);
+  -webkit-font-smoothing: antialiased;
+}
+a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 150ms ease-out;
+}
+:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Type scale. Atkinson Hyperlegible ships 400 and 700 only. */
+h1,
+h2,
+h3 {
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+h1 {
+  font-size: 34px;
+  margin-bottom: 12px;
+}
+h2 {
+  font-size: 24px;
+  margin-bottom: 18px;
+}
+h3 {
+  font-size: 17px;
+  letter-spacing: 0;
+}
+p {
+  text-wrap: pretty;
+}
+h1 .ph,
+h2 .ph {
+  font-size: 0.82em;
+  vertical-align: -0.06em;
+}
+.lead {
+  font-size: 16px;
+  color: var(--ink-soft);
+  max-width: var(--measure);
+  margin-bottom: 48px;
+}
+
+/* Chrome */
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 28px clamp(20px, 5vw, 32px) 80px;
+}
+header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 56px;
+}
+header nav {
+  margin-left: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+header nav a {
+  display: block;
+  padding-block: 4px;
+  font-size: 15px;
+  color: var(--ink-soft);
+  text-decoration: none;
+  margin-left: 26px;
+}
+header nav a .ph {
+  font-size: 13px;
+  margin-right: 5px;
+  vertical-align: -1px;
+}
+header nav a:hover,
+header nav a[aria-current="page"] {
+  color: var(--ink);
+}
+header nav a:hover {
+  text-decoration: underline;
+  text-underline-offset: 20px;
+}
+#theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px;
+  min-height: 24px;
+  padding: 0;
+  margin-left: 36px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--ink-soft);
+  font-size: 17px;
+}
+#theme-toggle:hover {
+  color: var(--ink);
+}
+#theme-toggle .ph {
+  display: block;
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 10px 24px;
+  margin-top: 80px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+footer a {
+  display: block;
+  padding-block: 2px;
+}
+
+a[target="_blank"]::after {
+  content: "\2197";
+  font-size: 0.72em;
+  margin-left: 3px;
+  display: inline-block;
+  transition: transform 150ms ease-out;
+}
+a[target="_blank"]:hover::after {
+  transform: translate(2px, -2px);
+}
+
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background: var(--ink);
+  opacity: 0.6;
+  z-index: 40;
+}
+
+/* Section rhythm and the 3-up photo tiles shared by home and gallery. */
+.section {
+  margin-bottom: 84px;
+}
+.section p {
+  max-width: var(--measure);
+}
+.section p + p {
+  margin-top: 14px;
+}
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.gallery-item {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.gallery-item img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: var(--radius);
+  outline: 1px solid var(--line);
+  display: block;
+  transition: transform 200ms ease-out;
+}
+.gallery-item:hover img {
+  transform: scale(1.03);
+}
+.gallery-item .caption {
+  display: block;
+  padding-top: 6px;
+  font-size: 12px;
+  color: var(--ink-faint);
+}
+/* Tweet Wall. Body copy runs at full text contrast; the meta line stays a step down. */
+.tweets {
+  list-style: none;
+}
+.tweet {
+  margin-bottom: 56px;
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--ink);
+}
+.tweet p {
+  max-width: var(--measure);
+}
+.tweet p + p {
+  margin-top: 10px;
+}
+.tweet-meta {
+  margin-bottom: 8px;
+  font-size: 13px;
+  color: var(--ink-soft);
+  text-wrap: pretty;
+}
+.tweet-meta a {
+  color: var(--ink-soft);
+}
+
+.more-link {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 15px;
+  color: var(--ink-soft);
+}
+
+@media (max-width: 720px) {
+  header nav {
+    margin-left: 0;
+    flex: 1;
+    justify-content: flex-start;
+  }
+  header nav a {
+    margin-left: 0;
+    margin-right: 16px;
+    font-size: 14px;
+  }
+  header nav a .ph {
+    display: none;
+  }
+  #theme-toggle {
+    margin-left: auto;
+  }
+  h1 {
+    font-size: 28px;
+  }
+  .section {
+    margin-bottom: 56px;
+  }
+  .lead {
+    margin-bottom: 36px;
+  }
+  .photo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  footer {
+    margin-top: 56px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gallery-item img {
+    transition: none;
+  }
+}
