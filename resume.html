@@ -1,247 +1,285 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Saurav Sharma Resume</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link
-        rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700&display=swap"
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Resume of Saurav Sharma: five years of Django and Python backend work, now building SaaS products."
     />
-        <style>
-            @page {
-                size: A4;
-                margin: 0.5in;
-            }
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; base-uri 'self'; img-src 'self'; media-src 'self'; connect-src 'self' https://beamanalytics.b-cdn.net; script-src 'self' 'unsafe-inline' https://unpkg.com https://beamanalytics.b-cdn.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com; font-src 'self' https://fonts.gstatic.com https://unpkg.com;"
+    />
+    <meta property="og:title" content="Resume | Saurav Sharma" />
+    <meta property="og:description" content="Five years of Django and Python backend work." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sorv.dev/resume.html" />
+    <meta property="og:image" content="https://sorv.dev/assets/images/og-image.png" />
+    <title>Resume | Saurav Sharma</title>
+    <link rel="canonical" href="https://sorv.dev/resume.html" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+    <link rel="stylesheet" href="./assets/css/site.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="./site.webmanifest" />
+    <script>
+      (function () {
+        var stored = localStorage.getItem("theme");
+        var dark = window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.dataset.theme = stored || (dark ? "dark" : "light");
+      })();
+    </script>
+    <style>
+      .sheet {
+        max-width: 42rem;
+      }
+      .name {
+        margin-bottom: 2px;
+      }
+      .role {
+        font-size: 17px;
+        font-weight: 700;
+      }
+      .contact {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px 16px;
+        margin-top: 10px;
+        font-size: 14px;
+        color: var(--ink-soft);
+      }
+      .sheet .section {
+        margin-top: 40px;
+        margin-bottom: 0;
+      }
+      .section-title {
+        padding-bottom: 6px;
+        border-bottom: 1px solid var(--line);
+        font-size: 17px;
+      }
+      .entry {
+        margin-top: 24px;
+      }
+      .entry-title {
+        font-size: 16px;
+      }
+      .entry-meta {
+        margin-top: 2px;
+        font-size: 14px;
+        color: var(--ink-soft);
+      }
+      .sheet ul {
+        margin-top: 8px;
+        padding-left: 18px;
+      }
+      .sheet li {
+        margin-top: 4px;
+      }
+      .summary p + p {
+        margin-top: 8px;
+      }
+      .download {
+        display: inline-block;
+        margin-top: 16px;
+        font-size: 15px;
+      }
 
-            :root {
-                color-scheme: light;
-            }
+      @media print {
+        @page {
+          size: A4;
+          margin: 0.5in;
+        }
+        body {
+          font-size: 11px;
+          line-height: 1.35;
+          color: #111;
+          background: #fff;
+        }
+        .contact,
+        .entry-meta {
+          color: #111;
+        }
+        .container {
+          max-width: none;
+          padding: 0;
+        }
+        header,
+        footer,
+        .scroll-progress,
+        .download {
+          display: none;
+        }
+        .sheet {
+          max-width: none;
+        }
+        .sheet .section {
+          margin-top: 16px;
+        }
+        .section-title {
+          margin-bottom: 6px;
+          border-bottom-color: #111;
+        }
+        .entry {
+          margin-top: 10px;
+          break-inside: avoid;
+        }
+        a {
+          text-decoration: none;
+        }
+        a[target="_blank"]::after {
+          content: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="scroll-progress"></div>
+    <div class="container">
+      <header>
+        <nav aria-label="Primary navigation">
+          <a href="/"><i class="ph ph-house" aria-hidden="true"></i>Home</a>
+          <a href="/#story"><i class="ph ph-book-open" aria-hidden="true"></i>Story</a>
+          <a href="/#projects"><i class="ph ph-briefcase" aria-hidden="true"></i>Projects</a>
+          <a href="/#blog"><i class="ph ph-pencil-line" aria-hidden="true"></i>Blog</a>
+          <a href="./gallery.html"><i class="ph ph-images" aria-hidden="true"></i>Photos</a>
+          <a href="./tweets.html"><i class="ph ph-chats-circle" aria-hidden="true"></i>Tweet Wall</a>
+          <a href="./resume.html" aria-current="page"><i class="ph ph-file-text" aria-hidden="true"></i>Resume</a>
+        </nav>
+        <button id="theme-toggle" type="button" aria-label="Toggle theme">
+          <i id="theme-icon" class="ph ph-sun" aria-hidden="true"></i>
+        </button>
+      </header>
 
-            * {
-                box-sizing: border-box;
-            }
+      <main>
+        <div class="sheet">
+          <h1 class="name">Saurav Sharma</h1>
+          <p class="role">Indie Hacker &amp; Software Engineer</p>
 
-            body {
-                max-width: 8.27in;
-                margin: 0 auto;
-                padding: 0.5in;
-                color: #111111;
-                background: #ffffff;
-                font-family: "Open Sans", -apple-system, system-ui, sans-serif;
-                font-size: 11px;
-                line-height: 1.35;
-            }
+          <div class="contact">
+            <span>India</span>
+            <a href="mailto:selftaughtdev@proton.me">selftaughtdev@proton.me</a>
+            <a href="https://sorv.dev">sorv.dev</a>
+            <a href="https://github.com/saurav-codes" target="_blank" rel="noopener noreferrer">github.com/saurav-codes</a>
+            <a href="https://blog.sorv.dev" target="_blank" rel="noopener noreferrer">blog.sorv.dev</a>
+          </div>
+          <a class="download" href="./assets/saurav_sharma_django_dev_resume.pdf">Download PDF</a>
 
-            h1,
-            h2,
-            h3,
-            p,
-            ul {
-                margin: 0;
-            }
+          <section class="section">
+            <h2 class="section-title">Summary</h2>
+            <div class="summary">
+              <p>Indie hacker and software engineer with 5+ years of client work building SaaS products, APIs, internal tools, and real-time features, now building my own products.</p>
+              <p>Main stack: Python, Django, Go, HTMX, PostgreSQL, Redis, and Vue.js.</p>
+            </div>
+          </section>
 
-            .resume {
-                display: block;
-            }
+          <section class="section">
+            <h2 class="section-title">Skills</h2>
+            <p>Python, Django, Django REST Framework, Django Channels, FastAPI, Vue.js, HTMX, JavaScript</p>
+            <p>PostgreSQL, MySQL, SQLite, Redis</p>
+            <p>Celery, Docker, Git, Linux, pytest, REST APIs, WebSockets, OpenAI API</p>
+          </section>
 
-            .name,
-            .section-title {
-                font-family: "Open Sans", -apple-system, system-ui, sans-serif;
-            }
+          <section class="section">
+            <h2 class="section-title">Experience</h2>
 
-            .name {
-                font-size: 24px;
-                font-weight: 700;
-                letter-spacing: 0.01em;
-            }
+            <article class="entry">
+              <h3 class="entry-title">Generative Studio, Software Developer</h3>
+              <p class="entry-meta">Jul 2025 - Present · Remote</p>
+              <ul>
+                <li>Build Python backend services for real-time voice workflows</li>
+                <li>Work on low-latency processing, orchestration, and third-party integrations</li>
+                <li>Ship backend features with a small remote product team</li>
+              </ul>
+            </article>
 
-            .role {
-                margin-top: 4px;
-                font-size: 13px;
-                font-weight: 700;
-            }
+            <article class="entry">
+              <h3 class="entry-title">Fillyouin, Django Developer</h3>
+              <p class="entry-meta">Oct 2024 - Nov 2024 · Remote</p>
+              <ul>
+                <li>Built candidate-matching features with Django and the OpenAI API</li>
+                <li>Added CKEditor-based email template editing for internal users</li>
+                <li>Integrated Google Calendar and Jitsi meetings into the product</li>
+              </ul>
+            </article>
 
-            .contact,
-            .summary,
-            .skills,
-            .entry-meta,
-            .education,
-            .languages {
-                margin-top: 8px;
-            }
+            <article class="entry">
+              <h3 class="entry-title">The Payroll App, Django Developer</h3>
+              <p class="entry-meta">May 2023 - Sep 2024 · Remote</p>
+              <ul>
+                <li>Built and maintained features for a payroll SaaS covering payroll, tax reporting, and employee benefits</li>
+                <li>Refactored backend code to improve maintainability and test coverage with pytest</li>
+                <li>Owned backend work for new features from implementation through deployment</li>
+              </ul>
+            </article>
 
-            .contact p,
-            .summary p,
-            .skills p,
-            .education p,
-            .languages p {
-                margin-top: 2px;
-            }
+            <article class="entry">
+              <h3 class="entry-title">Valar Digital, Python Django Developer</h3>
+              <p class="entry-meta">Sep 2021 - Apr 2023 · Remote</p>
+              <ul>
+                <li>Built SaaS products including LeadPlane, GoodMeeting, and EmailVerifier using Django and PostgreSQL</li>
+                <li>Developed image-processing tools for Random Tools with NumPy and OpenCV</li>
+                <li>Added background jobs with Celery and Redis and search features with Elasticsearch and Haystack</li>
+                <li>Worked on backend refactors and product features for Clasiq Cars</li>
+              </ul>
+            </article>
+          </section>
 
-            .section {
-                margin-top: 16px;
-            }
+          <section class="section">
+            <h2 class="section-title">Project</h2>
+            <article class="entry">
+              <h3 class="entry-title">Tymr Online</h3>
+              <p class="entry-meta"><a href="https://github.com/saurav-codes/focus-timer-v" target="_blank" rel="noopener noreferrer">github.com/saurav-codes/focus-timer-v</a></p>
+              <ul>
+                <li>Built a real-time focus timer with synchronized sessions and live updates</li>
+                <li>Handled concurrent updates with Redis-backed coordination and server-side state management</li>
+                <li>Stack: Django, HTMX, Redis, Django Channels, SQLite</li>
+              </ul>
+            </article>
+          </section>
 
-            .section-title {
-                margin-bottom: 6px;
-                padding-bottom: 3px;
-                border-bottom: 1px solid #111111;
-                font-size: 11px;
-                font-weight: 700;
-                letter-spacing: 0.08em;
-            }
+          <section class="section">
+            <h2 class="section-title">Early experience</h2>
+            <ul>
+              <li>Django programming content creator at StudyGyaan</li>
+              <li>Customer care executive at Karvy Digikonnect</li>
+            </ul>
+          </section>
 
-            .entry {
-                margin-top: 10px;
-                break-inside: avoid;
-            }
+          <section class="section">
+            <h2 class="section-title">Education</h2>
+            <p>Self-directed study in computer science and web development through project work, documentation, and online courses</p>
+          </section>
 
-            .entry:first-of-type {
-                margin-top: 0;
-            }
+          <section class="section">
+            <h2 class="section-title">Languages</h2>
+            <p>Hindi, English</p>
+          </section>
+        </div>
+      </main>
 
-            .entry-title {
-                font-size: 11px;
-                font-weight: 700;
-            }
+      <footer>
+        <a href="mailto:selftaughtdev@proton.me">Email</a>
+        <a href="./resume.html">Resume</a>
+        <a href="https://blog.sorv.dev/" target="_blank" rel="noopener noreferrer">Writing</a>
+        <a href="https://twitter.com/saurav__codes" target="_blank" rel="noopener noreferrer">Twitter</a>
+        <a href="https://github.com/saurav-codes/" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/saurav-sharma-23b162315" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </footer>
+    </div>
 
-            .entry-meta {
-                font-size: 11px;
-            }
-
-            ul {
-                margin-top: 6px;
-                padding-left: 18px;
-            }
-
-            li {
-                margin-top: 3px;
-            }
-
-            a {
-                color: inherit;
-                text-decoration: none;
-            }
-
-            @media screen {
-                body {
-                    padding: 32px;
-                }
-            }
-        </style>
-    </head>
-    <body>
-        <main class="resume">
-            <header>
-                <h1 class="name">Saurav Sharma</h1>
-                <p class="role">Indie Hacker &amp; Software Engineer</p>
-
-                <div class="contact">
-                    <p>India</p>
-                    <p>Email: <a href="mailto:selftaughtdev@proton.me">selftaughtdev@proton.me</a></p>
-                    <p>Portfolio: <a href="https://sorv.dev">https://sorv.dev</a></p>
-                    <p>GitHub: <a href="https://github.com/saurav-codes">https://github.com/saurav-codes</a></p>
-                    <p>Blog: <a href="https://blog.sorv.dev">https://blog.sorv.dev</a></p>
-                </div>
-
-                <div class="summary">
-                    <p>Indie hacker and software engineer with 5+ years of client work building SaaS products, APIs, internal tools, and real-time features, now building my own products.</p>
-                    <p>Main stack: Python, Django, Go, HTMX, PostgreSQL, Redis, and Vue.js.</p>
-                </div>
-            </header>
-
-            <section class="section">
-                <h2 class="section-title">SKILLS</h2>
-                <div class="skills">
-                    <p>Python, Django, Django REST Framework, Django Channels, FastAPI, Vue.js, HTMX, JavaScript</p>
-                    <p>PostgreSQL, MySQL, SQLite, Redis</p>
-                    <p>Celery, Docker, Git, Linux, pytest, REST APIs, WebSockets, OpenAI API</p>
-                </div>
-            </section>
-
-            <section class="section">
-                <h2 class="section-title">EXPERIENCE</h2>
-
-                <article class="entry">
-                    <h3 class="entry-title">Generative Studio, Software Developer</h3>
-                    <p class="entry-meta">Jul 2025 - Present | Remote</p>
-                    <ul>
-                        <li>Build Python backend services for real-time voice workflows</li>
-                        <li>Work on low-latency processing, orchestration, and third-party integrations</li>
-                        <li>Ship backend features with a small remote product team</li>
-                    </ul>
-                </article>
-
-                <article class="entry">
-                    <h3 class="entry-title">Fillyouin, Django Developer</h3>
-                    <p class="entry-meta">Oct 2024 - Nov 2024 | Remote</p>
-                    <ul>
-                        <li>Built candidate-matching features with Django and the OpenAI API</li>
-                        <li>Added CKEditor-based email template editing for internal users</li>
-                        <li>Integrated Google Calendar and Jitsi meetings into the product</li>
-                    </ul>
-                </article>
-
-                <article class="entry">
-                    <h3 class="entry-title">The Payroll App, Django Developer</h3>
-                    <p class="entry-meta">May 2023 - Sep 2024 | Remote</p>
-                    <ul>
-                        <li>Built and maintained features for a payroll SaaS covering payroll, tax reporting, and employee benefits</li>
-                        <li>Refactored backend code to improve maintainability and test coverage with pytest</li>
-                        <li>Owned backend work for new features from implementation through deployment</li>
-                    </ul>
-                </article>
-
-                <article class="entry">
-                    <h3 class="entry-title">Valar Digital, Python Django Developer</h3>
-                    <p class="entry-meta">Sep 2021 - Apr 2023 | Remote</p>
-                    <ul>
-                        <li>Built SaaS products including LeadPlane, GoodMeeting, and EmailVerifier using Django and PostgreSQL</li>
-                        <li>Developed image-processing tools for Random Tools with NumPy and OpenCV</li>
-                        <li>Added background jobs with Celery and Redis and search features with Elasticsearch and Haystack</li>
-                        <li>Worked on backend refactors and product features for Clasiq Cars</li>
-                    </ul>
-                </article>
-            </section>
-
-            <section class="section">
-                <h2 class="section-title">PROJECT</h2>
-
-                <article class="entry">
-                    <h3 class="entry-title">Tymr Online</h3>
-                    <p class="entry-meta"><a href="https://github.com/saurav-codes/focus-timer-v">https://github.com/saurav-codes/focus-timer-v</a></p>
-                    <ul>
-                        <li>Built a real-time focus timer with synchronized sessions and live updates</li>
-                        <li>Handled concurrent updates with Redis-backed coordination and server-side state management</li>
-                        <li>Stack: Django, HTMX, Redis, Django Channels, SQLite</li>
-                    </ul>
-                </article>
-            </section>
-
-            <section class="section">
-                <h2 class="section-title">EARLY EXPERIENCE</h2>
-                <ul>
-                    <li>Django programming content creator at StudyGyaan</li>
-                    <li>Customer care executive at Karvy Digikonnect</li>
-                </ul>
-            </section>
-
-            <section class="section">
-                <h2 class="section-title">EDUCATION</h2>
-                <div class="education">
-                    <p>Self-directed study in computer science and web development through project work, documentation, and online courses</p>
-                </div>
-            </section>
-
-            <section class="section">
-                <h2 class="section-title">LANGUAGES</h2>
-                <div class="languages">
-                    <p>Hindi, English</p>
-                </div>
-            </section>
-        </main>
-    </body>
+    <script defer src="./assets/js/theme-toggle.js"></script>
+    <script defer src="./assets/js/proximity.js"></script>
+    <script defer src="./assets/js/scroll-progress.js"></script>
+    <script
+      src="https://beamanalytics.b-cdn.net/beam.min.js"
+      data-token="4d8d10b5-436d-4483-b61d-392ee0f77a3d"
+      async
+    ></script>
+  </body>
 </html>
