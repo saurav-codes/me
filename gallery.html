@@ -18,35 +18,14 @@
     <meta property="og:image" content="https://sorv.dev/assets/images/gallery/me_caffee_compressed.jpg" />
     <title>Photo Gallery | Saurav Sharma</title>
     <link rel="canonical" href="https://sorv.dev/gallery.html" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,700&display=swap"
-    />
     <link
       rel="stylesheet"
       href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css"
     />
     <style>
-      @font-face {
-        font-family: "Geist";
-        src: url("./assets/fonts/geist-400.woff2") format("woff2");
-        font-weight: 400;
-        font-display: swap;
-      }
-      @font-face {
-        font-family: "Geist";
-        src: url("./assets/fonts/geist-500.woff2") format("woff2");
-        font-weight: 500;
-        font-display: swap;
-      }
-      @font-face {
-        font-family: "Geist";
-        src: url("./assets/fonts/geist-600.woff2") format("woff2");
-        font-weight: 600;
-        font-display: swap;
-      }
+      
+      
+      
       :root {
         --ink: #111;
         --ink-soft: #555;
@@ -54,8 +33,8 @@
         --ink-shade: #444;
         --paper: #fff;
         --paper-ink: #000;
-        --sans: "Geist", -apple-system, system-ui, sans-serif;
-        --serif: "Newsreader", Georgia, serif;
+        --sans: ui-monospace, "SF Mono", Menlo, Monaco, Consolas, monospace;
+        --serif: ui-monospace, "SF Mono", Menlo, Monaco, Consolas, monospace;
       }
       :root[data-theme="dark"] {
         --ink: #ededed;
@@ -81,6 +60,25 @@
         color: inherit;
         text-decoration: underline;
         text-underline-offset: 3px;
+      }
+      header nav a .ph {
+        font-size: 13px;
+        margin-right: 5px;
+        vertical-align: -1px;
+      }
+      a[target="_blank"]::after {
+        content: "\2197";
+        font-size: 0.72em;
+        margin-left: 3px;
+        display: inline-block;
+        transition: transform 150ms ease-out;
+      }
+      a[target="_blank"]:hover::after {
+        transform: translate(2px, -2px);
+      }
+      h1 .ph {
+        font-size: 26px;
+        vertical-align: -2px;
       }
       :focus-visible {
         outline: 2px solid var(--ink);
@@ -131,7 +129,7 @@
       h1 {
         font-family: var(--serif);
         font-size: 30px;
-        font-weight: 600;
+        font-weight: 400;
         letter-spacing: -0.01em;
         margin-bottom: 8px;
       }
@@ -264,10 +262,10 @@
     <div class="container">
       <header>
         <nav aria-label="Primary navigation">
-          <a href="/">Home</a>
-          <a href="/#story">Story</a>
-          <a href="/#projects">Projects</a>
-          <a href="/#blog">Blog</a>
+          <a href="/"><i class="ph ph-house" aria-hidden="true"></i>Home</a>
+          <a href="/#story"><i class="ph ph-book-open" aria-hidden="true"></i>Story</a>
+          <a href="/#projects"><i class="ph ph-briefcase" aria-hidden="true"></i>Projects</a>
+          <a href="/#blog"><i class="ph ph-pencil-line" aria-hidden="true"></i>Blog</a>
         </nav>
         <button id="theme-toggle" type="button" aria-label="Toggle theme">
           <i id="theme-icon" class="ph ph-sun" aria-hidden="true"></i>
@@ -275,7 +273,7 @@
       </header>
 
       <main>
-        <h1>Photos</h1>
+        <h1><i class="ph ph-images" aria-hidden="true"></i> Photos</h1>
         <p class="lead">Travel, work, and time away from the editor.</p>
 
         <div class="photo-grid">
