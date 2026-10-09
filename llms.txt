@@ -1,6 +1,6 @@
 # Saurav Sharma
 
-> Saurav Sharma is an indie hacker and software engineer who builds SaaS products end to end. His main project is ox, a deployment platform that deploys GitHub repos to your own Ubuntu server with systemd and Caddy, no Docker. Before that he spent five years building Django and Python backends for clients.
+> Saurav Sharma is an indie hacker and software engineer who builds SaaS products end to end. His main project is ox, a deployment platform that deploys GitHub repos to your own Ubuntu server with systemd and Caddy, no Docker. He also has 5+ years of building Django and Python backends, and works as a backend developer at Generative Studio.
 
 ## Projects
 
