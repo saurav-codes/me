@@ -63,6 +63,7 @@
       }
       .hero-title a {
         text-underline-offset: 4px;
+        white-space: nowrap;
       }
       .intro-sub {
         max-width: var(--measure);
@@ -94,6 +95,68 @@
         color: var(--ink-faint);
       }
 
+      .featured {
+        max-width: var(--measure);
+        margin-bottom: 36px;
+        padding: 22px 24px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+      }
+      .featured-head {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 6px 12px;
+      }
+      .featured-mark {
+        width: 41px;
+        height: 20px;
+        flex: none;
+      }
+      .featured-head h3 {
+        font-size: 20px;
+      }
+      .featured-head h3 a {
+        text-decoration: none;
+      }
+      .featured-head h3 a:hover {
+        text-decoration: underline;
+      }
+      .featured-badge {
+        padding: 0 7px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        font-size: 13px;
+        color: var(--ink-soft);
+      }
+      .featured-tag {
+        font-size: 14px;
+        color: var(--ink-faint);
+      }
+      .featured .featured-desc {
+        margin-top: 10px;
+        color: var(--ink-soft);
+      }
+      .featured ul {
+        margin-top: 12px;
+        padding-left: 18px;
+      }
+      .featured li {
+        margin-top: 4px;
+      }
+      .featured-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px 18px;
+        margin-top: 16px;
+        font-size: 15px;
+      }
+      .featured .featured-posts {
+        margin-top: 10px;
+        font-size: 14px;
+        color: var(--ink-soft);
+      }
+
       @media (max-width: 720px) {
         .hero {
           grid-template-columns: 1fr;
@@ -104,6 +167,9 @@
         }
         .hero-title {
           font-size: 26px;
+        }
+        .featured {
+          padding: 18px 16px;
         }
       }
     </style>
@@ -143,6 +209,7 @@
             <h1 class="hero-title">
               Saurav Sharma is an indie hacker &amp; software engineer who builds
               SaaS products end to end, currently working on
+              <a href="https://deploywithox.com" target="_blank" rel="noopener noreferrer">ox</a> and
               <a href="https://lazyplanner.app" target="_blank" rel="noopener noreferrer">LazyPlanner</a>.
             </h1>
             <p class="intro-sub">
@@ -167,30 +234,60 @@
           </p>
           <p>
             Between jobs I took breaks on purpose, and I used them to build my
-            own projects. LazyPlanner (AI planning SaaS), ox (deploy tool), Tymr
-            (focus timer), plus plenty of ideas that never left the notebook.
+            own projects. ox (deploy platform), LazyPlanner (AI planning SaaS),
+            Tymr (focus timer), plus plenty of ideas that never left the notebook.
             Those breaks were also school of a different kind: Go, HTMX,
             real-time AI, what makes design good, and sales (cold email,
             copywriting, reading buyers).
           </p>
           <p>
-            Now I am trying to make my own indie products work, LazyPlanner
-            first, while keeping a foot in client work when I want it.
+            Now I am trying to make my own indie products work, ox first. It
+            deploys apps from GitHub to a server you own, and LazyPlanner
+            already runs on it. I still keep a foot in client work when I want it.
           </p>
         </section>
 
         <section id="projects" class="section">
           <h2><i class="ph ph-briefcase" aria-hidden="true"></i> Projects</h2>
+          <article class="featured" aria-labelledby="ox-title">
+            <div class="featured-head">
+              <svg class="featured-mark" viewBox="0 0 124 60" aria-hidden="true" focusable="false">
+                <circle cx="29" cy="30" r="21" fill="none" stroke="currentColor" stroke-width="15" />
+                <path d="M64 6h17l14 17 14-17h15L102 31l22 29h-17L95 42 82 60H65l22-29z" fill="currentColor" />
+              </svg>
+              <h3 id="ox-title"><a href="https://deploywithox.com" target="_blank" rel="noopener noreferrer">ox</a></h3>
+              <span class="featured-badge">Beta, free</span>
+              <span class="featured-tag">Go · HTMX · systemd · Caddy</span>
+            </div>
+            <p class="featured-desc">
+              My main project. Connect a GitHub repo and ox deploys it to your
+              own Ubuntu server with systemd and Caddy, no Docker. It reads the
+              repo, so most stacks need no config.
+            </p>
+            <ul>
+              <li>Checks a plan before every deploy, switches releases with no downtime, and keeps the live one running if an update fails.</li>
+              <li>One-click rollback, daily backups, and preview environments per branch that you can promote.</li>
+              <li>A console, a CLI with <code>--json</code> on every command, and an llms.txt for AI agents.</li>
+              <li>Runs my own LazyPlanner, plus a live zoo of 24 apps on 4 servers and 45 example repos.</li>
+            </ul>
+            <p class="featured-links">
+              <a href="https://deploywithox.com" target="_blank" rel="noopener noreferrer">Website</a>
+              <a href="https://deploywithox.com/docs" target="_blank" rel="noopener noreferrer">Docs</a>
+              <a href="https://deploywithox.com/story" target="_blank" rel="noopener noreferrer">Story</a>
+              <a href="https://github.com/saurav-codes?tab=repositories&amp;q=oxzoo" target="_blank" rel="noopener noreferrer">Examples on GitHub</a>
+            </p>
+            <p class="featured-posts">
+              Posts:
+              <a href="https://blog.sorv.dev/stopped-paying-for-vercel-side-projects" target="_blank" rel="noopener noreferrer">Why I stopped paying for Vercel</a>,
+              <a href="https://blog.sorv.dev/why-i-built-ox-simple-self-hosted-deploys" target="_blank" rel="noopener noreferrer">Why I built ox</a>,
+              <a href="https://blog.sorv.dev/deploy-fastapi-to-your-own-vps" target="_blank" rel="noopener noreferrer">FastAPI on your own VPS</a>
+            </p>
+          </article>
           <ul class="project-list">
             <li>
               <a class="project-name" href="https://lazyplanner.app" target="_blank" rel="noopener noreferrer">LazyPlanner</a>
-              <span class="project-desc">AI planning SaaS, built and deployed solo.</span>
+              <span class="project-desc">AI planning SaaS, built solo and deployed with ox.</span>
               <span class="project-tag">Django · Vue · Celery · own</span>
-            </li>
-            <li>
-              <a class="project-name" href="https://github.com/saurav-codes/ox" target="_blank" rel="noopener noreferrer">ox</a>
-              <span class="project-desc">Vercel-grade deploys on a single VPS.</span>
-              <span class="project-tag">Go · HTMX · own</span>
             </li>
             <li>
               <a class="project-name" href="https://github.com/saurav-codes/focus-timer-v" target="_blank" rel="noopener noreferrer">Tymr</a>
