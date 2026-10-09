@@ -29,6 +29,51 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png" />
     <link rel="manifest" href="./site.webmanifest" />
+    <link rel="alternate" type="text/plain" href="/llms.txt" title="llms.txt" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": "https://sorv.dev/#person",
+            "name": "Saurav Sharma",
+            "url": "https://sorv.dev/",
+            "jobTitle": "Indie Hacker & Software Engineer",
+            "worksFor": { "@type": "Organization", "name": "Generative Studio", "url": "https://vonda.ai" },
+            "owns": [{ "@id": "https://deploywithox.com/#software" }, { "@id": "https://lazyplanner.app/#software" }],
+            "knowsAbout": ["Go", "HTMX", "Python", "Django", "systemd", "Caddy", "Linux servers", "Deployment", "SaaS"],
+            "sameAs": [
+              "https://github.com/saurav-codes",
+              "https://x.com/saurav__codes",
+              "https://www.linkedin.com/in/saurav-sharma-23b162315",
+              "https://blog.sorv.dev/"
+            ]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "@id": "https://deploywithox.com/#software",
+            "name": "ox",
+            "url": "https://deploywithox.com",
+            "description": "Deployment platform that deploys GitHub repos to your own Ubuntu server with systemd and Caddy, no Docker. In beta and free during the beta.",
+            "applicationCategory": "DeveloperApplication",
+            "operatingSystem": "Ubuntu",
+            "creator": { "@id": "https://sorv.dev/#person" },
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+          },
+          {
+            "@type": "WebApplication",
+            "@id": "https://lazyplanner.app/#software",
+            "name": "LazyPlanner",
+            "url": "https://lazyplanner.app",
+            "description": "AI planning SaaS, built solo and deployed with ox.",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "Web",
+            "creator": { "@id": "https://sorv.dev/#person" }
+          }
+        ]
+      }
+    </script>
     <script>
       (function () {
         var stored = localStorage.getItem("theme");

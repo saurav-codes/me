@@ -1,0 +1,19 @@
+# Saurav Sharma
+
+> Saurav Sharma is an indie hacker and software engineer who builds SaaS products end to end. His main project is ox, a deployment platform that deploys GitHub repos to your own Ubuntu server with systemd and Caddy, no Docker. Before that he spent five years building Django and Python backends for clients.
+
+## Projects
+
+- [ox](https://deploywithox.com): deployment platform for your own server. Connect a GitHub repo and ox deploys it with zero-downtime releases, rollback, previews per branch and daily backups. Built in Go with HTMX. In beta and free during the beta.
+- [ox docs](https://deploywithox.com/docs): how to deploy, configure and operate apps with ox.
+- [ox story](https://deploywithox.com/story): why and how ox was built.
+- [ox llms.txt](https://deploywithox.com/llms.txt): machine-readable guide to ox for AI agents.
+- [LazyPlanner](https://lazyplanner.app): AI planning SaaS, built solo and deployed with ox.
+- [Blog](https://blog.sorv.dev): writing on deploys, Django, and building products.
+- [Resume](https://sorv.dev/resume.html): work history and skills.
+
+## Optional
+
+- [ox example projects](https://github.com/saurav-codes?tab=repositories&q=oxzoo): 45 example repos named oxzoo-*.
+- [GitHub](https://github.com/saurav-codes): code.
+- [Plain-text resume](https://sorv.dev/Resume.txt): same resume as text.
