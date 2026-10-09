@@ -11,9 +11,9 @@ Django developer with 5+ years of experience building SaaS products, APIs, inter
 Main stack: Python, Django, PostgreSQL, Redis, HTMX, and Vue.js.
 
 SKILLS
-Python, Django, Django REST Framework, Django Channels, FastAPI, Vue.js, HTMX, JavaScript
+Python, Django, Django REST Framework, Django Channels, FastAPI, Go, Vue.js, HTMX, JavaScript
 PostgreSQL, MySQL, SQLite, Redis
-Celery, Docker, Git, Linux, pytest, REST APIs, WebSockets, OpenAI API
+Celery, Docker, systemd, Caddy, Git, Linux, pytest, REST APIs, WebSockets, OpenAI API
 
 EXPERIENCE
 Generative Studio
@@ -49,7 +49,16 @@ Remote
 - Added background jobs with Celery and Redis and search features with Elasticsearch and Haystack
 - Worked on backend refactors and product features for Clasiq Cars
 
-PROJECT
+PROJECTS
+ox, deployment platform (own product)
+https://deploywithox.com
+In beta, 2026
+- Built solo a platform that deploys GitHub repos to the user's own Ubuntu server with systemd and Caddy, no Docker
+- Designed a hosted control plane plus a small agent on each server, with blue/green releases, rollback, branch previews, and daily backups
+- Shipped a console, a CLI with JSON output for every command, docs, and an llms.txt for AI agents
+- Tested in a lab of real DigitalOcean droplets; runs a live demo zoo of 24 apps on 4 servers
+- Stack: Go, HTMX, SQLite, systemd, Caddy, GitHub App, Cloudflare, DigitalOcean
+
 Tymr Online
 https://github.com/saurav-codes/focus-timer-v
 - Built a real-time focus timer with synchronized sessions and live updates
