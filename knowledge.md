@@ -1,7 +1,7 @@
 # Project knowledge
 
 ## What this is
-Static portfolio site for Saurav Sharma (Django developer) deployed at **sorv.dev** via GitHub Pages. Plain HTML, CSS, and vanilla JS — no build step, no framework, no package manager. Goal: attract recruiters and founders to hire Saurav as a Django developer.
+Static portfolio site for Saurav Sharma (backend engineer and indie hacker) deployed at **sorv.dev** via GitHub Pages. Plain HTML, CSS, and vanilla JS: no build step, no framework, no package manager. Goal: show his own products (ox first, then LazyPlanner) and let recruiters and founders hire him for Python, Django and backend work.
 
 ## ox (Saurav's main product)
 ox is Saurav's own deployment platform: https://deploywithox.com. It is the first, featured project on the home page.
@@ -23,46 +23,42 @@ ox is Saurav's own deployment platform: https://deploywithox.com. It is the firs
 - **Dev:** Open `index.html` directly in a browser, or serve the folder locally, e.g.:
   - `python3 -m http.server 8000` then visit `http://localhost:8000`
 - **Test / Lint / Build:** None configured. Manually verify in-browser (desktop + mobile widths, light + dark theme).
-- **Deploy:** Pushing to `main` deploys to GitHub Pages (custom domain in `CNAME` → `sorv.dev`). `_config.yml` exists so Jekyll includes the `.well-known/` folder.
+- **Deploy:** Pushing to `main` deploys to GitHub Pages (custom domain in `CNAME`: `sorv.dev`). `_config.yml` exists so Jekyll includes the `.well-known/` folder.
 
 ## Pages (project root)
-- `index.html` — home page (hero, tech marquee, projects, experience, skills, blog, gallery preview, hire/contact).
-- `gallery.html` — full photo gallery with inline lightbox + "Load More" script.
-- `resume.html` — standalone resume page. `Resume.txt` holds plain-text source.
-- `tweets.html` — curated tweets page.
-- `CNAME` — custom domain for GitHub Pages.
-- `site.webmanifest`, `_config.yml`, `.well-known/discord` — platform / manifest files.
+- `index.html`: home page (hero, story, projects with ox featured, blog picks, photos preview).
+- `gallery.html`: full photo gallery with an inline lightbox and a "Load more" script.
+- `resume.html`: standalone resume page with a print stylesheet. `Resume.txt` mirrors it in plain text.
+- `tweets.html`: curated tweets page.
+- `llms.txt`: summary of Saurav and his projects for AI readers.
+- `CNAME`: custom domain for GitHub Pages.
+- `site.webmanifest`, `_config.yml`, `.well-known/discord`: platform and manifest files.
 
 ## Asset layout (`assets/`)
-- `css/`
-  - `home.css`, `style.css`, `gallery-page.css` — page-level styles.
-  - `base/` — `reset.css`, `variables.css` (theme tokens, colors, spacing).
-  - `components/` — per-component stylesheets: `navbar.css`, `projects.css`, `gallery.css`, `gallery-preview.css`, `technologies.css`, `tweet-card.css`, `blog.css`, `profile.css`, `footer.css`.
+- `css/site.css`: the one shared stylesheet (theme tokens, base type, header, footer, shared components). Page-specific rules live in an inline `<style>` in each page's `<head>`.
 - `js/`
-  - `components/theme.js` — light/dark theme toggle (`data-theme` on `<html>`).
-  - `components/navigation.js` — header nav behavior.
-  - `scroll.js` — scroll progress bar + scroll interactions.
-  - `lazy-media.js` — lazy-loads videos (`[data-lazy-video]` with `data-src` on `<source>`).
-  - `blog.js` — fetches latest 6 Hashnode posts for user `selftaughtdev` via GraphQL (`https://gql.hashnode.com`) and injects them into `.blog-list`. Lazy-triggered via `IntersectionObserver` + `requestIdleCallback`.
-- `images/` — portraits, project GIFs/MP4s, `gallery/` photo archive, `companies_logo/`.
-- `favicon/` — favicons referenced from each HTML page.
+  - `theme-toggle.js`: light/dark theme toggle (`data-theme` on `<html>`).
+  - `proximity.js`: scales Phosphor icons near the cursor (skipped with reduced motion).
+  - `scroll-progress.js`: scroll progress bar.
+- `images/`: portraits, project media, `gallery/` photo archive, `companies_logo/`.
+- `favicon/`: favicons referenced from each HTML page.
+- `saurav_sharma_resume.pdf`: resume PDF printed from `resume.html` (the "Download PDF" link). `saurav_sharma_django_dev_resume.pdf` is an identical copy kept for old links.
 
 ## Conventions
 - Static site: no build pipeline. Edit HTML/CSS/JS directly and refresh.
-- Theme is set by `data-theme="dark"` (default) / `"light"` on `<html>`. Style tokens live in `assets/css/base/variables.css`.
-- Scripts are loaded with `defer` from the bottom of each HTML file; each page independently includes the scripts it needs (no bundler).
-- Icons come from Phosphor Icons via CDN (`@phosphor-icons/web`). Tech logos come from `cdn.jsdelivr.net/gh/devicons/devicon`. Fonts come from Google Fonts (IBM Plex Mono, etc.).
-- Images: prefer `_compressed` variants under `assets/images/gallery/`; use `loading="lazy"` + `decoding="async"` for everything below-the-fold. Hero image uses `fetchpriority="high"`.
-- Videos in project cards use `<video autoplay loop muted playsinline preload="none" data-lazy-video>` with `<source data-src="...">` — `lazy-media.js` swaps `data-src` → `src` when in view. Don't set `src` directly on these.
-- Each HTML page duplicates its own `<head>` block and footer links — keep them in sync when adding nav items or social links.
-- Analytics: PostHog init snippet is inlined at the bottom of each HTML page. The gallery page additionally loads Beam analytics. Keep these as-is unless asked.
-- Contact form posts to Formspree (`https://formspree.io/f/mkgnbdeq`).
+- Theme is set by `data-theme="light"` / `"dark"` on `<html>` by an inline head script (stored choice, else the OS preference). Style tokens live at the top of `assets/css/site.css`.
+- Scripts are loaded with `defer` from the bottom of each HTML file; each page includes the scripts it needs (no bundler).
+- Icons come from Phosphor Icons via unpkg (`@phosphor-icons/web`). The font is Atkinson Hyperlegible from Google Fonts.
+- Each page has a strict Content-Security-Policy `<meta>`; a new external host (script, style, font, fetch) must be added there or it is blocked.
+- Images: prefer `_compressed` variants under `assets/images/gallery/`; use `loading="lazy"` + `decoding="async"` below the fold. The hero image uses `fetchpriority="high"`.
+- Each HTML page duplicates its own `<head>` block, nav and footer links: keep them in sync when adding nav items or social links.
+- Analytics: Beam analytics (`beamanalytics.b-cdn.net`) is loaded at the bottom of each page. Keep it as-is unless asked.
+- Contact is a `mailto:` link (Say Hello, footer Email); there is no contact form.
 
 ## Gotchas
-- No package manager or lockfile — do **not** add `npm`, `node_modules`, bundlers, or frameworks without explicit request.
+- No package manager or lockfile: do **not** add `npm`, `node_modules`, bundlers, or frameworks without explicit request.
 - GitHub Pages serves via Jekyll. Any top-level folder starting with `_` or `.` is excluded by default; `_config.yml` re-includes `.well-known/`. If adding new dotfolders that must be served, extend `include:` in `_config.yml`.
-- Hashnode GraphQL endpoint and the username `selftaughtdev` are hardcoded in `blog.js`. Blog posts fail silently to a fallback link if the request breaks.
-- Resume download link in `index.html` points to `./assets/saurav_sharma_django_dev_resume.pdf?v=<date>` — bump the `?v=` query string when replacing the PDF to bust caches.
-- Gallery "Load More" logic shows 6 items at a time; new `.gallery-item` entries are automatically picked up but the order in the HTML is the display order.
+- When the resume changes, update `resume.html`, `Resume.txt` and both PDFs together. Print the PDF from `resume.html` in headless Chrome (`Page.printToPDF` with `preferCSSPageSize`, Letter, 2 pages).
+- The Blog section's post count ("All writing, N posts") is hardcoded in `index.html`: count post URLs in https://blog.sorv.dev/sitemap.xml (skip the home, `/archive` and `/recommendations`).
+- Gallery "Load more" shows 6 items at a time; new `.gallery-item` entries are picked up automatically and the order in the HTML is the display order.
 - Internal nav on non-home pages uses absolute anchors like `/#projects` (not `#projects`) so they work from `gallery.html`, `tweets.html`, etc. Follow this pattern when adding new subpages.
-- Per `.windsurfrules`: match existing patterns, don't delete unrelated comments/code, keep changes minimal and scoped.
