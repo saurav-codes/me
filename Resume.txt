@@ -1,5 +1,5 @@
 Saurav Sharma
-Django Developer
+Backend Engineer & Indie Hacker
 India
 Email: selftaughtdev@proton.me
 Portfolio: https://sorv.dev
@@ -7,20 +7,20 @@ GitHub: https://github.com/saurav-codes
 Blog: https://blog.sorv.dev
 
 SUMMARY
-Django developer with 5+ years of experience building SaaS products, APIs, internal tools, and real-time features.
-Main stack: Python, Django, PostgreSQL, Redis, HTMX, and Vue.js.
+Backend engineer with 5+ years of client work building SaaS products, APIs, internal tools, and real-time features in Python and Django. Now also building my own products: ox, a deployment platform written in Go, and LazyPlanner, an AI planning SaaS.
+Main stack: Python, Django, FastAPI, Go, HTMX, PostgreSQL, Redis, and Vue.js.
 
 SKILLS
 Python, Django, Django REST Framework, Django Channels, FastAPI, Go, Vue.js, HTMX, JavaScript
 PostgreSQL, MySQL, SQLite, Redis
-Celery, Docker, systemd, Caddy, Git, Linux, pytest, REST APIs, WebSockets, OpenAI API
+Celery, Docker, systemd, Caddy, Git, Linux, pytest, REST APIs, WebSockets, LiveKit, OpenAI and LLM APIs
 
 EXPERIENCE
 Generative Studio
-Software Developer
+Senior Backend Engineer
 Jul 2025 - Present
 Remote
-- Build Python backend services for real-time voice workflows
+- Build Python backend services for real-time AI voice workflows (LiveKit, ElevenLabs, Deepgram, OpenAI APIs, Telnyx, FastAPI)
 - Work on low-latency processing, orchestration, and third-party integrations
 - Ship backend features with a small remote product team
 
@@ -28,7 +28,7 @@ Fillyouin
 Django Developer
 Oct 2024 - Nov 2024
 Remote
-- Built candidate-matching features with Django and the OpenAI API
+- Built AI candidate-to-job matching features with Django and the OpenAI API
 - Added CKEditor-based email template editing for internal users
 - Integrated Google Calendar and Jitsi meetings into the product
 
@@ -51,19 +51,25 @@ Remote
 
 PROJECTS
 ox, deployment platform (own product)
-https://deploywithox.com
 In beta, 2026
-- Built solo a platform that deploys GitHub repos to the user's own Ubuntu server with systemd and Caddy, no Docker
+https://deploywithox.com
+- Designed and built a platform on my own that deploys GitHub repos to the user's own Ubuntu server with systemd and Caddy, no Docker
 - Designed a hosted control plane plus a small agent on each server, with blue/green releases, rollback, branch previews, and daily backups
 - Shipped a console, a CLI with JSON output for every command, docs, and an llms.txt for AI agents
 - Tested in a lab of real DigitalOcean droplets; runs a live demo zoo of 24 apps on 4 servers
 - Stack: Go, HTMX, SQLite, systemd, Caddy, GitHub App, Cloudflare, DigitalOcean
 
+LazyPlanner, AI planning SaaS (own product)
+https://lazyplanner.app
+- Captures tasks from third-party integrations such as GitHub, Asana, Gmail, and Linear
+- Uses AI to auto-assign tags, projects, and goals and to reschedule the day
+- Stack: Django, Vue.js, Django Channels, Celery, PostgreSQL; deployed on a Linux VPS with ox
+
 Tymr Online
 https://github.com/saurav-codes/focus-timer-v
 - Built a real-time focus timer with synchronized sessions and live updates
 - Handled concurrent updates with Redis-backed coordination and server-side state management
-- Stack: Django, HTMX, Redis, Django Channels, SQLite
+- Stack: Django, HTMX, Redis (sorted sets for queue management), Django Channels, SQLite
 
 EARLY EXPERIENCE
 - Django programming content creator at StudyGyaan

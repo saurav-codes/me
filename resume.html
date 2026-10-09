@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Resume of Saurav Sharma: five years of Django and Python backend work, now building SaaS products."
+      content="Resume of Saurav Sharma: backend engineer with 5+ years of Python and Django work, now building ox and LazyPlanner."
     />
     <meta
       http-equiv="Content-Security-Policy"
       content="default-src 'self'; base-uri 'self'; img-src 'self'; media-src 'self'; connect-src 'self' https://beamanalytics.b-cdn.net; script-src 'self' 'unsafe-inline' https://unpkg.com https://beamanalytics.b-cdn.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com; font-src 'self' https://fonts.gstatic.com https://unpkg.com;"
     />
     <meta property="og:title" content="Resume | Saurav Sharma" />
-    <meta property="og:description" content="Five years of Django and Python backend work." />
+    <meta property="og:description" content="Backend engineer with 5+ years of Python and Django work, now building ox and LazyPlanner." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://sorv.dev/resume.html" />
     <meta property="og:image" content="https://sorv.dev/assets/images/og-image.png" />
@@ -92,12 +92,12 @@
 
       @media print {
         @page {
-          size: A4;
+          size: letter;
           margin: 0.5in;
         }
         body {
-          font-size: 11px;
-          line-height: 1.35;
+          font-size: 11.5px;
+          line-height: 1.4;
           color: #111;
           background: #fff;
         }
@@ -118,16 +118,44 @@
         .sheet {
           max-width: none;
         }
+        .name {
+          font-size: 26px;
+        }
+        .role {
+          font-size: 14px;
+        }
+        .contact,
+        .entry-meta {
+          font-size: 11.5px;
+        }
         .sheet .section {
           margin-top: 16px;
         }
         .section-title {
           margin-bottom: 6px;
           border-bottom-color: #111;
+          font-size: 14px;
+          break-after: avoid;
+        }
+        .section p {
+          max-width: none;
+        }
+        .section p + p,
+        .summary p + p {
+          margin-top: 3px;
         }
         .entry {
           margin-top: 10px;
           break-inside: avoid;
+        }
+        .entry-title {
+          font-size: 13px;
+        }
+        .sheet ul {
+          margin-top: 4px;
+        }
+        .sheet li {
+          margin-top: 2px;
         }
         a {
           text-decoration: none;
@@ -159,7 +187,7 @@
       <main>
         <div class="sheet">
           <h1 class="name">Saurav Sharma</h1>
-          <p class="role">Indie Hacker &amp; Software Engineer</p>
+          <p class="role">Backend Engineer &amp; Indie Hacker</p>
 
           <div class="contact">
             <span>India</span>
@@ -168,13 +196,13 @@
             <a href="https://github.com/saurav-codes" target="_blank" rel="noopener noreferrer">github.com/saurav-codes</a>
             <a href="https://blog.sorv.dev" target="_blank" rel="noopener noreferrer">blog.sorv.dev</a>
           </div>
-          <a class="download" href="./assets/saurav_sharma_django_dev_resume.pdf">Download PDF</a>
+          <a class="download" href="./assets/saurav_sharma_resume.pdf">Download PDF</a>
 
           <section class="section">
             <h2 class="section-title">Summary</h2>
             <div class="summary">
-              <p>Indie hacker and software engineer with 5+ years of client work building SaaS products, APIs, internal tools, and real-time features, now building my own products.</p>
-              <p>Main stack: Python, Django, Go, HTMX, PostgreSQL, Redis, and Vue.js.</p>
+              <p>Backend engineer with 5+ years of client work building SaaS products, APIs, internal tools, and real-time features in Python and Django. Now also building my own products: ox, a deployment platform written in Go, and LazyPlanner, an AI planning SaaS.</p>
+              <p>Main stack: Python, Django, FastAPI, Go, HTMX, PostgreSQL, Redis, and Vue.js.</p>
             </div>
           </section>
 
@@ -182,17 +210,17 @@
             <h2 class="section-title">Skills</h2>
             <p>Python, Django, Django REST Framework, Django Channels, FastAPI, Go, Vue.js, HTMX, JavaScript</p>
             <p>PostgreSQL, MySQL, SQLite, Redis</p>
-            <p>Celery, Docker, systemd, Caddy, Git, Linux, pytest, REST APIs, WebSockets, OpenAI API</p>
+            <p>Celery, Docker, systemd, Caddy, Git, Linux, pytest, REST APIs, WebSockets, LiveKit, OpenAI and LLM APIs</p>
           </section>
 
           <section class="section">
             <h2 class="section-title">Experience</h2>
 
             <article class="entry">
-              <h3 class="entry-title">Generative Studio, Software Developer</h3>
+              <h3 class="entry-title">Generative Studio, Senior Backend Engineer</h3>
               <p class="entry-meta">Jul 2025 - Present · Remote</p>
               <ul>
-                <li>Build Python backend services for real-time voice workflows</li>
+                <li>Build Python backend services for real-time AI voice workflows (LiveKit, ElevenLabs, Deepgram, OpenAI APIs, Telnyx, FastAPI)</li>
                 <li>Work on low-latency processing, orchestration, and third-party integrations</li>
                 <li>Ship backend features with a small remote product team</li>
               </ul>
@@ -202,7 +230,7 @@
               <h3 class="entry-title">Fillyouin, Django Developer</h3>
               <p class="entry-meta">Oct 2024 - Nov 2024 · Remote</p>
               <ul>
-                <li>Built candidate-matching features with Django and the OpenAI API</li>
+                <li>Built AI candidate-to-job matching features with Django and the OpenAI API</li>
                 <li>Added CKEditor-based email template editing for internal users</li>
                 <li>Integrated Google Calendar and Jitsi meetings into the product</li>
               </ul>
@@ -236,11 +264,21 @@
               <h3 class="entry-title">ox, deployment platform (own product)</h3>
               <p class="entry-meta">In beta, 2026 · <a href="https://deploywithox.com" target="_blank" rel="noopener noreferrer">deploywithox.com</a></p>
               <ul>
-                <li>Built solo a platform that deploys GitHub repos to the user's own Ubuntu server with systemd and Caddy, no Docker</li>
+                <li>Designed and built a platform on my own that deploys GitHub repos to the user's own Ubuntu server with systemd and Caddy, no Docker</li>
                 <li>Designed a hosted control plane plus a small agent on each server, with blue/green releases, rollback, branch previews, and daily backups</li>
                 <li>Shipped a console, a CLI with JSON output for every command, docs, and an llms.txt for AI agents</li>
                 <li>Tested in a lab of real DigitalOcean droplets; runs a live demo zoo of 24 apps on 4 servers</li>
                 <li>Stack: Go, HTMX, SQLite, systemd, Caddy, GitHub App, Cloudflare, DigitalOcean</li>
+              </ul>
+            </article>
+
+            <article class="entry">
+              <h3 class="entry-title">LazyPlanner, AI planning SaaS (own product)</h3>
+              <p class="entry-meta"><a href="https://lazyplanner.app" target="_blank" rel="noopener noreferrer">lazyplanner.app</a></p>
+              <ul>
+                <li>Captures tasks from third-party integrations such as GitHub, Asana, Gmail, and Linear</li>
+                <li>Uses AI to auto-assign tags, projects, and goals and to reschedule the day</li>
+                <li>Stack: Django, Vue.js, Django Channels, Celery, PostgreSQL; deployed on a Linux VPS with ox</li>
               </ul>
             </article>
 
@@ -250,7 +288,7 @@
               <ul>
                 <li>Built a real-time focus timer with synchronized sessions and live updates</li>
                 <li>Handled concurrent updates with Redis-backed coordination and server-side state management</li>
-                <li>Stack: Django, HTMX, Redis, Django Channels, SQLite</li>
+                <li>Stack: Django, HTMX, Redis (sorted sets for queue management), Django Channels, SQLite</li>
               </ul>
             </article>
           </section>
