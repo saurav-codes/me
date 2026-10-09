@@ -3,6 +3,21 @@
 ## What this is
 Static portfolio site for Saurav Sharma (Django developer) deployed at **sorv.dev** via GitHub Pages. Plain HTML, CSS, and vanilla JS — no build step, no framework, no package manager. Goal: attract recruiters and founders to hire Saurav as a Django developer.
 
+## ox (Saurav's main product)
+ox is Saurav's own deployment platform: https://deploywithox.com. It is the first, featured project on the home page.
+- You connect a GitHub repo and ox deploys it to your own Ubuntu server (a VPS you rent) using systemd and Caddy, no Docker.
+- It reads the repo, so most stacks need no config. An optional `ox.toml` covers the rest, and an AI agent can write it with the bundled skill.
+- It checks a plan before every deploy, switches releases with no downtime (blue/green), keeps the live release running when an update fails, and has one-click rollback.
+- Daily backups of services, preview environments per branch with promote, logs with a query bar and an error-focused explorer.
+- A console plus a CLI with `--json` for every command, and an `/llms.txt` for AI agents: https://deploywithox.com/llms.txt
+- Built in Go with HTMX. Runs as a hosted plane with a small agent on each customer server.
+- In beta and free during the beta.
+- Has plans for many stacks: Python, JavaScript/TypeScript, Ruby on Rails, PHP, Go, Rust, Java and .NET, Elixir, and static sites. Do not claim every stack is tested.
+- 45 example projects on GitHub (repos named `oxzoo-*` under https://github.com/saurav-codes) and a live zoo of 24 apps across 4 servers.
+- Lazy Planner (https://lazyplanner.app) runs on ox.
+- Docs: https://deploywithox.com/docs. Story: https://deploywithox.com/story.
+- Blog posts on https://blog.sorv.dev: "Why I Stopped Paying for Vercel on My Side Projects", "Self-Hosted Deploy Tools Felt Too Busy, So I Built ox", "Deploy FastAPI to Your Own VPS with One Config File".
+
 ## Quickstart
 - **Setup:** None. No dependencies to install.
 - **Dev:** Open `index.html` directly in a browser, or serve the folder locally, e.g.:
