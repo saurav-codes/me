@@ -7,7 +7,7 @@ GitHub: https://github.com/saurav-codes
 Blog: https://blog.sorv.dev
 
 SUMMARY
-Backend engineer with 5+ years of client work building SaaS products, APIs, internal tools, and real-time features in Python and Django. Now also building my own products: ox, a deployment platform written in Go, and LazyPlanner, an AI planning SaaS.
+Backend engineer with 5+ years of client work building SaaS products, APIs, internal tools, and real-time features in Python and Django. Since late 2025, building my own products: ox, a deployment platform written in Go, and LazyPlanner, an AI planning SaaS.
 Main stack: Python, Django, FastAPI, Go, HTMX, PostgreSQL, Redis, and Vue.js.
 
 SKILLS
@@ -16,13 +16,20 @@ PostgreSQL, MySQL, SQLite, Redis
 Celery, Docker, systemd, Caddy, Git, Linux, pytest, REST APIs, WebSockets, LiveKit, OpenAI and LLM APIs
 
 EXPERIENCE
+Independent
+Own products
+Nov 2025 - Present
+Remote
+- Took a break after Generative Studio to rest, learn new stacks, and try product ideas
+- Those experiments became LazyPlanner and ox, both built and run on my own (see Projects)
+
 Generative Studio
 Senior Backend Engineer
-Jul 2025 - Present
+Jul 2025 - Oct 2025
 Remote
-- Build Python backend services for real-time AI voice workflows (LiveKit, ElevenLabs, Deepgram, OpenAI APIs, Telnyx, FastAPI)
-- Work on low-latency processing, orchestration, and third-party integrations
-- Ship backend features with a small remote product team
+- Built Python backend services for real-time AI voice workflows (LiveKit, ElevenLabs, Deepgram, OpenAI APIs, Telnyx, FastAPI)
+- Worked on low-latency processing, orchestration, and third-party integrations
+- Shipped backend features with a small remote product team
 
 Fillyouin
 Django Developer
