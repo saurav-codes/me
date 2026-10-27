@@ -270,14 +270,19 @@ a[target="_blank"]:hover::after {
 }
 
 @media (max-width: 720px) {
+  header {
+    flex-wrap: wrap;
+    row-gap: 10px;
+  }
   header nav {
+    order: 3;
+    flex-basis: 100%;
     margin-left: 0;
-    flex: 1;
-    justify-content: flex-start;
+    justify-content: space-between;
+    column-gap: 12px;
   }
   header nav a {
     margin-left: 0;
-    margin-right: 16px;
     font-size: 14px;
   }
   header nav a .ph {
