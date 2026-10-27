@@ -105,9 +105,51 @@
         line-height: 1.2;
       }
       .hero-title a {
+        position: relative;
         text-decoration-thickness: 2px;
         text-underline-offset: 5px;
         white-space: nowrap;
+      }
+      .link-preview {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 10;
+        width: 300px;
+        padding-top: 10px;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 1.4;
+        color: var(--ink-soft);
+        white-space: normal;
+        display: none;
+      }
+      .link-preview-card {
+        display: block;
+        overflow: hidden;
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        box-shadow: 0 12px 32px oklch(0 0 0 / 0.16);
+      }
+      .link-preview img {
+        display: block;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 640 / 336;
+        border-bottom: 1px solid var(--line);
+      }
+      .link-preview-domain {
+        display: block;
+        padding: 8px 12px;
+      }
+      @media (hover: hover) {
+        .hero-title a:hover .link-preview {
+          display: block;
+        }
+      }
+      .hero-title a:focus-visible .link-preview {
+        display: block;
       }
       .hero-mark {
         height: 0.72em;
@@ -296,11 +338,25 @@
               Saurav Sharma is an indie hacker &amp; software engineer who builds
               SaaS products end to end, currently working on
               <a href="https://deploywithox.com" target="_blank" rel="noopener noreferrer"
-                ><svg class="hero-mark hero-mark-ox" aria-hidden="true" focusable="false"><use href="#ox-mark" /></svg>ox</a
+                ><svg class="hero-mark hero-mark-ox" aria-hidden="true" focusable="false"><use href="#ox-mark" /></svg>ox<span class="link-preview" aria-hidden="true"
+                  ><span class="link-preview-card"
+                    ><img src="./assets/images/projects/og-ox.webp" alt="" width="640" height="336" /><span
+                      class="link-preview-domain"
+                      >deploywithox.com</span
+                    ></span
+                  ></span
+                ></a
               >
               and
               <a href="https://lazyplanner.app" target="_blank" rel="noopener noreferrer"
-                ><svg class="hero-mark hero-mark-lp" aria-hidden="true" focusable="false"><use href="#lp-mark" /></svg>LazyPlanner</a
+                ><svg class="hero-mark hero-mark-lp" aria-hidden="true" focusable="false"><use href="#lp-mark" /></svg>LazyPlanner<span class="link-preview" aria-hidden="true"
+                  ><span class="link-preview-card"
+                    ><img src="./assets/images/projects/og-lazyplanner.webp" alt="" width="640" height="336" /><span
+                      class="link-preview-domain"
+                      >lazyplanner.app</span
+                    ></span
+                  ></span
+                ></a
               >.
             </h1>
             <p class="intro-sub">
