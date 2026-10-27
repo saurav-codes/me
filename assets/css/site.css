@@ -107,6 +107,11 @@ header {
   align-items: center;
   margin-bottom: 56px;
 }
+header .brand {
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+}
 header nav {
   margin-left: auto;
   display: flex;
