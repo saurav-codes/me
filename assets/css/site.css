@@ -176,15 +176,24 @@ footer a {
   padding-block: 2px;
 }
 
+/* The arrow is a mask on a zero-width word joiner: no visible glyph means no underline under it,
+   and no break opportunity before it, so it never wraps onto its own line. */
 a[target="_blank"]::after {
-  content: "\2197";
-  font-size: 0.72em;
-  margin-left: 3px;
-  display: inline-block;
-  transition: transform 150ms ease-out;
+  content: "\2060";
+  position: relative;
+  top: 0;
+  left: 0;
+  margin-left: 0.2em;
+  padding-left: 0.62em;
+  background-color: currentColor;
+  mask: url("../images/arrow-up-right.svg") no-repeat center / 0.62em;
+  transition:
+    top 150ms ease-out,
+    left 150ms ease-out;
 }
 a[target="_blank"]:hover::after {
-  transform: translate(2px, -2px);
+  top: -2px;
+  left: 2px;
 }
 
 .scroll-progress {
