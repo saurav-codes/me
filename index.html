@@ -1,0 +1,536 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Saurav Sharma is an indie hacker and software engineer who builds SaaS products end to end."
+    />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; base-uri 'self'; img-src 'self'; media-src 'self'; connect-src 'self' https://beamanalytics.b-cdn.net; script-src 'self' 'unsafe-inline' https://unpkg.com https://beamanalytics.b-cdn.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com; font-src 'self' https://fonts.gstatic.com https://unpkg.com;"
+    />
+    <meta property="og:title" content="Saurav Sharma | Indie Hacker & Software Engineer" />
+    <meta property="og:description" content="Indie hacker and software engineer building SaaS products end to end." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sorv.dev/" />
+    <meta property="og:image" content="https://sorv.dev/assets/images/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="https://sorv.dev/" />
+    <title>Saurav Sharma | Indie Hacker &amp; Software Engineer</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+    <link rel="stylesheet" href="./assets/css/site.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="./site.webmanifest" />
+    <link rel="alternate" type="text/plain" href="/llms.txt" title="llms.txt" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": "https://sorv.dev/#person",
+            "name": "Saurav Sharma",
+            "url": "https://sorv.dev/",
+            "jobTitle": "Indie Hacker & Software Engineer",
+            "knowsAbout": ["Go", "HTMX", "Python", "Django", "systemd", "Caddy", "Linux servers", "Deployment", "SaaS"],
+            "sameAs": [
+              "https://github.com/saurav-codes",
+              "https://x.com/saurav__codes",
+              "https://www.linkedin.com/in/saurav-sharma-23b162315",
+              "https://blog.sorv.dev/"
+            ]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "@id": "https://deploywithox.com/#software",
+            "name": "ox",
+            "url": "https://deploywithox.com",
+            "description": "Deployment platform that deploys GitHub repos to your own Ubuntu server with systemd and Caddy, no Docker. In beta and free during the beta.",
+            "applicationCategory": "DeveloperApplication",
+            "operatingSystem": "Ubuntu",
+            "creator": { "@id": "https://sorv.dev/#person" },
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+          },
+          {
+            "@type": "WebApplication",
+            "@id": "https://lazyplanner.app/#software",
+            "name": "LazyPlanner",
+            "url": "https://lazyplanner.app",
+            "description": "AI planning SaaS, built solo and deployed with ox.",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "Web",
+            "creator": { "@id": "https://sorv.dev/#person" }
+          }
+        ]
+      }
+    </script>
+    <script>
+      (function () {
+        var stored = localStorage.getItem("theme");
+        var dark = window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.dataset.theme = stored || (dark ? "dark" : "light");
+      })();
+    </script>
+    <style>
+      section {
+        scroll-margin-top: 24px;
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: 280px 1fr;
+        gap: 56px;
+        align-items: center;
+        padding: 24px 0;
+      }
+      .visually-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip-path: inset(50%);
+        white-space: nowrap;
+      }
+      .hero-photo {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 280 / 360;
+        object-fit: cover;
+        border-radius: var(--radius);
+        outline: 1px solid var(--line);
+      }
+      .hero-title {
+        font-size: clamp(30px, 4.5vw, 40px);
+        line-height: 1.2;
+      }
+      .hero-title a {
+        position: relative;
+        text-decoration-thickness: 2px;
+        text-underline-offset: 5px;
+        white-space: nowrap;
+      }
+      .link-preview {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 10;
+        width: 300px;
+        padding-top: 10px;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 1.4;
+        color: var(--ink-soft);
+        white-space: normal;
+        display: none;
+      }
+      .link-preview-card {
+        display: block;
+        overflow: hidden;
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        box-shadow: 0 12px 32px oklch(0 0 0 / 0.16);
+      }
+      .link-preview img {
+        display: block;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 640 / 336;
+        border-bottom: 1px solid var(--line);
+      }
+      .link-preview-domain {
+        display: block;
+        padding: 8px 12px;
+      }
+      @media (hover: hover) {
+        .hero-title a:hover .link-preview {
+          display: block;
+        }
+      }
+      .hero-title a:focus-visible .link-preview {
+        display: block;
+      }
+      .hero-mark {
+        height: 0.72em;
+        margin-right: 0.2em;
+        vertical-align: -0.04em;
+      }
+      .hero-mark-ox {
+        width: 1.3em;
+        margin-right: 0;
+      }
+      .hero-mark-lp {
+        width: 0.74em;
+        height: 0.84em;
+        vertical-align: -0.1em;
+      }
+      :root {
+        --lp-pen: #3b5c9e;
+      }
+      :root[data-theme="dark"] {
+        --lp-pen: #8aa6e0;
+      }
+      .intro-sub {
+        max-width: var(--measure);
+        margin-top: 20px;
+        font-size: 16px;
+        color: var(--ink-soft);
+      }
+      .say-hello {
+        margin-top: 12px;
+        font-size: 16px;
+        font-weight: 700;
+      }
+
+      .project-list {
+        list-style: none;
+      }
+      .project-list li {
+        max-width: var(--measure);
+        margin-bottom: 22px;
+      }
+      .project-list .project-name {
+        font-weight: 700;
+      }
+      .project-list .project-desc {
+        color: var(--ink-soft);
+      }
+      .project-list .project-tag {
+        font-size: 14px;
+        color: var(--ink-faint);
+      }
+
+      .featured {
+        max-width: var(--measure);
+        margin-bottom: 36px;
+        padding: 22px 24px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+      }
+      .featured-head {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 6px 12px;
+      }
+      .featured-mark {
+        width: 41px;
+        height: 20px;
+        flex: none;
+      }
+      .featured-head h3 {
+        font-size: 20px;
+      }
+      .featured-head h3 a {
+        text-decoration: none;
+      }
+      .featured-head h3 a:hover {
+        text-decoration: underline;
+      }
+      .featured-badge {
+        padding: 0 7px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        font-size: 13px;
+        color: var(--ink-soft);
+      }
+      .featured-tag {
+        font-size: 14px;
+        color: var(--ink-faint);
+      }
+      .featured .featured-desc {
+        margin-top: 10px;
+        color: var(--ink-soft);
+      }
+      .featured ul {
+        margin-top: 12px;
+        padding-left: 18px;
+      }
+      .featured li {
+        margin-top: 4px;
+      }
+      .featured-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px 18px;
+        margin-top: 16px;
+        font-size: 15px;
+      }
+      .featured .featured-posts {
+        margin-top: 10px;
+        font-size: 14px;
+        color: var(--ink-soft);
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          grid-template-columns: 1fr;
+          gap: 32px;
+          align-items: start;
+          padding: 0 0 40px;
+        }
+        .hero-title {
+          font-size: 26px;
+        }
+        .featured {
+          padding: 18px 16px;
+        }
+        #photos .photo-grid {
+          grid-template-columns: repeat(3, 1fr);
+          gap: 6px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true" focusable="false">
+      <defs>
+        <mask id="ox-mo" maskUnits="userSpaceOnUse" x="-50" y="-50" width="300" height="200"><rect x="-50" y="-50" width="300" height="200" fill="#fff" /><path d="M50 0H67.20L107.20 56H90Z" fill="#000" stroke="#000" stroke-width="12" /></mask>
+        <mask id="ox-mx" maskUnits="userSpaceOnUse" x="-50" y="-50" width="300" height="200"><rect x="-50" y="-50" width="300" height="200" fill="#fff" /><circle cx="36" cy="28" r="21" fill="none" stroke="#000" stroke-width="26" /></mask>
+      </defs>
+      <symbol id="ox-mark" viewBox="6 -2 108.1 60">
+        <g mask="url(#ox-mx)"><path d="M90 0H107.20L67.20 56H50Z" fill="currentColor" /></g>
+                <g mask="url(#ox-mo)"><circle cx="36" cy="28" r="21" fill="none" stroke="currentColor" stroke-width="14" /></g>
+                <path d="M50 0H67.20L107.20 56H90Z" fill="currentColor" />
+      </symbol>
+      <symbol id="lp-mark" viewBox="4 1.5 25 28">
+        <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="7.5" y="10.5" width="20" height="18" rx="4.5" style="fill: color-mix(in srgb, currentColor 9%, var(--paper))" />
+          <rect x="5" y="8" width="20" height="18" rx="4.5" style="fill: var(--paper)" />
+          <path d="M5 13h20M10.5 5.5v4.5M19.5 5.5v4.5M9.5 18.6q1.8 1.5 3.6 0M16.9 18.6q1.8 1.5 3.6 0M13.6 22.2q1.4 1 2.8 0" />
+          <path d="M25 2.5h3.4l-3.4 4h3.4" stroke-width="1.3" style="stroke: var(--lp-pen)" />
+        </g>
+      </symbol>
+    </svg>
+    <div class="scroll-progress"></div>
+    <div class="container">
+      <header>
+        <a class="brand" href="/" aria-current="page">Saurav Sharma</a>
+        <nav aria-label="Primary navigation">
+          <a href="/#story"><i class="ph ph-book-open" aria-hidden="true"></i>Story</a>
+          <a href="/#projects"><i class="ph ph-briefcase" aria-hidden="true"></i>Projects</a>
+          <a href="/#blog"><i class="ph ph-pencil-line" aria-hidden="true"></i>Blog</a>
+          <a href="./gallery.html"><i class="ph ph-images" aria-hidden="true"></i>Photos</a>
+          <a href="./tweets.html"><i class="ph ph-chats-circle" aria-hidden="true"></i>Tweet Wall</a>
+          <a href="./resume.html"><i class="ph ph-file-text" aria-hidden="true"></i>Resume</a>
+        </nav>
+        <button id="theme-toggle" type="button" aria-label="Toggle theme">
+          <i id="theme-icon" class="ph ph-sun" aria-hidden="true"></i>
+        </button>
+      </header>
+
+      <main>
+        <div class="hero">
+          <img
+            class="hero-photo"
+            src="./assets/images/hero-saurav-backend.jpg"
+            srcset="./assets/images/hero-saurav-backend-390.jpg 390w, ./assets/images/hero-saurav-backend-780.jpg 780w, ./assets/images/hero-saurav-backend.jpg 800w"
+            sizes="(max-width: 720px) 100vw, 280px"
+            alt="Saurav Sharma"
+            width="280"
+            height="360"
+            fetchpriority="high"
+            decoding="async"
+          />
+          <div>
+            <h1 class="hero-title">
+              Saurav Sharma is an indie hacker &amp; software engineer who builds
+              SaaS products end to end, currently working on
+              <a href="https://deploywithox.com" target="_blank" rel="noopener noreferrer"
+                ><svg class="hero-mark hero-mark-ox" aria-hidden="true" focusable="false"><use href="#ox-mark" /></svg><span class="visually-hidden">ox</span><span class="link-preview" aria-hidden="true"
+                  ><span class="link-preview-card"
+                    ><img src="./assets/images/projects/og-ox.webp" alt="" width="640" height="336" /><span
+                      class="link-preview-domain"
+                      >deploywithox.com</span
+                    ></span
+                  ></span
+                ></a
+              >
+              and
+              <a href="https://lazyplanner.app" target="_blank" rel="noopener noreferrer"
+                ><svg class="hero-mark hero-mark-lp" aria-hidden="true" focusable="false"><use href="#lp-mark" /></svg>LazyPlanner<span class="link-preview" aria-hidden="true"
+                  ><span class="link-preview-card"
+                    ><img src="./assets/images/projects/og-lazyplanner.webp" alt="" width="640" height="336" /><span
+                      class="link-preview-domain"
+                      >lazyplanner.app</span
+                    ></span
+                  ></span
+                ></a
+              >.
+            </h1>
+            <p class="intro-sub">
+              Build logs on <a href="https://x.com/saurav__codes" target="_blank" rel="noopener noreferrer">Twitter</a>,
+              code on <a href="https://github.com/saurav-codes/" target="_blank" rel="noopener noreferrer">GitHub</a>,
+              writing on <a href="https://blog.sorv.dev/" target="_blank" rel="noopener noreferrer">Blog</a>,
+              full resume <a href="./resume.html">here</a>.
+            </p>
+            <p class="say-hello">
+              <a href="mailto:selftaughtdev@proton.me">Say Hello</a>
+            </p>
+          </div>
+        </div>
+
+        <section id="story" class="section">
+          <h2><i class="ph ph-book-open" aria-hidden="true"></i> The story so far</h2>
+          <p>
+            I taught myself to code on freeCodeCamp, then spent 5+ years
+            shipping Django backends for clients around the world: payroll SaaS,
+            recruiting tools, lead routing, voice AI. Remote gigs, full-time and
+            freelance.
+          </p>
+          <p>
+            Between jobs I took breaks on purpose, and I used them to build my
+            own projects. ox (deploy platform), LazyPlanner (AI planning SaaS),
+            Tymr (focus timer), plus plenty of ideas that never left the notebook.
+            Those breaks were also school of a different kind: Go, HTMX,
+            real-time AI, what makes design good, and sales (cold email,
+            copywriting, reading buyers).
+          </p>
+          <p>
+            Now I am trying to make my own indie products work, ox first. It
+            deploys apps from GitHub to a server you own, and LazyPlanner
+            already runs on it. I still keep a foot in client work when I want it.
+          </p>
+        </section>
+
+        <section id="projects" class="section">
+          <h2><i class="ph ph-briefcase" aria-hidden="true"></i> Projects</h2>
+          <article class="featured" aria-labelledby="ox-title">
+            <div class="featured-head">
+              <h3 id="ox-title"><a href="https://deploywithox.com" target="_blank" rel="noopener noreferrer"><svg class="featured-mark" aria-hidden="true" focusable="false"><use href="#ox-mark" /></svg><span class="visually-hidden">ox</span></a></h3>
+              <span class="featured-badge">Beta, free</span>
+              <span class="featured-tag">Go · HTMX · systemd · Caddy</span>
+            </div>
+            <p class="featured-desc">
+              My main project. Connect a GitHub repo and ox deploys it to your
+              own Ubuntu server with systemd and Caddy, no Docker. It reads the
+              repo, so most stacks need no config.
+            </p>
+            <ul>
+              <li>Checks a plan before every deploy, switches releases with no downtime, and keeps the live one running if an update fails.</li>
+              <li>One-click rollback, daily backups, and preview environments per branch that you can promote.</li>
+              <li>A console, a CLI with <code>--json</code> on every command, and an llms.txt for AI agents.</li>
+              <li>Runs my own LazyPlanner and a live demo zoo of 24 apps on 4 servers, with 45 example repos on GitHub.</li>
+            </ul>
+            <p class="featured-links">
+              <a href="https://deploywithox.com" target="_blank" rel="noopener noreferrer">Website</a>
+              <a href="https://deploywithox.com/docs" target="_blank" rel="noopener noreferrer">Docs</a>
+              <a href="https://deploywithox.com/story" target="_blank" rel="noopener noreferrer">Story</a>
+              <a href="https://github.com/saurav-codes?tab=repositories&amp;q=oxzoo" target="_blank" rel="noopener noreferrer">Examples on GitHub</a>
+            </p>
+            <p class="featured-posts">
+              Posts:
+              <a href="https://blog.sorv.dev/stopped-paying-for-vercel-side-projects" target="_blank" rel="noopener noreferrer">Why I stopped paying for Vercel</a>,
+              <a href="https://blog.sorv.dev/why-i-built-ox-simple-self-hosted-deploys" target="_blank" rel="noopener noreferrer">Why I built ox</a>,
+              <a href="https://blog.sorv.dev/deploy-fastapi-to-your-own-vps" target="_blank" rel="noopener noreferrer">FastAPI on your own VPS</a>
+            </p>
+          </article>
+          <ul class="project-list">
+            <li>
+              <a class="project-name" href="https://lazyplanner.app" target="_blank" rel="noopener noreferrer">LazyPlanner</a>
+              <span class="project-desc">AI planning SaaS, built solo and deployed with ox.</span>
+              <span class="project-tag">Django · Vue · Celery · my project</span>
+            </li>
+            <li>
+              <a class="project-name" href="https://github.com/saurav-codes/focus-timer-v" target="_blank" rel="noopener noreferrer">Tymr</a>
+              <span class="project-desc">Real-time focus timer.</span>
+              <span class="project-tag">Django · Channels · my project</span>
+            </li>
+            <li>
+              <a class="project-name" href="https://vonda.ai" target="_blank" rel="noopener noreferrer">Generative Studio</a>
+              <span class="project-desc">Real-time AI voice backend, 2025.</span>
+              <span class="project-tag">FastAPI · LiveKit · client work</span>
+            </li>
+            <li>
+              <a class="project-name" href="https://leadplane.io" target="_blank" rel="noopener noreferrer">LeadPlane</a>
+              <span class="project-desc">Lead routing into CRM, email, WhatsApp.</span>
+              <span class="project-tag">Django · Celery · client work</span>
+            </li>
+            <li>
+              <a class="project-name" href="https://thepayroll.app" target="_blank" rel="noopener noreferrer">The Payroll App</a>
+              <span class="project-desc">Payroll SaaS features and refactors.</span>
+              <span class="project-tag">Django · PostgreSQL · client work</span>
+            </li>
+          </ul>
+        </section>
+
+        <section id="blog" class="section">
+          <h2><i class="ph ph-pencil-line" aria-hidden="true"></i> Blog</h2>
+          <ul class="project-list">
+            <li>
+              <a class="project-name" href="https://blog.sorv.dev/agentic-loops-swarm-is-the-new-moat" target="_blank" rel="noopener noreferrer">Agentic Loops &amp; Swarm is the New Moat</a>
+              <span class="project-desc">Why agent loops beat one-shot prompts.</span>
+            </li>
+            <li>
+              <a class="project-name" href="https://blog.sorv.dev/anti-engagement-farm-from-gpt-4o-prototype-to-a-42mb-local-classifier" target="_blank" rel="noopener noreferrer">Anti-Engagement-Farm: GPT-4o prototype to local classifier</a>
+              <span class="project-desc">From GPT-4o to a 42MB model running on device.</span>
+            </li>
+            <li>
+              <a class="project-name" href="https://blog.sorv.dev/deployment-guide-for-django-vuejs-project-on-vps" target="_blank" rel="noopener noreferrer">Deployment Guide for Django + Vue.js on VPS</a>
+              <span class="project-desc">Full walkthrough from bare server to production.</span>
+            </li>
+          </ul>
+          <a class="more-link" href="https://blog.sorv.dev/" target="_blank" rel="noopener noreferrer">All writing, 26 posts</a>
+        </section>
+
+        <section id="photos" class="section">
+          <h2><i class="ph ph-images" aria-hidden="true"></i> Photos corner</h2>
+          <div class="photo-grid">
+            <a class="gallery-item" href="./gallery.html">
+              <img
+                src="./assets/images/gallery/man-overlooking-palace-jaipur_compressed.JPG"
+                alt="Overlooking a palace in Jaipur"
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+            <a class="gallery-item" href="./gallery.html">
+              <img
+                src="./assets/images/gallery/IMG_0938_compressed.jpg"
+                alt="Coding setup"
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+            <a class="gallery-item" href="./gallery.html">
+              <img
+                src="./assets/images/gallery/man-in-black-outfit_compressed.JPG"
+                alt="Black outfit in Mussoorie"
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+          </div>
+          <a class="more-link" href="./gallery.html">All photos →</a>
+        </section>
+      </main>
+
+      <footer>
+        <a href="mailto:selftaughtdev@proton.me">Email</a>
+        <a href="./resume.html">Resume</a>
+        <a href="https://blog.sorv.dev/" target="_blank" rel="noopener noreferrer">Writing</a>
+        <a href="https://deploywithox.com" target="_blank" rel="noopener noreferrer">ox</a>
+        <a href="https://x.com/saurav__codes" target="_blank" rel="noopener noreferrer">Twitter</a>
+        <a href="https://github.com/saurav-codes/" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/saurav-sharma-23b162315" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </footer>
+    </div>
+
+    <script defer src="./assets/js/theme-toggle.js"></script>
+    <script defer src="./assets/js/proximity.js"></script>
+    <script defer src="./assets/js/scroll-progress.js"></script>
+    <script
+      src="https://beamanalytics.b-cdn.net/beam.min.js"
+      data-token="4d8d10b5-436d-4483-b61d-392ee0f77a3d"
+      async
+    ></script>
+  </body>
+</html>

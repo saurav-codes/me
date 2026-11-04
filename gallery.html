@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Photo gallery from Saurav Sharma: travel, work, and personal moments outside the code editor."
+    />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; base-uri 'self'; img-src 'self'; media-src 'self'; connect-src 'self' https://beamanalytics.b-cdn.net; script-src 'self' 'unsafe-inline' https://unpkg.com https://beamanalytics.b-cdn.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com; font-src 'self' https://fonts.gstatic.com https://unpkg.com;"
+    />
+    <meta property="og:title" content="Photos | Saurav Sharma" />
+    <meta property="og:description" content="Travel and personal moments from Saurav Sharma." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sorv.dev/gallery.html" />
+    <meta property="og:image" content="https://sorv.dev/assets/images/gallery/me_caffee_compressed.jpg" />
+    <title>Photos | Saurav Sharma</title>
+    <link rel="canonical" href="https://sorv.dev/gallery.html" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+    <link rel="stylesheet" href="./assets/css/site.css" />
+    <style>
+      .photo-grid {
+        margin-bottom: 20px;
+      }
+      .gallery-item img {
+        cursor: zoom-in;
+      }
+      .is-hidden {
+        display: none;
+      }
+
+      .load-more {
+        margin-top: 24px;
+        padding: 8px 16px;
+        font-size: 15px;
+        color: var(--ink-soft);
+        background: none;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        cursor: pointer;
+      }
+      .load-more:hover {
+        color: var(--ink);
+        border-color: var(--ink);
+      }
+
+      .lightbox {
+        position: fixed;
+        inset: 0;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        background: color-mix(in srgb, var(--paper) 92%, transparent);
+        z-index: 50;
+      }
+      .lightbox-content {
+        max-width: 80vw;
+        max-height: 84vh;
+      }
+      .lightbox-content img {
+        max-width: 80vw;
+        max-height: 80vh;
+        object-fit: contain;
+        border-radius: var(--radius);
+      }
+      .lightbox-caption {
+        text-align: center;
+        font-size: 13px;
+        color: var(--ink-soft);
+        margin-top: 10px;
+      }
+      .lightbox-close,
+      .lightbox-nav {
+        position: fixed;
+        background: none;
+        border: none;
+        color: var(--ink);
+        font-size: 22px;
+        cursor: pointer;
+        padding: 8px;
+      }
+      .lightbox-close {
+        top: 24px;
+        right: 24px;
+      }
+      .lightbox-prev {
+        left: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      .lightbox-next {
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    </style>
+    <script>
+      (function () {
+        var stored = localStorage.getItem("theme");
+        var dark = window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.dataset.theme = stored || (dark ? "dark" : "light");
+      })();
+    </script>
+  </head>
+  <body>
+    <div class="scroll-progress"></div>
+    <div class="container">
+      <header>
+        <a class="brand" href="/">Saurav Sharma</a>
+        <nav aria-label="Primary navigation">
+          <a href="/#story"><i class="ph ph-book-open" aria-hidden="true"></i>Story</a>
+          <a href="/#projects"><i class="ph ph-briefcase" aria-hidden="true"></i>Projects</a>
+          <a href="/#blog"><i class="ph ph-pencil-line" aria-hidden="true"></i>Blog</a>
+          <a href="./gallery.html" aria-current="page"><i class="ph ph-images" aria-hidden="true"></i>Photos</a>
+          <a href="./tweets.html"><i class="ph ph-chats-circle" aria-hidden="true"></i>Tweet Wall</a>
+          <a href="./resume.html"><i class="ph ph-file-text" aria-hidden="true"></i>Resume</a>
+        </nav>
+        <button id="theme-toggle" type="button" aria-label="Toggle theme">
+          <i id="theme-icon" class="ph ph-sun" aria-hidden="true"></i>
+        </button>
+      </header>
+
+      <main>
+        <h1><i class="ph ph-images" aria-hidden="true"></i> Photos</h1>
+        <p class="lead">Travel, work, and time away from the editor.</p>
+
+        <div class="photo-grid">
+          <figure class="gallery-item">
+            <img src="./assets/images/gallery/man-posing-jal-mahal_compressed.JPG" alt="Man posing at Jal Mahal" loading="lazy" />
+            <figcaption class="caption">Jal Mahal</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="./assets/images/gallery/man-posing-outdoor-fashion_compressed.JPG" alt="Outdoor fashion portrait" loading="lazy" />
+            <figcaption class="caption">Jaipur</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="./assets/images/gallery/man-reading-near-arches_compressed.JPG" alt="Reading near arches" loading="lazy" />
+            <figcaption class="caption">Jaipur</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="./assets/images/gallery/man-overlooking-palace-jaipur_compressed.JPG" alt="Overlooking palace in Jaipur" loading="lazy" />
+            <figcaption class="caption">Jaipur</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="./assets/images/gallery/man-standing-hill-background_compressed.JPG" alt="Standing with hill background" loading="lazy" />
+            <figcaption class="caption">Jaipur</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="./assets/images/gallery/man-black-outfit-street_compressed.JPG" alt="Black outfit on the street" loading="lazy" />
+            <figcaption class="caption">Jaipur</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="./assets/images/gallery/man-sitting-old-door_compressed.JPG" alt="Sitting at old door" loading="lazy" />
+            <figcaption class="caption">Jaipur</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="./assets/images/gallery/group-enjoying-indian-desserts_compressed.jpg" alt="Group with Indian desserts" loading="lazy" />
+            <figcaption class="caption">Ice cream stop</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="./assets/images/gallery/historic-indian-palace-visit_compressed.JPG" alt="Historic Indian palace" loading="lazy" />
+            <figcaption class="caption">Jaipur</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="./assets/images/gallery/man-by-luxury-villa_compressed.JPG" alt="By luxury villa" loading="lazy" />
+            <figcaption class="caption">Jaipur</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="./assets/images/gallery/man-by-riverside-fort_compressed.JPG" alt="By riverside fort" loading="lazy" />
+            <figcaption class="caption">Jaipur</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="./assets/images/gallery/man-checking-smartwatch_compressed.JPG" alt="Checking smartwatch" loading="lazy" />
+            <figcaption class="caption">Jaipur</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="./assets/images/gallery/man-galta-temple-visit_compressed.jpg" alt="Galta temple visit" loading="lazy" />
+            <figcaption class="caption">Jaipur</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="./assets/images/gallery/man-in-black-outfit_compressed.JPG" alt="Black outfit" loading="lazy" />
+            <figcaption class="caption">Jaipur</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="./assets/images/gallery/man-leaning-yellow-wall_compressed.JPG" alt="Leaning against yellow wall" loading="lazy" />
+            <figcaption class="caption">Jaipur</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="./assets/images/gallery/man-overlooking-historical-fort_compressed.JPG" alt="Overlooking historical fort" loading="lazy" />
+            <figcaption class="caption">Jaipur</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="./assets/images/gallery/man-posing-historic-building_compressed.JPG" alt="Posing at historic building" loading="lazy" />
+            <figcaption class="caption">Jaipur</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="./assets/images/gallery/man-sitting-street-style_compressed.JPG" alt="Street style portrait" loading="lazy" />
+            <figcaption class="caption">Jaipur</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="./assets/images/gallery/man-sitting-temple-steps_compressed.JPG" alt="Sitting at temple steps" loading="lazy" />
+            <figcaption class="caption">Jaipur</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="./assets/images/gallery/man-sitting-white-structure_compressed.JPG" alt="Sitting at white structure" loading="lazy" />
+            <figcaption class="caption">Jaipur</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="./assets/images/gallery/man-standing-historic-door_compressed.JPG" alt="Standing at historic door" loading="lazy" />
+            <figcaption class="caption">Jaipur</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="./assets/images/gallery/himachal%20group_compressed.jpg" alt="Group trip in Himachal" loading="lazy" />
+            <figcaption class="caption">Himachal</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="./assets/images/gallery/delhi1_compressed.jpg" alt="Street in Delhi" loading="lazy" />
+            <figcaption class="caption">Delhi</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="./assets/images/gallery/delhi2_compressed.jpg" alt="Delhi city moment" loading="lazy" />
+            <figcaption class="caption">Delhi</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="./assets/images/gallery/winters_compressed.jpg" alt="Winter day in Delhi" loading="lazy" />
+            <figcaption class="caption">Delhi</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="./assets/images/gallery/himachal1_compressed.jpg" alt="Scenic Himachal" loading="lazy" />
+            <figcaption class="caption">Himachal</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="./assets/images/gallery/himachal3_compressed.jpg" alt="Another view in Himachal" loading="lazy" />
+            <figcaption class="caption">Himachal</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="./assets/images/gallery/himachal_group2_compressed.jpg" alt="Group moment in Himachal" loading="lazy" />
+            <figcaption class="caption">Himachal</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="./assets/images/gallery/me1_compressed.jpg" alt="Portrait" loading="lazy" />
+            <figcaption class="caption">Portrait</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="./assets/images/gallery/me_caffee_compressed.jpg" alt="At a cafe" loading="lazy" />
+            <figcaption class="caption">Coffee time</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="./assets/images/gallery/noida_compressed.jpg" alt="View from Noida" loading="lazy" />
+            <figcaption class="caption">Noida</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="./assets/images/gallery/noida2_compressed.jpg" alt="Noida view" loading="lazy" />
+            <figcaption class="caption">Noida</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="./assets/images/gallery/noida3_compressed.jpg" alt="Noida cityscape" loading="lazy" />
+            <figcaption class="caption">Noida</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="./assets/images/gallery/IMG_0640_compressed.jpg" alt="Mountain road trip" loading="lazy" />
+            <figcaption class="caption">Mountain drive</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="./assets/images/gallery/IMG_0698_compressed.jpg" alt="River adventure" loading="lazy" />
+            <figcaption class="caption">Bhagsu waterfall</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="./assets/images/gallery/IMG_0938_compressed.jpg" alt="Coding setup" loading="lazy" />
+            <figcaption class="caption">Coding</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="./assets/images/gallery/IMG_2893_compressed.jpg" alt="Outdoor portrait" loading="lazy" />
+            <figcaption class="caption">Outdoor</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="./assets/images/gallery/diwali-celebration_compressed.JPG" alt="Diwali celebration" loading="lazy" />
+            <figcaption class="caption">Diwali</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="./assets/images/gallery/hiking-selfie-mountains_compressed.JPG" alt="Hiking selfie" loading="lazy" />
+            <figcaption class="caption">Hiking</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="./assets/images/gallery/coding-on-train_compressed.JPG" alt="Coding on a train" loading="lazy" />
+            <figcaption class="caption">Coding</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="./assets/images/gallery/mountain-hiking-view_compressed.jpg" alt="Mountain hiking view" loading="lazy" />
+            <figcaption class="caption">Mountain trail</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="./assets/images/gallery/river-rocks-portrait_compressed.jpg" alt="By the river" loading="lazy" />
+            <figcaption class="caption">River</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="./assets/images/gallery/gym-workout-buddies_compressed.jpg" alt="Workout with friend" loading="lazy" />
+            <figcaption class="caption">Wrestling days</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="./assets/images/gallery/village-tree-view_compressed.jpg" alt="Village landscape" loading="lazy" />
+            <figcaption class="caption">Village</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="./assets/images/gallery/himalaya-night-moonlight_compressed.jpg" alt="Himalayan night" loading="lazy" />
+            <figcaption class="caption">Moonlit hills</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="./assets/images/gallery/pet.jpg" alt="With the pet" loading="lazy" />
+            <figcaption class="caption">Pet</figcaption>
+          </figure>
+        </div>
+
+        <button id="gallery-load-more" class="load-more" type="button">Load more</button>
+      </main>
+
+      <footer>
+        <a href="mailto:selftaughtdev@proton.me">Email</a>
+        <a href="./resume.html">Resume</a>
+        <a href="https://blog.sorv.dev/" target="_blank" rel="noopener noreferrer">Writing</a>
+        <a href="https://deploywithox.com" target="_blank" rel="noopener noreferrer">ox</a>
+        <a href="https://x.com/saurav__codes" target="_blank" rel="noopener noreferrer">Twitter</a>
+        <a href="https://github.com/saurav-codes/" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/saurav-sharma-23b162315" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </footer>
+    </div>
+
+    <script defer src="./assets/js/theme-toggle.js"></script>
+    <script defer src="./assets/js/proximity.js"></script>
+    <script defer src="./assets/js/scroll-progress.js"></script>
+    <script>
+      (function () {
+        const items = Array.from(document.querySelectorAll(".gallery-item"));
+        const loadMore = document.getElementById("gallery-load-more");
+        let visible = 6;
+        const images = items.map((i) => i.querySelector("img"));
+
+        function update() {
+          items.forEach((item, i) => item.classList.toggle("is-hidden", i >= visible));
+          if (loadMore) loadMore.hidden = visible >= items.length;
+        }
+        update();
+
+        if (loadMore) {
+          loadMore.addEventListener("click", () => {
+            visible = Math.min(visible + 6, items.length);
+            update();
+          });
+        }
+
+        const lightbox = document.createElement("div");
+        lightbox.className = "lightbox";
+        const content = document.createElement("div");
+        content.className = "lightbox-content";
+        const closeBtn = document.createElement("button");
+        closeBtn.type = "button";
+        closeBtn.className = "lightbox-close";
+        closeBtn.setAttribute("aria-label", "Close");
+        closeBtn.innerHTML = '<i class="ph ph-x" aria-hidden="true"></i>';
+        const prevBtn = document.createElement("button");
+        prevBtn.type = "button";
+        prevBtn.className = "lightbox-nav lightbox-prev";
+        prevBtn.setAttribute("aria-label", "Previous");
+        prevBtn.innerHTML = '<i class="ph ph-caret-left" aria-hidden="true"></i>';
+        const nextBtn = document.createElement("button");
+        nextBtn.type = "button";
+        nextBtn.className = "lightbox-nav lightbox-next";
+        nextBtn.setAttribute("aria-label", "Next");
+        nextBtn.innerHTML = '<i class="ph ph-caret-right" aria-hidden="true"></i>';
+
+        lightbox.appendChild(content);
+        lightbox.appendChild(closeBtn);
+        lightbox.appendChild(prevBtn);
+        lightbox.appendChild(nextBtn);
+        document.body.appendChild(lightbox);
+
+        let current = 0;
+
+        function show(index) {
+          current = index;
+          const image = images[index];
+          const caption = image.closest(".gallery-item").querySelector(".caption").innerHTML;
+          content.innerHTML = '<img src="' + image.src + '" alt="' + image.alt + '"><div class="lightbox-caption">' + caption + "</div>";
+          prevBtn.style.display = index === 0 ? "none" : "";
+          nextBtn.style.display = index === images.length - 1 ? "none" : "";
+        }
+        function close() {
+          lightbox.style.display = "none";
+          document.body.style.overflow = "";
+        }
+
+        images.forEach((image, index) => {
+          image.addEventListener("click", () => {
+            lightbox.style.display = "flex";
+            document.body.style.overflow = "hidden";
+            show(index);
+          });
+        });
+        closeBtn.addEventListener("click", close);
+        prevBtn.addEventListener("click", () => {
+          if (current > 0) show(current - 1);
+        });
+        nextBtn.addEventListener("click", () => {
+          if (current < images.length - 1) show(current + 1);
+        });
+        lightbox.addEventListener("click", (event) => {
+          if (event.target === lightbox) close();
+        });
+        document.addEventListener("keydown", (event) => {
+          if (lightbox.style.display !== "flex") return;
+          if (event.key === "Escape") close();
+          else if (event.key === "ArrowLeft" && current > 0) show(current - 1);
+          else if (event.key === "ArrowRight" && current < images.length - 1) show(current + 1);
+        });
+      })();
+    </script>
+    <script
+      src="https://beamanalytics.b-cdn.net/beam.min.js"
+      data-token="4d8d10b5-436d-4483-b61d-392ee0f77a3d"
+      async
+    ></script>
+  </body>
+</html>

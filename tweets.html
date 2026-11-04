@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Tweet highlights by Saurav Sharma: notes on Django, Python, and building SaaS."
+    />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; base-uri 'self'; img-src 'self'; media-src 'self'; connect-src 'self' https://beamanalytics.b-cdn.net; script-src 'self' 'unsafe-inline' https://unpkg.com https://beamanalytics.b-cdn.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com; font-src 'self' https://fonts.gstatic.com https://unpkg.com;"
+    />
+    <meta property="og:title" content="Tweet Wall | Saurav Sharma" />
+    <meta property="og:description" content="Notes around Django, Python, and SaaS." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sorv.dev/tweets.html" />
+    <title>Tweet Wall | Saurav Sharma</title>
+    <link rel="canonical" href="https://sorv.dev/tweets.html" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+    <link rel="stylesheet" href="./assets/css/site.css" />
+    <script>
+      (function () {
+        var stored = localStorage.getItem("theme");
+        var dark = window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.dataset.theme = stored || (dark ? "dark" : "light");
+      })();
+    </script>
+  </head>
+  <body>
+    <div class="scroll-progress"></div>
+    <div class="container">
+      <header>
+        <a class="brand" href="/">Saurav Sharma</a>
+        <nav aria-label="Primary navigation">
+          <a href="/#story"><i class="ph ph-book-open" aria-hidden="true"></i>Story</a>
+          <a href="/#projects"><i class="ph ph-briefcase" aria-hidden="true"></i>Projects</a>
+          <a href="/#blog"><i class="ph ph-pencil-line" aria-hidden="true"></i>Blog</a>
+          <a href="./gallery.html"><i class="ph ph-images" aria-hidden="true"></i>Photos</a>
+          <a href="./tweets.html" aria-current="page"><i class="ph ph-chats-circle" aria-hidden="true"></i>Tweet Wall</a>
+          <a href="./resume.html"><i class="ph ph-file-text" aria-hidden="true"></i>Resume</a>
+        </nav>
+        <button id="theme-toggle" type="button" aria-label="Toggle theme">
+          <i id="theme-icon" class="ph ph-sun" aria-hidden="true"></i>
+        </button>
+      </header>
+
+      <main>
+        <h1><i class="ph ph-chats-circle" aria-hidden="true"></i> Tweet Wall</h1>
+        <p class="lead">
+          Notes on Django, Python, and things I build.
+          Follow <a href="https://x.com/saurav__codes" target="_blank" rel="noopener noreferrer">@saurav__codes</a>.
+        </p>
+
+        <ul class="tweets">
+          <li class="tweet">
+            <p class="tweet-meta">ML classifier on Hugging Face · <a href="https://x.com/saurav__codes/status/2098964800772755626" target="_blank" rel="noopener noreferrer">view on X</a></p>
+            <p>My extension paid per-tweet LLM calls to filter engagement farming. Too expensive. So I trained my own: 12,506 posts labeled by an LLM, distilled into a 42MB model, 2ms per post on CPU. Free forever now.</p>
+          </li>
+          <li class="tweet">
+            <p class="tweet-meta">Perf numbers on a real workload · <a href="https://x.com/saurav__codes/status/2099029344333316558" target="_blank" rel="noopener noreferrer">view on X</a></p>
+            <p>Ran my bait filter on my real timeline for 8 min: 3,198 tweets checked at 17ms each, about 200MB of memory, zero internet calls. It hid 144 tweets. 1 in 22 tweets on my feed was bait.</p>
+          </li>
+          <li class="tweet">
+            <p class="tweet-meta">Architecture of a shipped SaaS feature · <a href="https://x.com/saurav__codes/status/1914304106237227244" target="_blank" rel="noopener noreferrer">view on X</a></p>
+            <p>Building the recurring-task feature for LazyPlanner: store recurrence as an RFC-5545 RRULE string, rrule.js in Vue for UI, python-dateutil on Django to validate and generate, a daily Celery job to seed the instances.</p>
+          </li>
+          <li class="tweet">
+            <p class="tweet-meta">Engineering judgment · <a href="https://x.com/saurav__codes/status/2090865891990978983" target="_blank" rel="noopener noreferrer">view on X</a></p>
+            <p>The best code is no code. Deleted 10,700 lines of Python CLI machinery and replaced it with a small skill spec. Now any agent creates clean, topological atomic commits in seconds with zero token overhead.</p>
+          </li>
+          <li class="tweet">
+            <p class="tweet-meta">Open-source dev tool · <a href="https://x.com/saurav__codes/status/2066232945749393679" target="_blank" rel="noopener noreferrer">view on X</a></p>
+            <p>I made a CLI for those who think more commits mean a better engineer. It takes a dirty worktree and commits it hunk by hunk: 5 messy feature commits become 30 tiny reviewable ones. Open source.</p>
+          </li>
+          <li class="tweet">
+            <p class="tweet-meta">Career story in one tweet · <a href="https://x.com/saurav__codes/status/2031358247643578788" target="_blank" rel="noopener noreferrer">view on X</a></p>
+            <p>Dropped out of college. Learned coding for a year. Internship as backend developer that turned into a job. Spent about five years in tech. Now building SaaS products with Django/Vue.js and sharing everything in public.</p>
+          </li>
+          <li class="tweet">
+            <p class="tweet-meta">Hired by an Estonian startup · <a href="https://x.com/saurav__codes/status/1952695730813976982" target="_blank" rel="noopener noreferrer">view on X</a></p>
+            <p>Landed a dev role at an Estonian startup: building AI voice agents and their SaaS products, plus a few brand new ones from scratch.</p>
+          </li>
+          <li class="tweet">
+            <p class="tweet-meta">Production timezone lessons · <a href="https://x.com/saurav__codes/status/1943922555049717774" target="_blank" rel="noopener noreferrer">view on X</a></p>
+            <p>Staying sane with multiple timezones: always store time in UTC and convert for the user, and store timezone names instead of offsets to dodge DST issues.</p>
+          </li>
+          <li class="tweet">
+            <p class="tweet-meta">Security from threat reports · <a href="https://x.com/saurav__codes/status/2098318058007965851" target="_blank" rel="noopener noreferrer">view on X</a></p>
+            <p>Lessons from a recent AI threat report: AI keys are prod credentials, scope OAuth hard, scan repos and images for keys with TruffleHog, and buy direct instead of cheap AI resellers.</p>
+          </li>
+          <li class="tweet">
+            <p class="tweet-meta">Ops hardening + writeup · <a href="https://x.com/saurav__codes/status/1930181037520240650" target="_blank" rel="noopener noreferrer">view on X</a></p>
+            <p>Set up fail2ban to automatically ban actors crawling or brute forcing my app, and wrote a full article about it.</p>
+          </li>
+        </ul>
+      </main>
+
+      <footer>
+        <a href="mailto:selftaughtdev@proton.me">Email</a>
+        <a href="./resume.html">Resume</a>
+        <a href="https://blog.sorv.dev/" target="_blank" rel="noopener noreferrer">Writing</a>
+        <a href="https://deploywithox.com" target="_blank" rel="noopener noreferrer">ox</a>
+        <a href="https://x.com/saurav__codes" target="_blank" rel="noopener noreferrer">Twitter</a>
+        <a href="https://github.com/saurav-codes/" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/saurav-sharma-23b162315" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </footer>
+    </div>
+
+    <script defer src="./assets/js/theme-toggle.js"></script>
+    <script defer src="./assets/js/proximity.js"></script>
+    <script defer src="./assets/js/scroll-progress.js"></script>
+    <script
+      src="https://beamanalytics.b-cdn.net/beam.min.js"
+      data-token="4d8d10b5-436d-4483-b61d-392ee0f77a3d"
+      async
+    ></script>
+  </body>
+</html>
